@@ -4,8 +4,8 @@
  "cases": [
   {
    "id": "V001",
-   "age": 56,
-   "sex": "F",
+   "age": 29,
+   "sex": "M",
    "acute": "yes",
    "rass": -2,
    "tool": "camicu",
@@ -18,16 +18,16 @@
     "seiz"
    ],
    "causes": [
-    "bleed",
-    "etohwd",
-    "septic"
+    "etohx",
+    "sah",
+    "tumor"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. CNS bleed (ICH or SAH)\n2. Septic encephalopathy due to [specify etiology]\n3. Alcohol withdrawal",
+    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Brain tumor or mass\n2. Subarachnoid hemorrhage (SAH)\n3. Alcohol intoxication",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI.",
      "Seizure, twitching or myoclonus: EEG for non-convulsive status."
@@ -39,22 +39,20 @@
    "age": 71,
    "sex": "M",
    "acute": "yes",
-   "rass": 0,
+   "rass": -4,
    "tool": "camicu",
-   "feats": {
-    "disorg": true
-   },
+   "feats": {},
    "dem": false,
    "flags": [],
    "causes": [
-    "bleed"
+    "cns"
    ],
    "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "mixed or undetermined",
-    "note": "CNS bleed (ICH or SAH), presenting with subsyndromal delirium.",
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Stupor/coma",
+    "subtype": "",
+    "note": "Primary CNS infection (meningitis or encephalitis), presenting with stupor/coma.",
     "nextSteps": []
    }
   },
@@ -72,14 +70,14 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "vascular"
+    "toxidrome"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Vascular/hemodynamic encephalopathy due to [specify etiology], manifesting as hypoactive subsyndromal delirium.",
+    "note": "Toxidrome: [specify toxidrome], presenting with hypoactive subsyndromal delirium.",
     "nextSteps": []
    }
   },
@@ -179,14 +177,14 @@
    "flags": [],
    "causes": [
     "nutritional",
-    "sz"
+    "septic"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Seizure (postictal state or non-convulsive status)\n2. Nutritional encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hyperactive delirium:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Septic encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -206,14 +204,14 @@
    ],
    "causes": [
     "autoimmune",
-    "bleed"
+    "cns"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. CNS bleed (ICH or SAH)\n2. Autoimmune/inflammatory encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Autoimmune encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -260,14 +258,14 @@
    ],
    "causes": [
     "nutritional",
-    "tbi"
+    "stroke"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Traumatic brain injury or subdural hematoma\n2. Nutritional encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Acute ischemic stroke\n2. Nutritional encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]
@@ -286,14 +284,14 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "toxic"
+    "sz"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Toxic encephalopathy due to [specify etiology], manifesting as hyperactive subsyndromal delirium.",
+    "note": "Seizure (postictal state or non-convulsive status), presenting with hyperactive subsyndromal delirium.",
     "nextSteps": []
    }
   },
@@ -312,14 +310,14 @@
    "flags": [],
    "causes": [
     "autoimmune",
-    "stroke"
+    "sdh"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium superimposed on dementia:\n1. Acute ischemic stroke\n2. Autoimmune/inflammatory encephalopathy due to [specify etiology]",
+    "note": "Multifactorial subsyndromal delirium superimposed on dementia:\n1. Subdural hematoma (SDH)\n2. Autoimmune encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -341,7 +339,7 @@
    ],
    "causes": [
     "autoimmune",
-    "tbi"
+    "stroke"
    ],
    "expected": {
     "level": 0,
@@ -367,7 +365,7 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "tumor",
+    "toxic",
     "vascular"
    ],
    "expected": {
@@ -375,7 +373,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Brain tumor or mass\n2. Vascular/hemodynamic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hyperactive delirium:\n1. Toxic encephalopathy due to [specify etiology]\n2. Vascular encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -392,14 +390,14 @@
     "seiz"
    ],
    "causes": [
-    "sz"
+    "septic"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Stupor/coma",
     "subtype": "",
-    "note": "Seizure (postictal state or non-convulsive status), presenting with stupor/coma.",
+    "note": "Septic encephalopathy due to [specify etiology], manifesting as stupor/coma.",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]
@@ -432,8 +430,8 @@
   },
   {
    "id": "V017",
-   "age": 60,
-   "sex": "F",
+   "age": 35,
+   "sex": "M",
    "acute": "yes",
    "rass": -1,
    "tool": "camicu",
@@ -443,41 +441,45 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "drugx",
-    "septic",
-    "stroke",
-    "tbi"
+    "nutritional",
+    "sah",
+    "sdh",
+    "stroke"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Acute ischemic stroke\n2. Traumatic brain injury or subdural hematoma\n3. Septic encephalopathy due to [specify etiology]\n4. Drug intoxication due to [specify drug]",
+    "note": "Multifactorial hypoactive delirium:\n1. Acute ischemic stroke\n2. Subarachnoid hemorrhage (SAH)\n3. Subdural hematoma (SDH)\n4. Nutritional encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
   {
    "id": "V018",
-   "age": 75,
+   "age": 56,
    "sex": "M",
-   "acute": "unsure",
-   "rass": -5,
-   "tool": "camicu",
+   "acute": "no",
+   "rass": 1,
+   "tool": "cam",
    "feats": {},
    "dem": false,
-   "flags": [],
+   "flags": [
+    "focal",
+    "mening"
+   ],
    "causes": [
-    "unk"
+    "tbi"
    ],
    "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Coma",
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Acute encephalopathy unlikely",
     "subtype": "",
-    "note": "Coma, etiology not yet identified.",
+    "note": "Acute encephalopathy not supported at this time.",
     "nextSteps": [
-     "No cause named yet: consider brain imaging."
+     "Focal or one-sided signs: urgent CT or MRI.",
+     "Fever with neck stiffness: lumbar puncture."
     ]
    }
   },
@@ -486,25 +488,25 @@
    "age": 91,
    "sex": "F",
    "acute": "yes",
-   "rass": 0,
+   "rass": -1,
    "tool": "cam",
    "feats": {
     "disorg": true,
     "fluct": true,
     "inatt": true
    },
-   "dem": true,
+   "dem": false,
    "flags": [],
    "causes": [
     "autoimmune",
-    "drugwd"
+    "drugx"
    ],
    "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Possible delirium on top of dementia",
-    "subtype": "mixed or undetermined",
-    "note": "Multifactorial possible delirium superimposed on dementia:\n1. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n2. Drug withdrawal",
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hypoactive",
+    "note": "Multifactorial hypoactive delirium:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": []
    }
   },
@@ -548,15 +550,15 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "etohwd",
-    "stroke"
+    "etohx",
+    "sdh"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Stupor/coma",
     "subtype": "",
-    "note": "Multifactorial stupor/coma:\n1. Acute ischemic stroke\n2. Alcohol withdrawal",
+    "note": "Multifactorial stupor/coma:\n1. Subdural hematoma (SDH)\n2. Alcohol intoxication",
     "nextSteps": []
    }
   },
@@ -571,10 +573,10 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "autoimmune",
     "cns",
-    "drugx",
-    "tumor",
+    "drugwd",
+    "nutritional",
+    "toxic",
     "vascular"
    ],
    "expected": {
@@ -582,7 +584,7 @@
     "levelText": "High likelihood",
     "phenotype": "Coma",
     "subtype": "",
-    "note": "Multifactorial coma:\n1. Brain tumor or mass\n2. Primary CNS infection (meningitis or encephalitis)\n3. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n4. Vascular/hemodynamic encephalopathy due to [specify etiology]\n5. Drug intoxication due to [specify drug]",
+    "note": "Multifactorial coma:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Toxic encephalopathy due to [specify etiology]\n4. Vascular encephalopathy due to [specify etiology]\n5. Drug withdrawal",
     "nextSteps": []
    }
   },
@@ -602,14 +604,14 @@
     "mening"
    ],
    "causes": [
-    "toxidrome"
+    "tbi"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Delirium",
     "subtype": "mixed or undetermined",
-    "note": "Toxidrome: [specify toxidrome], presenting with delirium.",
+    "note": "Traumatic brain injury (TBI), presenting with delirium.",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -630,15 +632,15 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "stroke",
-    "sz"
+    "sdh",
+    "septic"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Acute ischemic stroke\n2. Seizure (postictal state or non-convulsive status)",
+    "note": "Multifactorial hypoactive delirium:\n1. Subdural hematoma (SDH)\n2. Septic encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -666,7 +668,7 @@
   },
   {
    "id": "V026",
-   "age": 61,
+   "age": 78,
    "sex": "M",
    "acute": "yes",
    "rass": -5,
@@ -678,7 +680,7 @@
    ],
    "causes": [
     "autoimmune",
-    "toxic",
+    "sdh",
     "vascular"
    ],
    "expected": {
@@ -686,7 +688,7 @@
     "levelText": "High likelihood",
     "phenotype": "Coma",
     "subtype": "",
-    "note": "Multifactorial coma:\n1. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]\n3. Vascular/hemodynamic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial coma:\n1. Subdural hematoma (SDH)\n2. Autoimmune encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -696,22 +698,22 @@
    "id": "V027",
    "age": 56,
    "sex": "F",
-   "acute": "yes",
+   "acute": "no",
    "rass": -5,
    "tool": "cam",
    "feats": {},
    "dem": false,
    "flags": [],
    "causes": [
-    "toxic",
-    "toxidrome"
+    "sz",
+    "tbi"
    ],
    "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Coma",
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Acute encephalopathy unlikely",
     "subtype": "",
-    "note": "Multifactorial coma:\n1. Toxic encephalopathy due to [specify etiology]\n2. Toxidrome: [specify toxidrome]",
+    "note": "Acute encephalopathy not supported at this time.",
     "nextSteps": []
    }
   },
@@ -732,16 +734,16 @@
     "mening"
    ],
    "causes": [
-    "cns",
+    "etohwd",
     "nutritional",
-    "tbi"
+    "stroke"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Traumatic brain injury or subdural hematoma\n3. Nutritional encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hyperactive delirium:\n1. Acute ischemic stroke\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -749,8 +751,8 @@
   },
   {
    "id": "V029",
-   "age": 76,
-   "sex": "F",
+   "age": 93,
+   "sex": "M",
    "acute": "unsure",
    "rass": -2,
    "tool": "camicu",
@@ -764,14 +766,14 @@
     "seiz"
    ],
    "causes": [
-    "nutritional"
+    "tumor"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Nutritional encephalopathy due to [specify etiology], manifesting as hypoactive delirium.",
+    "note": "Brain tumor or mass, presenting with hypoactive delirium.",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]
@@ -779,36 +781,68 @@
   },
   {
    "id": "V030",
-   "age": 70,
+   "age": 55,
    "sex": "M",
-   "acute": "unsure",
-   "rass": 1,
-   "tool": "cam",
+   "acute": "yes",
+   "rass": 2,
+   "tool": "camicu",
    "feats": {
-    "disorg": true,
-    "fluct": true
+    "inatt": true
+   },
+   "dem": true,
+   "flags": [
+    "seiz",
+    "mening"
+   ],
+   "causes": [
+    "drugx",
+    "nutritional",
+    "tbi"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Possible delirium on top of dementia",
+    "subtype": "hyperactive",
+    "note": "Multifactorial possible hyperactive delirium superimposed on dementia:\n1. Traumatic brain injury (TBI)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]",
+    "nextSteps": [
+     "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
+     "Fever with neck stiffness: lumbar puncture."
+    ]
+   }
+  },
+  {
+   "id": "V031",
+   "age": 37,
+   "sex": "M",
+   "acute": "yes",
+   "rass": 1,
+   "tool": "camicu",
+   "feats": {
+    "fluct": true,
+    "inatt": true
    },
    "dem": false,
    "flags": [],
    "causes": [
     "drugwd",
-    "septic"
+    "tbi"
    ],
    "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Septic encephalopathy due to [specify etiology]\n2. Drug withdrawal",
+    "note": "Multifactorial hyperactive delirium:\n1. Traumatic brain injury (TBI)\n2. Drug withdrawal",
     "nextSteps": []
    }
   },
   {
-   "id": "V031",
-   "age": 29,
+   "id": "V032",
+   "age": 74,
    "sex": "F",
-   "acute": "no",
-   "rass": -1,
+   "acute": "unsure",
+   "rass": 1,
    "tool": "camicu",
    "feats": {
     "fluct": true,
@@ -816,48 +850,22 @@
    },
    "dem": true,
    "flags": [
-    "mening"
-   ],
-   "causes": [
-    "unk"
-   ],
-   "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Dementia at baseline; acute encephalopathy not supported at this time.",
-    "nextSteps": [
-     "Fever with neck stiffness: lumbar puncture."
-    ]
-   }
-  },
-  {
-   "id": "V032",
-   "age": 74,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 3,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true
-   },
-   "dem": true,
-   "flags": [
-    "mening",
+    "focal",
     "fall"
    ],
    "causes": [
-    "vascular"
+    "drugx",
+    "toxidrome",
+    "tumor"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
+    "phenotype": "Possible delirium on top of dementia",
     "subtype": "hyperactive",
-    "note": "Vascular/hemodynamic encephalopathy due to [specify etiology], manifesting as hyperactive subsyndromal delirium superimposed on dementia.",
+    "note": "Multifactorial possible hyperactive delirium superimposed on dementia:\n1. Brain tumor or mass\n2. Drug intoxication/overdose due to [specify drug]\n3. Toxidrome: [specify toxidrome]",
     "nextSteps": [
-     "Fever with neck stiffness: lumbar puncture.",
+     "Focal or one-sided signs: urgent CT or MRI.",
      "Fall or head injury on blood thinners: urgent head CT."
     ]
    }
@@ -875,16 +883,16 @@
     "mening"
    ],
    "causes": [
-    "cns",
-    "drugx",
-    "nutritional"
+    "etohwd",
+    "nutritional",
+    "tumor"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Stupor/coma",
     "subtype": "",
-    "note": "Multifactorial stupor/coma:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Drug intoxication due to [specify drug]",
+    "note": "Multifactorial stupor/coma:\n1. Brain tumor or mass\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -905,9 +913,9 @@
     "focal"
    ],
    "causes": [
-    "bleed",
-    "etohx",
-    "stroke"
+    "cns",
+    "sdh",
+    "sz"
    ],
    "expected": {
     "level": 0,
@@ -935,14 +943,14 @@
    "flags": [],
    "causes": [
     "autoimmune",
-    "toxic"
+    "tumor"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial delirium:\n1. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial delirium:\n1. Brain tumor or mass\n2. Autoimmune encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -951,24 +959,24 @@
    "age": 44,
    "sex": "M",
    "acute": "yes",
-   "rass": -1,
+   "rass": 3,
    "tool": "cam",
    "feats": {
     "disorg": true,
     "fluct": true,
     "inatt": true
    },
-   "dem": false,
+   "dem": true,
    "flags": [],
    "causes": [
-    "drugx"
+    "etohwd"
    ],
    "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hypoactive",
-    "note": "Drug intoxication due to [specify drug], presenting with hypoactive delirium.",
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Possible delirium on top of dementia",
+    "subtype": "hyperactive",
+    "note": "Alcohol withdrawal, presenting with possible hyperactive delirium superimposed on dementia.",
     "nextSteps": []
    }
   },
@@ -989,14 +997,14 @@
     "mening"
    ],
    "causes": [
-    "cns"
+    "drugwd"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Primary CNS infection (meningitis or encephalitis), presenting with hyperactive delirium.",
+    "note": "Drug withdrawal, presenting with hyperactive delirium.",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI.",
      "Fever with neck stiffness: lumbar puncture."
@@ -1020,7 +1028,7 @@
     "fall"
    ],
    "causes": [
-    "bleed",
+    "cns",
     "tbi",
     "toxidrome"
    ],
@@ -1029,7 +1037,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. CNS bleed (ICH or SAH)\n2. Traumatic brain injury or subdural hematoma\n3. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial subsyndromal delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Traumatic brain injury (TBI)\n3. Toxidrome: [specify toxidrome]",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture.",
      "Fall or head injury on blood thinners: urgent head CT."
@@ -1050,23 +1058,23 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "drugwd",
+    "drugx",
     "metabolic",
-    "sz"
+    "tumor"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Seizure (postictal state or non-convulsive status)\n2. Metabolic encephalopathy due to [specify etiology]\n3. Drug withdrawal",
+    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Brain tumor or mass\n2. Metabolic encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": []
    }
   },
   {
    "id": "V040",
-   "age": 54,
-   "sex": "F",
+   "age": 55,
+   "sex": "M",
    "acute": "yes",
    "rass": -1,
    "tool": "camicu",
@@ -1079,16 +1087,16 @@
     "mening"
    ],
    "causes": [
-    "bleed",
-    "drugx",
-    "metabolic"
+    "cns",
+    "metabolic",
+    "vascular"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. CNS bleed (ICH or SAH)\n2. Metabolic encephalopathy due to [specify etiology]\n3. Drug intoxication due to [specify drug]",
+    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Metabolic encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
      "Fever with neck stiffness: lumbar puncture."
@@ -1097,68 +1105,43 @@
   },
   {
    "id": "V041",
-   "age": 68,
-   "sex": "F",
-   "acute": "no",
-   "rass": -3,
+   "age": 70,
+   "sex": "M",
+   "acute": "yes",
+   "rass": 0,
    "tool": "cam",
    "feats": {
-    "disorg": true
+    "disorg": true,
+    "inatt": true
    },
-   "dem": true,
+   "dem": false,
    "flags": [],
    "causes": [
-    "toxic"
+    "tumor"
    ],
    "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Dementia at baseline; acute encephalopathy not supported at this time.",
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Brain tumor or mass, presenting with delirium.",
     "nextSteps": []
    }
   },
   {
    "id": "V042",
-   "age": 75,
-   "sex": "M",
-   "acute": "yes",
-   "rass": -5,
-   "tool": "cam",
-   "feats": {},
-   "dem": false,
-   "flags": [
-    "fall"
-   ],
-   "causes": [
-    "drugwd",
-    "tbi"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Coma",
-    "subtype": "",
-    "note": "Multifactorial coma:\n1. Traumatic brain injury or subdural hematoma\n2. Drug withdrawal",
-    "nextSteps": [
-     "Fall or head injury on blood thinners: urgent head CT."
-    ]
-   }
-  },
-  {
-   "id": "V043",
-   "age": 58,
+   "age": 64,
    "sex": "F",
    "acute": "yes",
-   "rass": -2,
+   "rass": -1,
    "tool": "camicu",
    "feats": {
     "disorg": true
    },
    "dem": false,
    "flags": [
-    "mening"
+    "seiz",
+    "fall"
    ],
    "causes": [],
    "expected": {
@@ -1168,17 +1151,104 @@
     "subtype": "hypoactive",
     "note": "Hypoactive subsyndromal delirium, etiology not yet identified.",
     "nextSteps": [
-     "Fever with neck stiffness: lumbar puncture.",
+     "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
+     "Fall or head injury on blood thinners: urgent head CT.",
      "No cause named yet: consider brain imaging."
     ]
    }
   },
   {
-   "id": "V044",
-   "age": 80,
+   "id": "V043",
+   "age": 94,
    "sex": "M",
+   "acute": "yes",
+   "rass": -1,
+   "tool": "cam",
+   "feats": {
+    "disorg": true,
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "autoimmune",
+    "etohwd",
+    "nutritional",
+    "vascular"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hypoactive",
+    "note": "Multifactorial hypoactive delirium:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Nutritional encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]\n4. Alcohol withdrawal",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V044",
+   "age": 92,
+   "sex": "M",
+   "acute": "yes",
+   "rass": -5,
+   "tool": "camicu",
+   "feats": {},
+   "dem": false,
+   "flags": [
+    "seiz",
+    "mening"
+   ],
+   "causes": [
+    "sdh"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Coma",
+    "subtype": "",
+    "note": "Subdural hematoma (SDH), presenting with coma.",
+    "nextSteps": [
+     "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
+     "Fever with neck stiffness: lumbar puncture."
+    ]
+   }
+  },
+  {
+   "id": "V045",
+   "age": 35,
+   "sex": "M",
+   "acute": "yes",
+   "rass": -1,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true,
+    "fluct": true
+   },
+   "dem": true,
+   "flags": [
+    "seiz"
+   ],
+   "causes": [
+    "nutritional",
+    "sah"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Multifactorial hypoactive subsyndromal delirium superimposed on dementia:\n1. Subarachnoid hemorrhage (SAH)\n2. Nutritional encephalopathy due to [specify etiology]",
+    "nextSteps": [
+     "Seizure, twitching or myoclonus: EEG for non-convulsive status."
+    ]
+   }
+  },
+  {
+   "id": "V046",
+   "age": 45,
+   "sex": "F",
    "acute": "unsure",
-   "rass": 0,
+   "rass": -2,
    "tool": "cam",
    "feats": {
     "disorg": true,
@@ -1188,49 +1258,57 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "tbi",
-    "tumor"
+    "unk"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Multifactorial delirium:\n1. Brain tumor or mass\n2. Traumatic brain injury or subdural hematoma",
-    "nextSteps": []
+    "subtype": "hypoactive",
+    "note": "Hypoactive delirium, etiology not yet identified.",
+    "nextSteps": [
+     "No cause named yet: consider brain imaging."
+    ]
    }
   },
   {
-   "id": "V045",
-   "age": 91,
-   "sex": "M",
-   "acute": "yes",
-   "rass": -2,
+   "id": "V047",
+   "age": 51,
+   "sex": "F",
+   "acute": "unsure",
+   "rass": -1,
    "tool": "camicu",
    "feats": {
     "disorg": true,
-    "fluct": true,
     "inatt": true
    },
-   "dem": true,
-   "flags": [],
+   "dem": false,
+   "flags": [
+    "mening"
+   ],
    "causes": [
-    "metabolic"
+    "drugwd",
+    "nutritional",
+    "toxic",
+    "toxidrome",
+    "vascular"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
-    "phenotype": "Possible delirium on top of dementia",
+    "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Metabolic encephalopathy due to [specify etiology], manifesting as possible hypoactive delirium superimposed on dementia.",
-    "nextSteps": []
+    "note": "Multifactorial hypoactive delirium:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]\n4. Drug withdrawal\n5. Toxidrome: [specify toxidrome]",
+    "nextSteps": [
+     "Fever with neck stiffness: lumbar puncture."
+    ]
    }
   },
   {
-   "id": "V046",
-   "age": 70,
-   "sex": "F",
-   "acute": "yes",
+   "id": "V048",
+   "age": 23,
+   "sex": "M",
+   "acute": "unsure",
    "rass": 0,
    "tool": "cam",
    "feats": {
@@ -1242,76 +1320,52 @@
    "flags": [
     "seiz"
    ],
-   "causes": [],
+   "causes": [
+    "etohwd",
+    "nutritional",
+    "sz"
+   ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Possible delirium on top of dementia",
     "subtype": "mixed or undetermined",
-    "note": "Possible delirium superimposed on dementia, etiology not yet identified.",
+    "note": "Multifactorial possible delirium superimposed on dementia:\n1. Seizure (postictal state or non-convulsive status)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal",
     "nextSteps": [
-     "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
-     "No cause named yet: consider brain imaging."
-    ]
-   }
-  },
-  {
-   "id": "V047",
-   "age": 26,
-   "sex": "F",
-   "acute": "yes",
-   "rass": -4,
-   "tool": "cam",
-   "feats": {},
-   "dem": true,
-   "flags": [],
-   "causes": [],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Stupor/coma",
-    "subtype": "",
-    "note": "Stupor/coma with underlying dementia, etiology not yet identified.",
-    "nextSteps": [
-     "No cause named yet: consider brain imaging."
-    ]
-   }
-  },
-  {
-   "id": "V048",
-   "age": 55,
-   "sex": "M",
-   "acute": "yes",
-   "rass": 2,
-   "tool": "cam",
-   "feats": {
-    "disorg": true,
-    "fluct": true,
-    "inatt": true
-   },
-   "dem": true,
-   "flags": [],
-   "causes": [
-    "unk"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Possible delirium on top of dementia",
-    "subtype": "hyperactive",
-    "note": "Possible hyperactive delirium superimposed on dementia, etiology not yet identified.",
-    "nextSteps": [
-     "No cause named yet: consider brain imaging."
+     "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]
    }
   },
   {
    "id": "V049",
-   "age": 73,
+   "age": 22,
    "sex": "F",
-   "acute": "yes",
-   "rass": 3,
+   "acute": "unsure",
+   "rass": -5,
    "tool": "cam",
+   "feats": {},
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "ich",
+    "stroke"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Coma",
+    "subtype": "",
+    "note": "Multifactorial coma:\n1. Acute ischemic stroke\n2. Intracerebral hemorrhage (ICH)",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V050",
+   "age": 72,
+   "sex": "M",
+   "acute": "unsure",
+   "rass": 0,
+   "tool": "camicu",
    "feats": {
     "disorg": true,
     "inatt": true
@@ -1319,64 +1373,45 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "metabolic",
-    "nutritional"
+    "etohwd"
    ],
    "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
+    "level": 1,
+    "levelText": "Moderate likelihood",
     "phenotype": "Delirium",
-    "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Nutritional encephalopathy due to [specify etiology]",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V050",
-   "age": 62,
-   "sex": "M",
-   "acute": "unsure",
-   "rass": 2,
-   "tool": "camicu",
-   "feats": {},
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "metabolic"
-   ],
-   "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hyperactive",
-    "note": "Acute encephalopathy not supported at this time.",
+    "subtype": "mixed or undetermined",
+    "note": "Alcohol withdrawal, presenting with delirium.",
     "nextSteps": []
    }
   },
   {
    "id": "V051",
-   "age": 43,
+   "age": 73,
    "sex": "F",
    "acute": "yes",
-   "rass": -4,
+   "rass": -1,
    "tool": "camicu",
-   "feats": {},
+   "feats": {
+    "disorg": true,
+    "fluct": true
+   },
    "dem": false,
    "flags": [
-    "mening"
+    "fall"
    ],
    "causes": [
-    "unk"
+    "drugwd",
+    "ich",
+    "stroke"
    ],
    "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Stupor/coma",
-    "subtype": "",
-    "note": "Stupor/coma, etiology not yet identified.",
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Acute ischemic stroke\n2. Intracerebral hemorrhage (ICH)\n3. Drug withdrawal",
     "nextSteps": [
-     "Fever with neck stiffness: lumbar puncture.",
-     "No cause named yet: consider brain imaging."
+     "Fall or head injury on blood thinners: urgent head CT."
     ]
    }
   },
@@ -1384,7 +1419,7 @@
    "id": "V052",
    "age": 83,
    "sex": "M",
-   "acute": "unsure",
+   "acute": "yes",
    "rass": -2,
    "tool": "cam",
    "feats": {
@@ -1423,7 +1458,7 @@
    "dem": true,
    "flags": [],
    "causes": [
-    "tbi",
+    "stroke",
     "vascular"
    ],
    "expected": {
@@ -1450,7 +1485,7 @@
    ],
    "causes": [
     "autoimmune",
-    "tbi"
+    "stroke"
    ],
    "expected": {
     "level": 0,
@@ -1466,7 +1501,7 @@
   },
   {
    "id": "V055",
-   "age": 69,
+   "age": 39,
    "sex": "M",
    "acute": "yes",
    "rass": 4,
@@ -1478,15 +1513,15 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "etohwd",
-    "tumor"
+    "toxic",
+    "toxidrome"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Brain tumor or mass\n2. Alcohol withdrawal",
+    "note": "Multifactorial hyperactive delirium:\n1. Toxic encephalopathy due to [specify etiology]\n2. Toxidrome: [specify toxidrome]",
     "nextSteps": []
    }
   },
@@ -1495,11 +1530,10 @@
    "age": 92,
    "sex": "M",
    "acute": "yes",
-   "rass": -3,
+   "rass": -1,
    "tool": "camicu",
    "feats": {
     "disorg": true,
-    "fluct": true,
     "inatt": true
    },
    "dem": false,
@@ -1512,7 +1546,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Autoimmune/inflammatory encephalopathy due to [specify etiology], manifesting as hypoactive delirium.",
+    "note": "Autoimmune encephalopathy due to [specify etiology], manifesting as hypoactive delirium.",
     "nextSteps": []
    }
   },
@@ -1531,7 +1565,7 @@
     "mening"
    ],
    "causes": [
-    "bleed"
+    "cns"
    ],
    "expected": {
     "level": 0,
@@ -1560,7 +1594,7 @@
    "flags": [],
    "causes": [
     "metabolic",
-    "tumor",
+    "toxic",
     "vascular"
    ],
    "expected": {
@@ -1568,13 +1602,13 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Brain tumor or mass\n2. Metabolic encephalopathy due to [specify etiology]\n3. Vascular/hemodynamic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hyperactive delirium:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
   {
    "id": "V059",
-   "age": 73,
+   "age": 47,
    "sex": "F",
    "acute": "yes",
    "rass": 4,
@@ -1587,17 +1621,17 @@
     "seiz"
    ],
    "causes": [
-    "bleed",
-    "septic",
+    "cns",
+    "sah",
     "sz",
-    "tbi"
+    "toxidrome"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. CNS bleed (ICH or SAH)\n2. Seizure (postictal state or non-convulsive status)\n3. Traumatic brain injury or subdural hematoma\n4. Septic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hyperactive delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Seizure (postictal state or non-convulsive status)\n3. Subarachnoid hemorrhage (SAH)\n4. Toxidrome: [specify toxidrome]",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]
@@ -1608,25 +1642,22 @@
    "age": 67,
    "sex": "F",
    "acute": "yes",
-   "rass": 0,
+   "rass": -1,
    "tool": "camicu",
-   "feats": {
-    "disorg": true,
-    "fluct": true
-   },
-   "dem": true,
+   "feats": {},
+   "dem": false,
    "flags": [
     "mening"
    ],
    "causes": [
-    "toxic"
+    "sz"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Toxic encephalopathy due to [specify etiology], manifesting as subsyndromal delirium superimposed on dementia.",
+    "subtype": "hypoactive",
+    "note": "Seizure (postictal state or non-convulsive status), presenting with hypoactive subsyndromal delirium.",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -1649,15 +1680,15 @@
     "focal"
    ],
    "causes": [
-    "drugx",
-    "toxidrome"
+    "etohwd",
+    "tbi"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Drug intoxication due to [specify drug]\n2. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hyperactive delirium:\n1. Traumatic brain injury (TBI)\n2. Alcohol withdrawal",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI."
     ]
@@ -1665,7 +1696,7 @@
   },
   {
    "id": "V062",
-   "age": 24,
+   "age": 22,
    "sex": "F",
    "acute": "yes",
    "rass": 0,
@@ -1676,857 +1707,179 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "bleed",
-    "stroke"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. Acute ischemic stroke\n2. CNS bleed (ICH or SAH)",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V063",
-   "age": 36,
-   "sex": "F",
-   "acute": "unsure",
-   "rass": -2,
-   "tool": "cam",
-   "feats": {
-    "disorg": true,
-    "fluct": true,
-    "inatt": true
-   },
-   "dem": true,
-   "flags": [],
-   "causes": [
-    "autoimmune",
-    "etohx",
-    "metabolic"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Possible delirium on top of dementia",
-    "subtype": "hypoactive",
-    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n2. Metabolic encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V064",
-   "age": 89,
-   "sex": "M",
-   "acute": "no",
-   "rass": 1,
-   "tool": "cam",
-   "feats": {
-    "fluct": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [],
-   "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V065",
-   "age": 33,
-   "sex": "M",
-   "acute": "no",
-   "rass": 0,
-   "tool": "cam",
-   "feats": {
-    "disorg": true,
-    "fluct": true
-   },
-   "dem": false,
-   "flags": [
-    "focal",
-    "seiz"
-   ],
-   "causes": [],
-   "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI.",
-     "Seizure, twitching or myoclonus: EEG for non-convulsive status."
-    ]
-   }
-  },
-  {
-   "id": "V066",
-   "age": 95,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 4,
-   "tool": "cam",
-   "feats": {
-    "disorg": true,
-    "fluct": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "unk"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hyperactive",
-    "note": "Hyperactive subsyndromal delirium, etiology not yet identified.",
-    "nextSteps": [
-     "No cause named yet: consider brain imaging."
-    ]
-   }
-  },
-  {
-   "id": "V067",
-   "age": 78,
-   "sex": "M",
-   "acute": "unsure",
-   "rass": 3,
-   "tool": "camicu",
-   "feats": {
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [
-    "focal"
-   ],
-   "causes": [
-    "autoimmune",
+    "sdh",
     "toxidrome"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n2. Toxidrome: [specify toxidrome]",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI."
-    ]
-   }
-  },
-  {
-   "id": "V068",
-   "age": 66,
-   "sex": "M",
-   "acute": "unsure",
-   "rass": -1,
-   "tool": "camicu",
-   "feats": {
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "unk"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hypoactive",
-    "note": "Hypoactive delirium, etiology not yet identified.",
-    "nextSteps": [
-     "No cause named yet: consider brain imaging."
-    ]
-   }
-  },
-  {
-   "id": "V069",
-   "age": 75,
-   "sex": "F",
-   "acute": "no",
-   "rass": 4,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [],
-   "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Multifactorial subsyndromal delirium:\n1. Subdural hematoma (SDH)\n2. Toxidrome: [specify toxidrome]",
     "nextSteps": []
    }
   },
   {
-   "id": "V070",
-   "age": 85,
-   "sex": "M",
-   "acute": "yes",
-   "rass": 2,
-   "tool": "cam",
-   "feats": {
-    "disorg": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hyperactive",
-    "note": "Hyperactive subsyndromal delirium, etiology not yet identified.",
-    "nextSteps": [
-     "No cause named yet: consider brain imaging."
-    ]
-   }
-  },
-  {
-   "id": "V071",
-   "age": 67,
-   "sex": "M",
-   "acute": "no",
-   "rass": 2,
+   "id": "V063",
+   "age": 76,
+   "sex": "F",
+   "acute": "unsure",
+   "rass": -2,
    "tool": "cam",
    "feats": {
     "disorg": true,
+    "fluct": true,
     "inatt": true
    },
    "dem": true,
+   "flags": [],
+   "causes": [
+    "autoimmune",
+    "ich",
+    "tumor"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Possible delirium on top of dementia",
+    "subtype": "hypoactive",
+    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Brain tumor or mass\n2. Intracerebral hemorrhage (ICH)\n3. Autoimmune encephalopathy due to [specify etiology]",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V064",
+   "age": 65,
+   "sex": "M",
+   "acute": "yes",
+   "rass": -3,
+   "tool": "cam",
+   "feats": {
+    "disorg": true,
+    "fluct": true
+   },
+   "dem": false,
    "flags": [],
    "causes": [
     "etohwd",
-    "nutritional"
-   ],
-   "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Dementia at baseline; acute encephalopathy not supported at this time.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V072",
-   "age": 68,
-   "sex": "M",
-   "acute": "yes",
-   "rass": -1,
-   "tool": "camicu",
-   "feats": {
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "drugwd",
-    "etohwd"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Alcohol withdrawal\n2. Drug withdrawal",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V073",
-   "age": 70,
-   "sex": "F",
-   "acute": "yes",
-   "rass": -3,
-   "tool": "cam",
-   "feats": {
-    "fluct": true
-   },
-   "dem": false,
-   "flags": [
-    "mening"
-   ],
-   "causes": [
-    "tbi"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hypoactive",
-    "note": "Traumatic brain injury or subdural hematoma, presenting with hypoactive subsyndromal delirium.",
-    "nextSteps": [
-     "Fever with neck stiffness: lumbar puncture."
-    ]
-   }
-  },
-  {
-   "id": "V074",
-   "age": 93,
-   "sex": "M",
-   "acute": "yes",
-   "rass": -1,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [
-    "focal"
-   ],
-   "causes": [
-    "autoimmune",
-    "bleed",
-    "drugx",
-    "toxidrome",
-    "tumor"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Brain tumor or mass\n2. CNS bleed (ICH or SAH)\n3. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n4. Drug intoxication due to [specify drug]\n5. Toxidrome: [specify toxidrome]",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI."
-    ]
-   }
-  },
-  {
-   "id": "V075",
-   "age": 82,
-   "sex": "M",
-   "acute": "yes",
-   "rass": 3,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "drugx",
-    "septic"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Septic encephalopathy due to [specify etiology]\n2. Drug intoxication due to [specify drug]",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V076",
-   "age": 64,
-   "sex": "F",
-   "acute": "no",
-   "rass": 2,
-   "tool": "camicu",
-   "feats": {
-    "fluct": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [
-    "focal"
-   ],
-   "causes": [
-    "tumor",
+    "sdh",
+    "toxic",
     "vascular"
    ],
    "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI."
-    ]
-   }
-  },
-  {
-   "id": "V077",
-   "age": 30,
-   "sex": "M",
-   "acute": "unsure",
-   "rass": -2,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true,
-    "fluct": true
-   },
-   "dem": false,
-   "flags": [
-    "seiz",
-    "fall"
-   ],
-   "causes": [
-    "drugx"
-   ],
-   "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Drug intoxication due to [specify drug], presenting with hypoactive subsyndromal delirium.",
-    "nextSteps": [
-     "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
-     "Fall or head injury on blood thinners: urgent head CT."
-    ]
+    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Subdural hematoma (SDH)\n2. Toxic encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]\n4. Alcohol withdrawal",
+    "nextSteps": []
    }
   },
   {
-   "id": "V078",
-   "age": 72,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 1,
-   "tool": "cam",
-   "feats": {
-    "fluct": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [
-    "focal"
-   ],
-   "causes": [],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hyperactive",
-    "note": "Hyperactive delirium, etiology not yet identified.",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI.",
-     "No cause named yet: consider brain imaging."
-    ]
-   }
-  },
-  {
-   "id": "V079",
-   "age": 75,
-   "sex": "F",
-   "acute": "unsure",
-   "rass": -1,
-   "tool": "cam",
-   "feats": {
-    "disorg": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [
-    "focal",
-    "seiz"
-   ],
-   "causes": [
-    "unk"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hypoactive",
-    "note": "Hypoactive delirium, etiology not yet identified.",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI.",
-     "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
-     "No cause named yet: consider brain imaging."
-    ]
-   }
-  },
-  {
-   "id": "V080",
+   "id": "V065",
    "age": 18,
    "sex": "F",
    "acute": "yes",
-   "rass": 3,
-   "tool": "cam",
-   "feats": {
-    "fluct": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [
-    "focal"
-   ],
-   "causes": [
-    "autoimmune",
-    "tumor"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Brain tumor or mass\n2. Autoimmune/inflammatory encephalopathy due to [specify etiology]",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI."
-    ]
-   }
-  },
-  {
-   "id": "V081",
-   "age": 68,
-   "sex": "M",
-   "acute": "yes",
-   "rass": 0,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true,
-    "fluct": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "vascular"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Vascular/hemodynamic encephalopathy due to [specify etiology], manifesting as delirium.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V082",
-   "age": 58,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 0,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true,
-    "fluct": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "autoimmune",
-    "stroke",
-    "sz"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. Acute ischemic stroke\n2. Seizure (postictal state or non-convulsive status)\n3. Autoimmune/inflammatory encephalopathy due to [specify etiology]",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V083",
-   "age": 84,
-   "sex": "M",
-   "acute": "yes",
    "rass": -3,
-   "tool": "cam",
+   "tool": "camicu",
    "feats": {
     "fluct": true
    },
    "dem": false,
    "flags": [
-    "mening"
-   ],
-   "causes": [
-    "sz"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hypoactive",
-    "note": "Seizure (postictal state or non-convulsive status), presenting with hypoactive subsyndromal delirium.",
-    "nextSteps": [
-     "Fever with neck stiffness: lumbar puncture."
-    ]
-   }
-  },
-  {
-   "id": "V084",
-   "age": 55,
-   "sex": "M",
-   "acute": "yes",
-   "rass": -3,
-   "tool": "camicu",
-   "feats": {},
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "tbi"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hypoactive",
-    "note": "Traumatic brain injury or subdural hematoma, presenting with hypoactive subsyndromal delirium.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V085",
-   "age": 23,
-   "sex": "M",
-   "acute": "no",
-   "rass": -2,
-   "tool": "camicu",
-   "feats": {},
-   "dem": true,
-   "flags": [
-    "mening",
+    "focal",
     "fall"
    ],
    "causes": [
-    "etohx",
-    "tumor"
+    "cns",
+    "drugx",
+    "nutritional"
    ],
    "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Dementia at baseline; acute encephalopathy not supported at this time.",
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": [
-     "Fever with neck stiffness: lumbar puncture.",
+     "Focal or one-sided signs: urgent CT or MRI.",
      "Fall or head injury on blood thinners: urgent head CT."
     ]
    }
   },
   {
-   "id": "V086",
-   "age": 71,
+   "id": "V066",
+   "age": 36,
    "sex": "F",
    "acute": "yes",
-   "rass": -1,
-   "tool": "cam",
+   "rass": 0,
+   "tool": "camicu",
    "feats": {
-    "disorg": true,
     "fluct": true
    },
    "dem": false,
-   "flags": [],
+   "flags": [
+    "focal",
+    "mening"
+   ],
    "causes": [
-    "autoimmune",
-    "tbi",
-    "toxic"
+    "drugwd",
+    "etohwd",
+    "ich",
+    "septic"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
-    "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Traumatic brain injury or subdural hematoma\n2. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n3. Toxic encephalopathy due to [specify etiology]",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V087",
-   "age": 70,
-   "sex": "M",
-   "acute": "no",
-   "rass": 2,
-   "tool": "cam",
-   "feats": {
-    "fluct": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [
-    "focal"
-   ],
-   "causes": [],
-   "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI."
-    ]
-   }
-  },
-  {
-   "id": "V088",
-   "age": 87,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 2,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true,
-    "fluct": true,
-    "inatt": true
-   },
-   "dem": true,
-   "flags": [
-    "fall"
-   ],
-   "causes": [],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Possible delirium on top of dementia",
-    "subtype": "hyperactive",
-    "note": "Possible hyperactive delirium superimposed on dementia, etiology not yet identified.",
-    "nextSteps": [
-     "Fall or head injury on blood thinners: urgent head CT.",
-     "No cause named yet: consider brain imaging."
-    ]
-   }
-  },
-  {
-   "id": "V089",
-   "age": 74,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 2,
-   "tool": "camicu",
-   "feats": {
-    "inatt": true
-   },
-   "dem": true,
-   "flags": [
-    "focal",
-    "mening"
-   ],
-   "causes": [],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Possible delirium on top of dementia",
-    "subtype": "hyperactive",
-    "note": "Possible hyperactive delirium superimposed on dementia, etiology not yet identified.",
+    "subtype": "mixed or undetermined",
+    "note": "Multifactorial subsyndromal delirium:\n1. Intracerebral hemorrhage (ICH)\n2. Septic encephalopathy due to [specify etiology]\n3. Alcohol withdrawal\n4. Drug withdrawal",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI.",
-     "Fever with neck stiffness: lumbar puncture.",
-     "No cause named yet: consider brain imaging."
+     "Fever with neck stiffness: lumbar puncture."
     ]
    }
   },
   {
-   "id": "V090",
-   "age": 59,
+   "id": "V067",
+   "age": 81,
    "sex": "F",
    "acute": "yes",
    "rass": -5,
    "tool": "cam",
    "feats": {},
    "dem": false,
-   "flags": [
-    "fall"
-   ],
+   "flags": [],
    "causes": [
-    "nutritional",
-    "septic"
+    "drugx"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Coma",
     "subtype": "",
-    "note": "Multifactorial coma:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Septic encephalopathy due to [specify etiology]",
-    "nextSteps": [
-     "Fall or head injury on blood thinners: urgent head CT."
-    ]
+    "note": "Drug intoxication/overdose due to [specify drug], presenting with coma.",
+    "nextSteps": []
    }
   },
   {
-   "id": "V091",
-   "age": 19,
-   "sex": "M",
-   "acute": "yes",
-   "rass": 2,
-   "tool": "cam",
+   "id": "V068",
+   "age": 46,
+   "sex": "F",
+   "acute": "no",
+   "rass": 0,
+   "tool": "camicu",
    "feats": {
     "disorg": true,
     "fluct": true,
     "inatt": true
    },
-   "dem": false,
-   "flags": [
-    "mening"
-   ],
-   "causes": [
-    "cns",
-    "tumor"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Brain tumor or mass\n2. Primary CNS infection (meningitis or encephalitis)",
-    "nextSteps": [
-     "Fever with neck stiffness: lumbar puncture."
-    ]
-   }
-  },
-  {
-   "id": "V092",
-   "age": 36,
-   "sex": "M",
-   "acute": "yes",
-   "rass": 0,
-   "tool": "cam",
-   "feats": {
-    "fluct": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "drugwd"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Drug withdrawal, presenting with subsyndromal delirium.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V093",
-   "age": 25,
-   "sex": "F",
-   "acute": "no",
-   "rass": 4,
-   "tool": "cam",
-   "feats": {
-    "disorg": true,
-    "fluct": true
-   },
    "dem": true,
    "flags": [],
    "causes": [
-    "autoimmune",
-    "vascular"
+    "drugwd",
+    "stroke",
+    "toxidrome"
    ],
    "expected": {
     "level": 0,
@@ -2538,19 +1891,308 @@
    }
   },
   {
-   "id": "V094",
-   "age": 94,
-   "sex": "M",
+   "id": "V069",
+   "age": 31,
+   "sex": "F",
+   "acute": "unsure",
+   "rass": -2,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true,
+    "fluct": true,
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "unk"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hypoactive",
+    "note": "Hypoactive delirium, etiology not yet identified.",
+    "nextSteps": [
+     "No cause named yet: consider brain imaging."
+    ]
+   }
+  },
+  {
+   "id": "V070",
+   "age": 39,
+   "sex": "F",
+   "acute": "no",
+   "rass": -3,
+   "tool": "camicu",
+   "feats": {
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [
+    "focal"
+   ],
+   "causes": [
+    "sdh"
+   ],
+   "expected": {
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Acute encephalopathy unlikely",
+    "subtype": "",
+    "note": "Acute encephalopathy not supported at this time.",
+    "nextSteps": [
+     "Focal or one-sided signs: urgent CT or MRI."
+    ]
+   }
+  },
+  {
+   "id": "V071",
+   "age": 63,
+   "sex": "F",
+   "acute": "yes",
+   "rass": 2,
+   "tool": "camicu",
+   "feats": {
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "cns",
+    "sah",
+    "stroke",
+    "tbi",
+    "toxidrome"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hyperactive",
+    "note": "Multifactorial hyperactive delirium:\n1. Acute ischemic stroke\n2. Primary CNS infection (meningitis or encephalitis)\n3. Subarachnoid hemorrhage (SAH)\n4. Traumatic brain injury (TBI)\n5. Toxidrome: [specify toxidrome]",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V072",
+   "age": 98,
+   "sex": "F",
+   "acute": "yes",
+   "rass": -1,
+   "tool": "cam",
+   "feats": {
+    "disorg": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "cns"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Primary CNS infection (meningitis or encephalitis), presenting with hypoactive subsyndromal delirium.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V073",
+   "age": 61,
+   "sex": "F",
    "acute": "yes",
    "rass": -1,
    "tool": "camicu",
    "feats": {
     "disorg": true,
+    "fluct": true,
+    "inatt": true
+   },
+   "dem": true,
+   "flags": [],
+   "causes": [
+    "cns",
+    "etohwd"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Possible delirium on top of dementia",
+    "subtype": "hypoactive",
+    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Alcohol withdrawal",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V074",
+   "age": 59,
+   "sex": "M",
+   "acute": "yes",
+   "rass": 4,
+   "tool": "cam",
+   "feats": {},
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "etohwd",
+    "nutritional",
+    "sz"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hyperactive",
+    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Seizure (postictal state or non-convulsive status)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V075",
+   "age": 70,
+   "sex": "M",
+   "acute": "unsure",
+   "rass": -3,
+   "tool": "cam",
+   "feats": {},
+   "dem": false,
+   "flags": [
+    "focal"
+   ],
+   "causes": [
+    "drugwd",
+    "sdh",
+    "stroke"
+   ],
+   "expected": {
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Acute encephalopathy not supported at this time.",
+    "nextSteps": [
+     "Focal or one-sided signs: urgent CT or MRI."
+    ]
+   }
+  },
+  {
+   "id": "V076",
+   "age": 31,
+   "sex": "M",
+   "acute": "yes",
+   "rass": -3,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true,
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "cns"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hypoactive",
+    "note": "Primary CNS infection (meningitis or encephalitis), presenting with hypoactive delirium.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V077",
+   "age": 27,
+   "sex": "M",
+   "acute": "no",
+   "rass": -2,
+   "tool": "camicu",
+   "feats": {
     "fluct": true
    },
    "dem": true,
+   "flags": [],
+   "causes": [
+    "drugwd"
+   ],
+   "expected": {
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Acute encephalopathy unlikely",
+    "subtype": "",
+    "note": "Dementia at baseline; acute encephalopathy not supported at this time.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V078",
+   "age": 34,
+   "sex": "M",
+   "acute": "unsure",
+   "rass": -3,
+   "tool": "cam",
+   "feats": {
+    "fluct": true,
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "etohwd",
+    "tumor"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hypoactive",
+    "note": "Multifactorial hypoactive delirium:\n1. Brain tumor or mass\n2. Alcohol withdrawal",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V079",
+   "age": 26,
+   "sex": "F",
+   "acute": "yes",
+   "rass": 4,
+   "tool": "cam",
+   "feats": {
+    "disorg": true,
+    "inatt": true
+   },
+   "dem": false,
    "flags": [
     "seiz"
+   ],
+   "causes": [
+    "tumor"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hyperactive",
+    "note": "Brain tumor or mass, presenting with hyperactive delirium.",
+    "nextSteps": [
+     "Seizure, twitching or myoclonus: EEG for non-convulsive status."
+    ]
+   }
+  },
+  {
+   "id": "V080",
+   "age": 86,
+   "sex": "M",
+   "acute": "yes",
+   "rass": -2,
+   "tool": "cam",
+   "feats": {},
+   "dem": true,
+   "flags": [
+    "focal",
+    "mening"
    ],
    "causes": [
     "toxidrome"
@@ -2562,70 +2204,435 @@
     "subtype": "hypoactive",
     "note": "Toxidrome: [specify toxidrome], presenting with hypoactive subsyndromal delirium superimposed on dementia.",
     "nextSteps": [
-     "Seizure, twitching or myoclonus: EEG for non-convulsive status."
+     "Focal or one-sided signs: urgent CT or MRI.",
+     "Fever with neck stiffness: lumbar puncture."
     ]
    }
   },
   {
-   "id": "V095",
-   "age": 58,
+   "id": "V081",
+   "age": 41,
    "sex": "M",
-   "acute": "no",
-   "rass": 3,
+   "acute": "yes",
+   "rass": -2,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true,
+    "fluct": true,
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hypoactive",
+    "note": "Hypoactive delirium, etiology not yet identified.",
+    "nextSteps": [
+     "No cause named yet: consider brain imaging."
+    ]
+   }
+  },
+  {
+   "id": "V082",
+   "age": 54,
+   "sex": "F",
+   "acute": "unsure",
+   "rass": 0,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true,
+    "fluct": true,
+    "inatt": true
+   },
+   "dem": true,
+   "flags": [
+    "fall"
+   ],
+   "causes": [
+    "metabolic",
+    "vascular"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Possible delirium on top of dementia",
+    "subtype": "mixed or undetermined",
+    "note": "Multifactorial possible delirium superimposed on dementia:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Vascular encephalopathy due to [specify etiology]",
+    "nextSteps": [
+     "Fall or head injury on blood thinners: urgent head CT."
+    ]
+   }
+  },
+  {
+   "id": "V083",
+   "age": 18,
+   "sex": "M",
+   "acute": "yes",
+   "rass": -1,
    "tool": "camicu",
    "feats": {
     "disorg": true,
     "inatt": true
    },
-   "dem": false,
-   "flags": [
-    "seiz"
-   ],
+   "dem": true,
+   "flags": [],
    "causes": [
     "drugwd",
-    "etohx"
+    "sdh",
+    "stroke",
+    "sz",
+    "vascular"
    ],
    "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Possible delirium on top of dementia",
+    "subtype": "hypoactive",
+    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Acute ischemic stroke\n2. Seizure (postictal state or non-convulsive status)\n3. Subdural hematoma (SDH)\n4. Vascular encephalopathy due to [specify etiology]\n5. Drug withdrawal",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V084",
+   "age": 89,
+   "sex": "F",
+   "acute": "yes",
+   "rass": -1,
+   "tool": "camicu",
+   "feats": {},
+   "dem": false,
+   "flags": [],
+   "causes": [],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Hypoactive subsyndromal delirium, etiology not yet identified.",
     "nextSteps": [
-     "Seizure, twitching or myoclonus: EEG for non-convulsive status."
+     "No cause named yet: consider brain imaging."
     ]
    }
   },
   {
-   "id": "V096",
-   "age": 89,
-   "sex": "M",
+   "id": "V085",
+   "age": 98,
+   "sex": "F",
    "acute": "yes",
-   "rass": -1,
-   "tool": "cam",
+   "rass": 0,
+   "tool": "camicu",
+   "feats": {
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "toxic"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Toxic encephalopathy due to [specify etiology], manifesting as subsyndromal delirium.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V086",
+   "age": 47,
+   "sex": "F",
+   "acute": "yes",
+   "rass": -2,
+   "tool": "camicu",
    "feats": {
     "disorg": true,
+    "fluct": true,
     "inatt": true
    },
    "dem": false,
-   "flags": [
-    "focal"
-   ],
+   "flags": [],
    "causes": [
-    "cns",
-    "etohx",
-    "stroke",
-    "sz",
-    "vascular"
+    "unk"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Acute ischemic stroke\n2. Primary CNS infection (meningitis or encephalitis)\n3. Seizure (postictal state or non-convulsive status)\n4. Vascular/hemodynamic encephalopathy due to [specify etiology]\n5. Alcohol intoxication",
+    "note": "Hypoactive delirium, etiology not yet identified.",
+    "nextSteps": [
+     "No cause named yet: consider brain imaging."
+    ]
+   }
+  },
+  {
+   "id": "V087",
+   "age": 91,
+   "sex": "M",
+   "acute": "yes",
+   "rass": 0,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true,
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "unk"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Delirium, etiology not yet identified.",
+    "nextSteps": [
+     "No cause named yet: consider brain imaging."
+    ]
+   }
+  },
+  {
+   "id": "V088",
+   "age": 23,
+   "sex": "F",
+   "acute": "unsure",
+   "rass": -1,
+   "tool": "cam",
+   "feats": {
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "metabolic",
+    "septic"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Septic encephalopathy due to [specify etiology]",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V089",
+   "age": 39,
+   "sex": "M",
+   "acute": "yes",
+   "rass": -2,
+   "tool": "cam",
+   "feats": {
+    "fluct": true,
+    "inatt": true
+   },
+   "dem": true,
+   "flags": [
+    "focal",
+    "fall"
+   ],
+   "causes": [
+    "cns",
+    "drugwd",
+    "nutritional",
+    "septic"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Possible delirium on top of dementia",
+    "subtype": "hypoactive",
+    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Septic encephalopathy due to [specify etiology]\n4. Drug withdrawal",
+    "nextSteps": [
+     "Focal or one-sided signs: urgent CT or MRI.",
+     "Fall or head injury on blood thinners: urgent head CT."
+    ]
+   }
+  },
+  {
+   "id": "V090",
+   "age": 44,
+   "sex": "F",
+   "acute": "yes",
+   "rass": 0,
+   "tool": "cam",
+   "feats": {
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "ich"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Intracerebral hemorrhage (ICH), presenting with subsyndromal delirium.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V091",
+   "age": 23,
+   "sex": "F",
+   "acute": "unsure",
+   "rass": 0,
+   "tool": "cam",
+   "feats": {},
+   "dem": false,
+   "flags": [
+    "focal"
+   ],
+   "causes": [
+    "vascular"
+   ],
+   "expected": {
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "No delirium features",
+    "subtype": "",
+    "note": "Acute encephalopathy not supported at this time.",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI."
+    ]
+   }
+  },
+  {
+   "id": "V092",
+   "age": 40,
+   "sex": "M",
+   "acute": "yes",
+   "rass": -4,
+   "tool": "cam",
+   "feats": {},
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "unk"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Stupor/coma",
+    "subtype": "",
+    "note": "Stupor/coma, etiology not yet identified.",
+    "nextSteps": [
+     "No cause named yet: consider brain imaging."
+    ]
+   }
+  },
+  {
+   "id": "V093",
+   "age": 82,
+   "sex": "M",
+   "acute": "unsure",
+   "rass": -2,
+   "tool": "cam",
+   "feats": {
+    "disorg": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "autoimmune",
+    "stroke"
+   ],
+   "expected": {
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Acute encephalopathy not supported at this time.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V094",
+   "age": 21,
+   "sex": "M",
+   "acute": "unsure",
+   "rass": 3,
+   "tool": "camicu",
+   "feats": {
+    "fluct": true,
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hyperactive",
+    "note": "Hyperactive delirium, etiology not yet identified.",
+    "nextSteps": [
+     "No cause named yet: consider brain imaging."
+    ]
+   }
+  },
+  {
+   "id": "V095",
+   "age": 50,
+   "sex": "M",
+   "acute": "unsure",
+   "rass": 2,
+   "tool": "cam",
+   "feats": {
+    "disorg": true,
+    "fluct": true,
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "unk"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hyperactive",
+    "note": "Hyperactive delirium, etiology not yet identified.",
+    "nextSteps": [
+     "No cause named yet: consider brain imaging."
+    ]
+   }
+  },
+  {
+   "id": "V096",
+   "age": 49,
+   "sex": "F",
+   "acute": "unsure",
+   "rass": -2,
+   "tool": "cam",
+   "feats": {
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [
+    "fall"
+   ],
+   "causes": [
+    "nutritional",
+    "tumor"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hypoactive",
+    "note": "Multifactorial hypoactive delirium:\n1. Brain tumor or mass\n2. Nutritional encephalopathy due to [specify etiology]",
+    "nextSteps": [
+     "Fall or head injury on blood thinners: urgent head CT."
     ]
    }
   },
@@ -2633,30 +2640,29 @@
    "id": "V097",
    "age": 68,
    "sex": "M",
-   "acute": "yes",
-   "rass": -2,
-   "tool": "camicu",
+   "acute": "unsure",
+   "rass": 2,
+   "tool": "cam",
    "feats": {
     "disorg": true,
+    "fluct": true,
     "inatt": true
    },
    "dem": false,
    "flags": [
-    "focal",
-    "fall"
+    "focal"
    ],
    "causes": [
-    "toxidrome"
+    "tbi"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
-    "subtype": "hypoactive",
-    "note": "Toxidrome: [specify toxidrome], presenting with hypoactive delirium.",
+    "subtype": "hyperactive",
+    "note": "Traumatic brain injury (TBI), presenting with hyperactive delirium.",
     "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI.",
-     "Fall or head injury on blood thinners: urgent head CT."
+     "Focal or one-sided signs: urgent CT or MRI."
     ]
    }
   },
@@ -2671,14 +2677,14 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "septic"
+    "sah"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Septic encephalopathy due to [specify etiology], manifesting as hyperactive subsyndromal delirium.",
+    "note": "Subarachnoid hemorrhage (SAH), presenting with hyperactive subsyndromal delirium.",
     "nextSteps": []
    }
   },
@@ -2698,14 +2704,14 @@
     "mening"
    ],
    "causes": [
-    "etohwd"
+    "etohx"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Alcohol withdrawal, presenting with hypoactive subsyndromal delirium.",
+    "note": "Alcohol intoxication, presenting with hypoactive subsyndromal delirium.",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -2753,14 +2759,14 @@
     "fall"
    ],
    "causes": [
-    "toxidrome"
+    "tbi"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Toxidrome: [specify toxidrome], presenting with hyperactive subsyndromal delirium.",
+    "note": "Traumatic brain injury (TBI), presenting with hyperactive subsyndromal delirium.",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
@@ -2783,8 +2789,8 @@
    ],
    "causes": [
     "autoimmune",
-    "etohx",
-    "toxidrome"
+    "sz",
+    "tbi"
    ],
    "expected": {
     "level": 0,
@@ -2812,15 +2818,15 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "bleed",
-    "drugwd"
+    "cns",
+    "drugx"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. CNS bleed (ICH or SAH)\n2. Drug withdrawal",
+    "note": "Multifactorial hyperactive delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": []
    }
   },
@@ -2866,18 +2872,18 @@
     "focal"
    ],
    "causes": [
-    "drugx",
+    "etohwd",
     "metabolic",
-    "sz",
-    "toxic",
-    "tumor"
+    "sah",
+    "septic",
+    "tbi"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Brain tumor or mass\n2. Seizure (postictal state or non-convulsive status)\n3. Metabolic encephalopathy due to [specify etiology]\n4. Toxic encephalopathy due to [specify etiology]\n5. Drug intoxication due to [specify drug]",
+    "note": "Multifactorial hypoactive delirium:\n1. Subarachnoid hemorrhage (SAH)\n2. Traumatic brain injury (TBI)\n3. Metabolic encephalopathy due to [specify etiology]\n4. Septic encephalopathy due to [specify etiology]\n5. Alcohol withdrawal",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI."
     ]
@@ -2885,7 +2891,7 @@
   },
   {
    "id": "V106",
-   "age": 72,
+   "age": 94,
    "sex": "F",
    "acute": "yes",
    "rass": 4,
@@ -2897,76 +2903,73 @@
    "flags": [],
    "causes": [
     "autoimmune",
-    "nutritional",
-    "septic",
-    "toxidrome",
-    "tumor"
+    "cns",
+    "sah",
+    "sz",
+    "tbi"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Brain tumor or mass\n2. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n3. Nutritional encephalopathy due to [specify etiology]\n4. Septic encephalopathy due to [specify etiology]\n5. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hyperactive delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Seizure (postictal state or non-convulsive status)\n3. Subarachnoid hemorrhage (SAH)\n4. Traumatic brain injury (TBI)\n5. Autoimmune encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
   {
    "id": "V107",
-   "age": 45,
-   "sex": "M",
+   "age": 51,
+   "sex": "F",
    "acute": "yes",
-   "rass": 3,
-   "tool": "cam",
+   "rass": 0,
+   "tool": "camicu",
    "feats": {
-    "disorg": true,
-    "fluct": true,
-    "inatt": true
+    "fluct": true
    },
    "dem": false,
    "flags": [
-    "fall"
+    "mening"
    ],
    "causes": [
-    "cns",
-    "drugx",
-    "tumor"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Brain tumor or mass\n2. Primary CNS infection (meningitis or encephalitis)\n3. Drug intoxication due to [specify drug]",
-    "nextSteps": [
-     "Fall or head injury on blood thinners: urgent head CT."
-    ]
-   }
-  },
-  {
-   "id": "V108",
-   "age": 39,
-   "sex": "M",
-   "acute": "yes",
-   "rass": 0,
-   "tool": "cam",
-   "feats": {
-    "disorg": true,
-    "fluct": true
-   },
-   "dem": true,
-   "flags": [],
-   "causes": [
-    "etohx",
-    "septic"
+    "drugwd",
+    "etohwd"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium superimposed on dementia:\n1. Septic encephalopathy due to [specify etiology]\n2. Alcohol intoxication",
-    "nextSteps": []
+    "note": "Multifactorial subsyndromal delirium:\n1. Alcohol withdrawal\n2. Drug withdrawal",
+    "nextSteps": [
+     "Fever with neck stiffness: lumbar puncture."
+    ]
+   }
+  },
+  {
+   "id": "V108",
+   "age": 87,
+   "sex": "M",
+   "acute": "no",
+   "rass": 1,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true
+   },
+   "dem": false,
+   "flags": [
+    "mening"
+   ],
+   "causes": [],
+   "expected": {
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Acute encephalopathy unlikely",
+    "subtype": "",
+    "note": "Acute encephalopathy not supported at this time.",
+    "nextSteps": [
+     "Fever with neck stiffness: lumbar puncture."
+    ]
    }
   },
   {
@@ -2974,24 +2977,26 @@
    "age": 77,
    "sex": "F",
    "acute": "yes",
-   "rass": -3,
-   "tool": "camicu",
+   "rass": 0,
+   "tool": "cam",
    "feats": {
-    "inatt": true
+    "fluct": true
    },
-   "dem": true,
+   "dem": false,
    "flags": [],
    "causes": [
-    "toxic",
-    "toxidrome",
-    "vascular"
+    "nutritional",
+    "stroke",
+    "sz",
+    "tbi",
+    "toxidrome"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
-    "phenotype": "Possible delirium on top of dementia",
-    "subtype": "hypoactive",
-    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Toxic encephalopathy due to [specify etiology]\n2. Vascular/hemodynamic encephalopathy due to [specify etiology]\n3. Toxidrome: [specify toxidrome]",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Multifactorial subsyndromal delirium:\n1. Acute ischemic stroke\n2. Seizure (postictal state or non-convulsive status)\n3. Traumatic brain injury (TBI)\n4. Nutritional encephalopathy due to [specify etiology]\n5. Toxidrome: [specify toxidrome]",
     "nextSteps": []
    }
   },
@@ -3011,14 +3016,14 @@
     "focal"
    ],
    "causes": [
-    "toxidrome"
+    "tbi"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Toxidrome: [specify toxidrome], presenting with hyperactive delirium.",
+    "note": "Traumatic brain injury (TBI), presenting with hyperactive delirium.",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI."
     ]
@@ -3026,7 +3031,7 @@
   },
   {
    "id": "V111",
-   "age": 80,
+   "age": 95,
    "sex": "F",
    "acute": "yes",
    "rass": 4,
@@ -3037,16 +3042,16 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "etohwd",
-    "toxic",
-    "toxidrome"
+    "etohx",
+    "sz",
+    "toxic"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Toxic encephalopathy due to [specify etiology]\n2. Alcohol withdrawal\n3. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hyperactive delirium:\n1. Seizure (postictal state or non-convulsive status)\n2. Toxic encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
     "nextSteps": []
    }
   },
@@ -3108,8 +3113,8 @@
   },
   {
    "id": "V114",
-   "age": 38,
-   "sex": "M",
+   "age": 78,
+   "sex": "F",
    "acute": "no",
    "rass": -2,
    "tool": "cam",
@@ -3124,10 +3129,10 @@
    ],
    "causes": [
     "autoimmune",
-    "stroke",
-    "sz",
-    "tumor",
-    "vascular"
+    "etohx",
+    "tbi",
+    "toxic",
+    "tumor"
    ],
    "expected": {
     "level": 0,
@@ -3142,30 +3147,28 @@
   },
   {
    "id": "V115",
-   "age": 41,
+   "age": 87,
    "sex": "F",
-   "acute": "unsure",
-   "rass": -2,
-   "tool": "camicu",
+   "acute": "no",
+   "rass": -3,
+   "tool": "cam",
    "feats": {
-    "disorg": true
+    "disorg": true,
+    "fluct": true
    },
    "dem": false,
    "flags": [
-    "mening"
+    "focal"
    ],
-   "causes": [
-    "drugwd",
-    "tumor"
-   ],
+   "causes": [],
    "expected": {
     "level": 0,
     "levelText": "Low likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hypoactive",
+    "phenotype": "Acute encephalopathy unlikely",
+    "subtype": "",
     "note": "Acute encephalopathy not supported at this time.",
     "nextSteps": [
-     "Fever with neck stiffness: lumbar puncture."
+     "Focal or one-sided signs: urgent CT or MRI."
     ]
    }
   },
@@ -3200,8 +3203,8 @@
   },
   {
    "id": "V117",
-   "age": 62,
-   "sex": "F",
+   "age": 23,
+   "sex": "M",
    "acute": "yes",
    "rass": 4,
    "tool": "cam",
@@ -3213,62 +3216,71 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "bleed"
+    "vascular"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "CNS bleed (ICH or SAH), presenting with hyperactive delirium.",
+    "note": "Vascular encephalopathy due to [specify etiology], manifesting as hyperactive delirium.",
     "nextSteps": []
    }
   },
   {
    "id": "V118",
-   "age": 53,
-   "sex": "M",
+   "age": 70,
+   "sex": "F",
    "acute": "yes",
-   "rass": -5,
+   "rass": 3,
    "tool": "camicu",
-   "feats": {},
-   "dem": true,
+   "feats": {
+    "disorg": true,
+    "inatt": true
+   },
+   "dem": false,
    "flags": [],
    "causes": [
     "autoimmune",
-    "cns",
-    "toxidrome",
-    "vascular"
+    "etohwd",
+    "nutritional",
+    "toxidrome"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
-    "phenotype": "Coma",
-    "subtype": "",
-    "note": "Multifactorial coma with underlying dementia:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n3. Vascular/hemodynamic encephalopathy due to [specify etiology]\n4. Toxidrome: [specify toxidrome]",
+    "phenotype": "Delirium",
+    "subtype": "hyperactive",
+    "note": "Multifactorial hyperactive delirium:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal\n4. Toxidrome: [specify toxidrome]",
     "nextSteps": []
    }
   },
   {
    "id": "V119",
-   "age": 85,
+   "age": 92,
    "sex": "M",
-   "acute": "no",
-   "rass": -3,
-   "tool": "cam",
-   "feats": {
-    "fluct": true
-   },
+   "acute": "unsure",
+   "rass": -5,
+   "tool": "camicu",
+   "feats": {},
    "dem": false,
-   "flags": [],
-   "causes": [],
+   "flags": [
+    "focal"
+   ],
+   "causes": [
+    "etohx",
+    "sdh",
+    "toxidrome"
+   ],
    "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Coma",
     "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
-    "nextSteps": []
+    "note": "Multifactorial coma:\n1. Subdural hematoma (SDH)\n2. Alcohol intoxication\n3. Toxidrome: [specify toxidrome]",
+    "nextSteps": [
+     "Focal or one-sided signs: urgent CT or MRI."
+    ]
    }
   },
   {
@@ -3276,22 +3288,23 @@
    "age": 98,
    "sex": "M",
    "acute": "yes",
-   "rass": -2,
+   "rass": -1,
    "tool": "camicu",
    "feats": {
-    "inatt": true
+    "disorg": true,
+    "fluct": true
    },
-   "dem": true,
+   "dem": false,
    "flags": [],
    "causes": [
-    "sz"
+    "septic"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
-    "phenotype": "Possible delirium on top of dementia",
+    "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Seizure (postictal state or non-convulsive status), presenting with possible hypoactive delirium superimposed on dementia.",
+    "note": "Septic encephalopathy due to [specify etiology], manifesting as hypoactive subsyndromal delirium.",
     "nextSteps": []
    }
   },
@@ -3337,8 +3350,8 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "etohwd",
-    "tbi"
+    "etohx",
+    "stroke"
    ],
    "expected": {
     "level": 0,
@@ -3363,14 +3376,14 @@
    "flags": [],
    "causes": [
     "autoimmune",
-    "drugwd"
+    "drugx"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n2. Drug withdrawal",
+    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": []
    }
   },
@@ -3388,20 +3401,20 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "drugx"
+    "etohwd"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Drug intoxication due to [specify drug], presenting with hyperactive delirium.",
+    "note": "Alcohol withdrawal, presenting with hyperactive delirium.",
     "nextSteps": []
    }
   },
   {
    "id": "V125",
-   "age": 40,
+   "age": 89,
    "sex": "F",
    "acute": "yes",
    "rass": 3,
@@ -3415,15 +3428,15 @@
     "fall"
    ],
    "causes": [
-    "bleed",
-    "nutritional"
+    "nutritional",
+    "toxidrome"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. CNS bleed (ICH or SAH)\n2. Nutritional encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Toxidrome: [specify toxidrome]",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
@@ -3431,80 +3444,80 @@
   },
   {
    "id": "V126",
-   "age": 39,
-   "sex": "M",
-   "acute": "no",
-   "rass": -3,
+   "age": 83,
+   "sex": "F",
+   "acute": "unsure",
+   "rass": 4,
    "tool": "camicu",
    "feats": {
-    "disorg": true,
-    "fluct": true,
-    "inatt": true
+    "disorg": true
    },
-   "dem": false,
+   "dem": true,
    "flags": [],
    "causes": [
-    "drugwd"
+    "sdh"
    ],
    "expected": {
     "level": 0,
     "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hyperactive",
+    "note": "Acute encephalopathy not supported at this time; known dementia.",
     "nextSteps": []
    }
   },
   {
    "id": "V127",
-   "age": 73,
+   "age": 97,
    "sex": "F",
    "acute": "yes",
-   "rass": -2,
-   "tool": "cam",
-   "feats": {
-    "disorg": true
-   },
+   "rass": -5,
+   "tool": "camicu",
+   "feats": {},
    "dem": false,
    "flags": [
-    "focal",
     "fall"
    ],
-   "causes": [],
+   "causes": [
+    "cns",
+    "drugx",
+    "etohwd",
+    "ich"
+   ],
    "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hypoactive",
-    "note": "Hypoactive subsyndromal delirium, etiology not yet identified.",
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Coma",
+    "subtype": "",
+    "note": "Multifactorial coma:\n1. Intracerebral hemorrhage (ICH)\n2. Primary CNS infection (meningitis or encephalitis)\n3. Alcohol withdrawal\n4. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI.",
-     "Fall or head injury on blood thinners: urgent head CT.",
-     "No cause named yet: consider brain imaging."
+     "Fall or head injury on blood thinners: urgent head CT."
     ]
    }
   },
   {
    "id": "V128",
-   "age": 59,
+   "age": 67,
    "sex": "M",
    "acute": "yes",
-   "rass": 0,
-   "tool": "camicu",
-   "feats": {},
-   "dem": true,
+   "rass": -2,
+   "tool": "cam",
+   "feats": {
+    "disorg": true,
+    "fluct": true
+   },
+   "dem": false,
    "flags": [],
    "causes": [
-    "etohwd",
-    "etohx",
-    "tbi"
+    "ich",
+    "vascular"
    ],
    "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "No delirium features",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time; known dementia.",
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Intracerebral hemorrhage (ICH)\n2. Vascular encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -3512,35 +3525,42 @@
    "id": "V129",
    "age": 43,
    "sex": "F",
-   "acute": "yes",
+   "acute": "unsure",
    "rass": 0,
    "tool": "cam",
    "feats": {
+    "disorg": true,
     "fluct": true,
     "inatt": true
    },
    "dem": false,
    "flags": [
-    "seiz"
+    "seiz",
+    "fall"
    ],
    "causes": [
-    "cns"
+    "drugwd",
+    "stroke",
+    "toxic",
+    "tumor",
+    "vascular"
    ],
    "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
     "subtype": "mixed or undetermined",
-    "note": "Primary CNS infection (meningitis or encephalitis), presenting with subsyndromal delirium.",
+    "note": "Multifactorial delirium:\n1. Acute ischemic stroke\n2. Brain tumor or mass\n3. Toxic encephalopathy due to [specify etiology]\n4. Vascular encephalopathy due to [specify etiology]\n5. Drug withdrawal",
     "nextSteps": [
-     "Seizure, twitching or myoclonus: EEG for non-convulsive status."
+     "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
+     "Fall or head injury on blood thinners: urgent head CT."
     ]
    }
   },
   {
    "id": "V130",
-   "age": 81,
-   "sex": "F",
+   "age": 49,
+   "sex": "M",
    "acute": "no",
    "rass": -3,
    "tool": "cam",
@@ -3553,11 +3573,11 @@
     "seiz"
    ],
    "causes": [
-    "cns",
     "etohwd",
     "metabolic",
-    "stroke",
-    "toxic"
+    "septic",
+    "sz",
+    "vascular"
    ],
    "expected": {
     "level": 0,
@@ -3573,10 +3593,10 @@
   },
   {
    "id": "V131",
-   "age": 28,
+   "age": 51,
    "sex": "F",
-   "acute": "yes",
-   "rass": -1,
+   "acute": "unsure",
+   "rass": 0,
    "tool": "camicu",
    "feats": {
     "fluct": true
@@ -3584,15 +3604,14 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "nutritional",
-    "tbi"
+    "stroke"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
-    "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Traumatic brain injury or subdural hematoma\n2. Nutritional encephalopathy due to [specify etiology]",
+    "subtype": "mixed or undetermined",
+    "note": "Acute ischemic stroke, presenting with subsyndromal delirium.",
     "nextSteps": []
    }
   },
@@ -3601,110 +3620,118 @@
    "age": 47,
    "sex": "M",
    "acute": "unsure",
-   "rass": -2,
-   "tool": "camicu",
+   "rass": 1,
+   "tool": "cam",
    "feats": {
-    "fluct": true,
-    "inatt": true
+    "disorg": true
    },
    "dem": false,
    "flags": [],
    "causes": [
-    "drugwd",
-    "tbi",
-    "tumor"
+    "stroke"
    ],
    "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Brain tumor or mass\n2. Traumatic brain injury or subdural hematoma\n3. Drug withdrawal",
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hyperactive",
+    "note": "Acute encephalopathy not supported at this time.",
     "nextSteps": []
    }
   },
   {
    "id": "V133",
-   "age": 36,
-   "sex": "M",
+   "age": 43,
+   "sex": "F",
    "acute": "yes",
-   "rass": 0,
-   "tool": "cam",
+   "rass": 1,
+   "tool": "camicu",
    "feats": {
-    "fluct": true,
+    "disorg": true,
     "inatt": true
    },
-   "dem": true,
-   "flags": [],
+   "dem": false,
+   "flags": [
+    "seiz"
+   ],
    "causes": [
-    "unk"
+    "drugx"
    ],
    "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Subsyndromal delirium superimposed on dementia, etiology not yet identified.",
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hyperactive",
+    "note": "Drug intoxication/overdose due to [specify drug], presenting with hyperactive delirium.",
     "nextSteps": [
-     "No cause named yet: consider brain imaging."
+     "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]
    }
   },
   {
    "id": "V134",
-   "age": 66,
-   "sex": "M",
-   "acute": "yes",
-   "rass": -4,
+   "age": 71,
+   "sex": "F",
+   "acute": "unsure",
+   "rass": 2,
    "tool": "camicu",
-   "feats": {},
-   "dem": true,
-   "flags": [],
+   "feats": {
+    "disorg": true
+   },
+   "dem": false,
+   "flags": [
+    "focal",
+    "mening"
+   ],
    "causes": [
-    "drugwd"
+    "autoimmune"
    ],
    "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Stupor/coma",
-    "subtype": "",
-    "note": "Drug withdrawal, presenting with stupor/coma with underlying dementia.",
-    "nextSteps": []
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hyperactive",
+    "note": "Acute encephalopathy not supported at this time.",
+    "nextSteps": [
+     "Focal or one-sided signs: urgent CT or MRI.",
+     "Fever with neck stiffness: lumbar puncture."
+    ]
    }
   },
   {
    "id": "V135",
-   "age": 84,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 4,
-   "tool": "cam",
+   "age": 97,
+   "sex": "M",
+   "acute": "unsure",
+   "rass": -1,
+   "tool": "camicu",
    "feats": {
     "inatt": true
    },
-   "dem": true,
+   "dem": false,
    "flags": [],
    "causes": [
-    "metabolic",
-    "sz",
-    "vascular"
+    "autoimmune",
+    "drugwd",
+    "etohwd",
+    "etohx"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
-    "phenotype": "Possible delirium on top of dementia",
-    "subtype": "hyperactive",
-    "note": "Multifactorial possible hyperactive delirium superimposed on dementia:\n1. Seizure (postictal state or non-convulsive status)\n2. Metabolic encephalopathy due to [specify etiology]\n3. Vascular/hemodynamic encephalopathy due to [specify etiology]",
+    "phenotype": "Delirium",
+    "subtype": "hypoactive",
+    "note": "Multifactorial hypoactive delirium:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Alcohol intoxication\n3. Alcohol withdrawal\n4. Drug withdrawal",
     "nextSteps": []
    }
   },
   {
    "id": "V136",
-   "age": 28,
+   "age": 93,
    "sex": "M",
-   "acute": "no",
-   "rass": 0,
-   "tool": "camicu",
+   "acute": "yes",
+   "rass": -2,
+   "tool": "cam",
    "feats": {
     "disorg": true,
     "inatt": true
@@ -3712,14 +3739,18 @@
    "dem": false,
    "flags": [],
    "causes": [
+    "autoimmune",
+    "drugwd",
+    "ich",
+    "sah",
     "toxidrome"
    ],
    "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hypoactive",
+    "note": "Multifactorial hypoactive delirium:\n1. Intracerebral hemorrhage (ICH)\n2. Subarachnoid hemorrhage (SAH)\n3. Autoimmune encephalopathy due to [specify etiology]\n4. Drug withdrawal\n5. Toxidrome: [specify toxidrome]",
     "nextSteps": []
    }
   },
@@ -3727,35 +3758,32 @@
    "id": "V137",
    "age": 84,
    "sex": "F",
-   "acute": "unsure",
+   "acute": "yes",
    "rass": 0,
    "tool": "camicu",
-   "feats": {},
+   "feats": {
+    "disorg": true,
+    "inatt": true
+   },
    "dem": false,
-   "flags": [
-    "seiz",
-    "fall"
-   ],
+   "flags": [],
    "causes": [
-    "drugwd",
-    "stroke",
-    "tbi"
+    "drugx",
+    "sdh",
+    "toxidrome"
    ],
    "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "No delirium features",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
-    "nextSteps": [
-     "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
-     "Fall or head injury on blood thinners: urgent head CT."
-    ]
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Multifactorial delirium:\n1. Subdural hematoma (SDH)\n2. Drug intoxication/overdose due to [specify drug]\n3. Toxidrome: [specify toxidrome]",
+    "nextSteps": []
    }
   },
   {
    "id": "V138",
-   "age": 70,
+   "age": 61,
    "sex": "M",
    "acute": "yes",
    "rass": -1,
@@ -3770,9 +3798,9 @@
     "focal"
    ],
    "causes": [
-    "autoimmune",
     "cns",
-    "etohwd",
+    "drugwd",
+    "etohx",
     "sz"
    ],
    "expected": {
@@ -3780,7 +3808,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Possible delirium on top of dementia",
     "subtype": "hypoactive",
-    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Seizure (postictal state or non-convulsive status)\n3. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n4. Alcohol withdrawal",
+    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Seizure (postictal state or non-convulsive status)\n3. Alcohol intoxication\n4. Drug withdrawal",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI."
     ]
@@ -3788,28 +3816,31 @@
   },
   {
    "id": "V139",
-   "age": 62,
+   "age": 45,
    "sex": "M",
    "acute": "yes",
    "rass": -3,
    "tool": "camicu",
-   "feats": {},
-   "dem": true,
+   "feats": {
+    "disorg": true,
+    "inatt": true
+   },
+   "dem": false,
    "flags": [
     "mening"
    ],
    "causes": [
-    "drugwd",
-    "drugx",
     "etohwd",
-    "etohx"
+    "ich",
+    "sdh",
+    "tumor"
    ],
    "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium superimposed on dementia:\n1. Alcohol intoxication\n2. Alcohol withdrawal\n3. Drug intoxication due to [specify drug]\n4. Drug withdrawal",
+    "note": "Multifactorial hypoactive delirium:\n1. Brain tumor or mass\n2. Intracerebral hemorrhage (ICH)\n3. Subdural hematoma (SDH)\n4. Alcohol withdrawal",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -3817,11 +3848,11 @@
   },
   {
    "id": "V140",
-   "age": 50,
+   "age": 60,
    "sex": "M",
    "acute": "yes",
-   "rass": -3,
-   "tool": "cam",
+   "rass": -2,
+   "tool": "camicu",
    "feats": {
     "disorg": true,
     "inatt": true
@@ -3829,512 +3860,110 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "etohwd"
+    "stroke"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Alcohol withdrawal, presenting with hypoactive delirium.",
+    "note": "Acute ischemic stroke, presenting with hypoactive delirium.",
     "nextSteps": []
    }
   },
   {
    "id": "V141",
-   "age": 45,
+   "age": 91,
    "sex": "M",
    "acute": "unsure",
-   "rass": -1,
+   "rass": 2,
    "tool": "camicu",
-   "feats": {},
+   "feats": {
+    "disorg": true
+   },
    "dem": false,
-   "flags": [
-    "focal"
-   ],
+   "flags": [],
    "causes": [
-    "unk"
+    "autoimmune",
+    "toxidrome"
    ],
    "expected": {
     "level": 0,
     "levelText": "Low likelihood",
     "phenotype": "Subsyndromal delirium",
-    "subtype": "hypoactive",
+    "subtype": "hyperactive",
     "note": "Acute encephalopathy not supported at this time.",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI."
-    ]
+    "nextSteps": []
    }
   },
   {
    "id": "V142",
-   "age": 47,
+   "age": 77,
    "sex": "M",
    "acute": "yes",
    "rass": 4,
    "tool": "cam",
    "feats": {
-    "inatt": true
+    "disorg": true,
+    "fluct": true
    },
    "dem": false,
-   "flags": [
-    "focal",
-    "seiz"
-   ],
+   "flags": [],
    "causes": [
+    "cns",
     "drugwd",
-    "septic"
+    "etohwd"
    ],
    "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Septic encephalopathy due to [specify etiology]\n2. Drug withdrawal",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI.",
-     "Seizure, twitching or myoclonus: EEG for non-convulsive status."
-    ]
+    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Alcohol withdrawal\n3. Drug withdrawal",
+    "nextSteps": []
    }
   },
   {
    "id": "V143",
-   "age": 22,
-   "sex": "M",
-   "acute": "unsure",
-   "rass": 0,
-   "tool": "cam",
-   "feats": {
-    "disorg": true
-   },
+   "age": 96,
+   "sex": "F",
+   "acute": "yes",
+   "rass": -4,
+   "tool": "camicu",
+   "feats": {},
    "dem": false,
    "flags": [
+    "seiz",
     "mening"
    ],
    "causes": [
-    "etohwd"
+    "etohx"
    ],
    "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Acute encephalopathy not supported at this time.",
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Stupor/coma",
+    "subtype": "",
+    "note": "Alcohol intoxication, presenting with stupor/coma.",
     "nextSteps": [
+     "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
      "Fever with neck stiffness: lumbar puncture."
     ]
    }
   },
   {
    "id": "V144",
-   "age": 46,
-   "sex": "M",
-   "acute": "yes",
-   "rass": -2,
-   "tool": "cam",
-   "feats": {
-    "disorg": true,
-    "inatt": true
-   },
-   "dem": true,
-   "flags": [
-    "focal"
-   ],
-   "causes": [
-    "unk"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Possible delirium on top of dementia",
-    "subtype": "hypoactive",
-    "note": "Possible hypoactive delirium superimposed on dementia, etiology not yet identified.",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI.",
-     "No cause named yet: consider brain imaging."
-    ]
-   }
-  },
-  {
-   "id": "V145",
-   "age": 61,
-   "sex": "M",
-   "acute": "yes",
-   "rass": -3,
-   "tool": "cam",
-   "feats": {
-    "disorg": true,
-    "inatt": true
-   },
-   "dem": true,
-   "flags": [],
-   "causes": [
-    "autoimmune"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Possible delirium on top of dementia",
-    "subtype": "hypoactive",
-    "note": "Autoimmune/inflammatory encephalopathy due to [specify etiology], manifesting as possible hypoactive delirium superimposed on dementia.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V146",
-   "age": 60,
-   "sex": "M",
-   "acute": "no",
-   "rass": -2,
-   "tool": "cam",
-   "feats": {
-    "fluct": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [
-    "seiz"
-   ],
-   "causes": [],
-   "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
-    "nextSteps": [
-     "Seizure, twitching or myoclonus: EEG for non-convulsive status."
-    ]
-   }
-  },
-  {
-   "id": "V147",
-   "age": 51,
-   "sex": "F",
-   "acute": "unsure",
-   "rass": 2,
-   "tool": "camicu",
-   "feats": {
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "unk"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hyperactive",
-    "note": "Hyperactive delirium, etiology not yet identified.",
-    "nextSteps": [
-     "No cause named yet: consider brain imaging."
-    ]
-   }
-  },
-  {
-   "id": "V148",
-   "age": 18,
-   "sex": "M",
-   "acute": "yes",
-   "rass": 2,
-   "tool": "cam",
-   "feats": {
-    "disorg": true
-   },
-   "dem": true,
-   "flags": [],
-   "causes": [
-    "etohx",
-    "nutritional",
-    "stroke",
-    "toxidrome"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium superimposed on dementia:\n1. Acute ischemic stroke\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol intoxication\n4. Toxidrome: [specify toxidrome]",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V149",
-   "age": 21,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 4,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "drugwd",
-    "nutritional",
-    "toxidrome"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Drug withdrawal\n3. Toxidrome: [specify toxidrome]",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V150",
-   "age": 47,
-   "sex": "M",
-   "acute": "unsure",
-   "rass": 3,
-   "tool": "camicu",
-   "feats": {
-    "fluct": true
-   },
-   "dem": false,
-   "flags": [
-    "seiz"
-   ],
-   "causes": [
-    "bleed",
-    "cns",
-    "etohx",
-    "nutritional"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. CNS bleed (ICH or SAH)\n2. Primary CNS infection (meningitis or encephalitis)\n3. Nutritional encephalopathy due to [specify etiology]\n4. Alcohol intoxication",
-    "nextSteps": [
-     "Seizure, twitching or myoclonus: EEG for non-convulsive status."
-    ]
-   }
-  },
-  {
-   "id": "V151",
-   "age": 78,
-   "sex": "M",
-   "acute": "yes",
-   "rass": 0,
-   "tool": "cam",
-   "feats": {
-    "fluct": true
-   },
-   "dem": true,
-   "flags": [],
-   "causes": [
-    "etohwd",
-    "tbi",
-    "tumor"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium superimposed on dementia:\n1. Brain tumor or mass\n2. Traumatic brain injury or subdural hematoma\n3. Alcohol withdrawal",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V152",
-   "age": 24,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 0,
-   "tool": "cam",
-   "feats": {
-    "disorg": true,
-    "fluct": true
-   },
-   "dem": true,
-   "flags": [],
-   "causes": [
-    "drugwd"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Drug withdrawal, presenting with subsyndromal delirium superimposed on dementia.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V153",
-   "age": 90,
-   "sex": "M",
-   "acute": "yes",
-   "rass": 0,
-   "tool": "camicu",
-   "feats": {
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "tumor"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Brain tumor or mass, presenting with subsyndromal delirium.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V154",
-   "age": 67,
-   "sex": "M",
-   "acute": "yes",
-   "rass": 0,
-   "tool": "cam",
-   "feats": {},
-   "dem": false,
-   "flags": [
-    "focal"
-   ],
-   "causes": [
-    "autoimmune",
-    "drugwd",
-    "tbi"
-   ],
-   "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "No delirium features",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI."
-    ]
-   }
-  },
-  {
-   "id": "V155",
-   "age": 56,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 3,
-   "tool": "cam",
-   "feats": {
-    "disorg": true,
-    "fluct": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hyperactive",
-    "note": "Hyperactive delirium, etiology not yet identified.",
-    "nextSteps": [
-     "No cause named yet: consider brain imaging."
-    ]
-   }
-  },
-  {
-   "id": "V156",
-   "age": 65,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 0,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true,
-    "fluct": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "septic"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Septic encephalopathy due to [specify etiology], manifesting as delirium.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V157",
    "age": 99,
-   "sex": "M",
-   "acute": "yes",
-   "rass": -5,
-   "tool": "cam",
-   "feats": {},
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "drugwd",
-    "metabolic",
-    "septic",
-    "stroke"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Coma",
-    "subtype": "",
-    "note": "Multifactorial coma:\n1. Acute ischemic stroke\n2. Metabolic encephalopathy due to [specify etiology]\n3. Septic encephalopathy due to [specify etiology]\n4. Drug withdrawal",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V158",
-   "age": 49,
    "sex": "F",
-   "acute": "no",
+   "acute": "yes",
    "rass": -1,
    "tool": "camicu",
    "feats": {
-    "disorg": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "drugx"
-   ],
-   "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V159",
-   "age": 65,
-   "sex": "F",
-   "acute": "yes",
-   "rass": -2,
-   "tool": "cam",
-   "feats": {
-    "fluct": true,
     "inatt": true
    },
    "dem": false,
    "flags": [
+    "focal",
     "mening"
    ],
    "causes": [],
@@ -4345,50 +3974,171 @@
     "subtype": "hypoactive",
     "note": "Hypoactive delirium, etiology not yet identified.",
     "nextSteps": [
+     "Focal or one-sided signs: urgent CT or MRI.",
      "Fever with neck stiffness: lumbar puncture.",
      "No cause named yet: consider brain imaging."
     ]
    }
   },
   {
-   "id": "V160",
-   "age": 85,
+   "id": "V145",
+   "age": 69,
    "sex": "F",
    "acute": "yes",
    "rass": -5,
-   "tool": "cam",
+   "tool": "camicu",
    "feats": {},
    "dem": false,
    "flags": [],
-   "causes": [
-    "bleed"
-   ],
+   "causes": [],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Coma",
     "subtype": "",
-    "note": "CNS bleed (ICH or SAH), presenting with coma.",
-    "nextSteps": []
+    "note": "Coma, etiology not yet identified.",
+    "nextSteps": [
+     "No cause named yet: consider brain imaging."
+    ]
    }
   },
   {
-   "id": "V161",
-   "age": 62,
+   "id": "V146",
+   "age": 89,
+   "sex": "F",
+   "acute": "yes",
+   "rass": -3,
+   "tool": "cam",
+   "feats": {
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [
+    "seiz",
+    "mening"
+   ],
+   "causes": [
+    "drugx"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hypoactive",
+    "note": "Drug intoxication/overdose due to [specify drug], presenting with hypoactive delirium.",
+    "nextSteps": [
+     "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
+     "Fever with neck stiffness: lumbar puncture."
+    ]
+   }
+  },
+  {
+   "id": "V147",
+   "age": 91,
+   "sex": "F",
+   "acute": "no",
+   "rass": -5,
+   "tool": "camicu",
+   "feats": {},
+   "dem": false,
+   "flags": [
+    "mening"
+   ],
+   "causes": [
+    "etohx",
+    "nutritional",
+    "sdh",
+    "stroke"
+   ],
+   "expected": {
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Acute encephalopathy unlikely",
+    "subtype": "",
+    "note": "Acute encephalopathy not supported at this time.",
+    "nextSteps": [
+     "Fever with neck stiffness: lumbar puncture."
+    ]
+   }
+  },
+  {
+   "id": "V148",
+   "age": 63,
+   "sex": "M",
+   "acute": "yes",
+   "rass": 2,
+   "tool": "cam",
+   "feats": {
+    "disorg": true,
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [
+    "seiz",
+    "fall"
+   ],
+   "causes": [],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hyperactive",
+    "note": "Hyperactive delirium, etiology not yet identified.",
+    "nextSteps": [
+     "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
+     "Fall or head injury on blood thinners: urgent head CT.",
+     "No cause named yet: consider brain imaging."
+    ]
+   }
+  },
+  {
+   "id": "V149",
+   "age": 82,
+   "sex": "F",
+   "acute": "no",
+   "rass": 1,
+   "tool": "cam",
+   "feats": {
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [
+    "mening"
+   ],
+   "causes": [
+    "autoimmune",
+    "etohwd",
+    "sah",
+    "sz"
+   ],
+   "expected": {
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Acute encephalopathy unlikely",
+    "subtype": "",
+    "note": "Acute encephalopathy not supported at this time.",
+    "nextSteps": [
+     "Fever with neck stiffness: lumbar puncture."
+    ]
+   }
+  },
+  {
+   "id": "V150",
+   "age": 83,
    "sex": "M",
    "acute": "no",
    "rass": -3,
-   "tool": "camicu",
+   "tool": "cam",
    "feats": {
-    "fluct": true,
-    "inatt": true
+    "disorg": true,
+    "fluct": true
    },
    "dem": false,
    "flags": [
     "seiz"
    ],
    "causes": [
-    "etohwd"
+    "tumor"
    ],
    "expected": {
     "level": 0,
@@ -4402,123 +4152,19 @@
    }
   },
   {
-   "id": "V162",
-   "age": 70,
+   "id": "V151",
+   "age": 73,
    "sex": "F",
-   "acute": "yes",
-   "rass": -2,
+   "acute": "no",
+   "rass": 4,
    "tool": "cam",
    "feats": {
-    "fluct": true
-   },
-   "dem": false,
-   "flags": [
-    "focal"
-   ],
-   "causes": [
-    "etohx"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hypoactive",
-    "note": "Alcohol intoxication, presenting with hypoactive subsyndromal delirium.",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI."
-    ]
-   }
-  },
-  {
-   "id": "V163",
-   "age": 59,
-   "sex": "M",
-   "acute": "unsure",
-   "rass": 1,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true,
-    "fluct": true,
     "inatt": true
    },
-   "dem": true,
+   "dem": false,
    "flags": [],
-   "causes": [
-    "sz"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Possible delirium on top of dementia",
-    "subtype": "hyperactive",
-    "note": "Seizure (postictal state or non-convulsive status), presenting with possible hyperactive delirium superimposed on dementia.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V164",
-   "age": 72,
-   "sex": "M",
-   "acute": "yes",
-   "rass": 0,
-   "tool": "cam",
-   "feats": {},
-   "dem": true,
-   "flags": [
-    "mening"
-   ],
    "causes": [
     "toxic"
-   ],
-   "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "No delirium features",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time; known dementia.",
-    "nextSteps": [
-     "Fever with neck stiffness: lumbar puncture."
-    ]
-   }
-  },
-  {
-   "id": "V165",
-   "age": 71,
-   "sex": "F",
-   "acute": "yes",
-   "rass": -1,
-   "tool": "camicu",
-   "feats": {},
-   "dem": true,
-   "flags": [],
-   "causes": [],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hypoactive",
-    "note": "Hypoactive subsyndromal delirium superimposed on dementia, etiology not yet identified.",
-    "nextSteps": [
-     "No cause named yet: consider brain imaging."
-    ]
-   }
-  },
-  {
-   "id": "V166",
-   "age": 63,
-   "sex": "M",
-   "acute": "no",
-   "rass": -4,
-   "tool": "camicu",
-   "feats": {},
-   "dem": false,
-   "flags": [
-    "focal"
-   ],
-   "causes": [
-    "autoimmune",
-    "cns",
-    "vascular"
    ],
    "expected": {
     "level": 0,
@@ -4526,13 +4172,433 @@
     "phenotype": "Acute encephalopathy unlikely",
     "subtype": "",
     "note": "Acute encephalopathy not supported at this time.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V152",
+   "age": 53,
+   "sex": "M",
+   "acute": "yes",
+   "rass": -1,
+   "tool": "cam",
+   "feats": {
+    "disorg": true
+   },
+   "dem": true,
+   "flags": [],
+   "causes": [
+    "sdh",
+    "stroke",
+    "toxic"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Multifactorial hypoactive subsyndromal delirium superimposed on dementia:\n1. Acute ischemic stroke\n2. Subdural hematoma (SDH)\n3. Toxic encephalopathy due to [specify etiology]",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V153",
+   "age": 53,
+   "sex": "F",
+   "acute": "yes",
+   "rass": 0,
+   "tool": "cam",
+   "feats": {
+    "fluct": true,
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [
+    "fall"
+   ],
+   "causes": [
+    "unk"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Subsyndromal delirium, etiology not yet identified.",
+    "nextSteps": [
+     "Fall or head injury on blood thinners: urgent head CT.",
+     "No cause named yet: consider brain imaging."
+    ]
+   }
+  },
+  {
+   "id": "V154",
+   "age": 35,
+   "sex": "F",
+   "acute": "no",
+   "rass": -5,
+   "tool": "cam",
+   "feats": {},
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "toxic"
+   ],
+   "expected": {
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Acute encephalopathy unlikely",
+    "subtype": "",
+    "note": "Acute encephalopathy not supported at this time.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V155",
+   "age": 50,
+   "sex": "M",
+   "acute": "yes",
+   "rass": 2,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true,
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [
+    "focal"
+   ],
+   "causes": [
+    "drugx",
+    "sah",
+    "septic"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hyperactive",
+    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Subarachnoid hemorrhage (SAH)\n2. Septic encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI."
     ]
    }
   },
   {
+   "id": "V156",
+   "age": 24,
+   "sex": "M",
+   "acute": "yes",
+   "rass": -1,
+   "tool": "cam",
+   "feats": {
+    "fluct": true,
+    "inatt": true
+   },
+   "dem": true,
+   "flags": [
+    "mening"
+   ],
+   "causes": [
+    "drugwd",
+    "etohwd",
+    "tbi"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Possible delirium on top of dementia",
+    "subtype": "hypoactive",
+    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Traumatic brain injury (TBI)\n2. Alcohol withdrawal\n3. Drug withdrawal",
+    "nextSteps": [
+     "Fever with neck stiffness: lumbar puncture."
+    ]
+   }
+  },
+  {
+   "id": "V157",
+   "age": 91,
+   "sex": "M",
+   "acute": "yes",
+   "rass": 0,
+   "tool": "cam",
+   "feats": {
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [
+    "fall"
+   ],
+   "causes": [],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Subsyndromal delirium, etiology not yet identified.",
+    "nextSteps": [
+     "Fall or head injury on blood thinners: urgent head CT.",
+     "No cause named yet: consider brain imaging."
+    ]
+   }
+  },
+  {
+   "id": "V158",
+   "age": 79,
+   "sex": "F",
+   "acute": "unsure",
+   "rass": 0,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true,
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "cns",
+    "stroke"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Multifactorial subsyndromal delirium:\n1. Acute ischemic stroke\n2. Primary CNS infection (meningitis or encephalitis)",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V159",
+   "age": 88,
+   "sex": "F",
+   "acute": "yes",
+   "rass": 4,
+   "tool": "cam",
+   "feats": {
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [
+    "fall"
+   ],
+   "causes": [
+    "autoimmune",
+    "sah",
+    "toxidrome"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hyperactive",
+    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Subarachnoid hemorrhage (SAH)\n2. Autoimmune encephalopathy due to [specify etiology]\n3. Toxidrome: [specify toxidrome]",
+    "nextSteps": [
+     "Fall or head injury on blood thinners: urgent head CT."
+    ]
+   }
+  },
+  {
+   "id": "V160",
+   "age": 77,
+   "sex": "F",
+   "acute": "no",
+   "rass": -3,
+   "tool": "cam",
+   "feats": {
+    "inatt": true
+   },
+   "dem": true,
+   "flags": [],
+   "causes": [
+    "etohx",
+    "toxic"
+   ],
+   "expected": {
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Acute encephalopathy unlikely",
+    "subtype": "",
+    "note": "Dementia at baseline; acute encephalopathy not supported at this time.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V161",
+   "age": 73,
+   "sex": "M",
+   "acute": "yes",
+   "rass": -2,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true,
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "ich"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Intracerebral hemorrhage (ICH), presenting with hypoactive subsyndromal delirium.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V162",
+   "age": 18,
+   "sex": "M",
+   "acute": "yes",
+   "rass": 2,
+   "tool": "cam",
+   "feats": {
+    "disorg": true,
+    "inatt": true
+   },
+   "dem": true,
+   "flags": [],
+   "causes": [
+    "etohx",
+    "septic",
+    "toxic"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Possible delirium on top of dementia",
+    "subtype": "hyperactive",
+    "note": "Multifactorial possible hyperactive delirium superimposed on dementia:\n1. Septic encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V163",
+   "age": 80,
+   "sex": "F",
+   "acute": "yes",
+   "rass": -2,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true
+   },
+   "dem": true,
+   "flags": [],
+   "causes": [
+    "ich"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Intracerebral hemorrhage (ICH), presenting with hypoactive subsyndromal delirium superimposed on dementia.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V164",
+   "age": 54,
+   "sex": "F",
+   "acute": "yes",
+   "rass": -1,
+   "tool": "camicu",
+   "feats": {
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "sz"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hypoactive",
+    "note": "Seizure (postictal state or non-convulsive status), presenting with hypoactive delirium.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V165",
+   "age": 76,
+   "sex": "F",
+   "acute": "yes",
+   "rass": -4,
+   "tool": "camicu",
+   "feats": {},
+   "dem": true,
+   "flags": [],
+   "causes": [
+    "septic"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Stupor/coma",
+    "subtype": "",
+    "note": "Septic encephalopathy due to [specify etiology], manifesting as stupor/coma with underlying dementia.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V166",
+   "age": 41,
+   "sex": "M",
+   "acute": "yes",
+   "rass": 0,
+   "tool": "cam",
+   "feats": {
+    "disorg": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "ich",
+    "metabolic",
+    "sz"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Multifactorial subsyndromal delirium:\n1. Intracerebral hemorrhage (ICH)\n2. Seizure (postictal state or non-convulsive status)\n3. Metabolic encephalopathy due to [specify etiology]",
+    "nextSteps": []
+   }
+  },
+  {
    "id": "V167",
+   "age": 82,
+   "sex": "M",
+   "acute": "no",
+   "rass": -1,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true,
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "etohx",
+    "septic"
+   ],
+   "expected": {
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Acute encephalopathy unlikely",
+    "subtype": "",
+    "note": "Acute encephalopathy not supported at this time.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V168",
    "age": 70,
    "sex": "F",
    "acute": "unsure",
@@ -4547,22 +4613,22 @@
     "focal"
    ],
    "causes": [
-    "bleed"
+    "cns"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "CNS bleed (ICH or SAH), presenting with hyperactive subsyndromal delirium superimposed on dementia.",
+    "note": "Primary CNS infection (meningitis or encephalitis), presenting with hyperactive subsyndromal delirium superimposed on dementia.",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI."
     ]
    }
   },
   {
-   "id": "V168",
-   "age": 47,
+   "id": "V169",
+   "age": 57,
    "sex": "M",
    "acute": "yes",
    "rass": -4,
@@ -4571,30 +4637,28 @@
    "dem": true,
    "flags": [],
    "causes": [
-    "bleed",
-    "cns",
-    "sz",
-    "toxidrome"
+    "drugwd",
+    "drugx",
+    "metabolic",
+    "septic"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Stupor/coma",
     "subtype": "",
-    "note": "Multifactorial stupor/coma with underlying dementia:\n1. CNS bleed (ICH or SAH)\n2. Primary CNS infection (meningitis or encephalitis)\n3. Seizure (postictal state or non-convulsive status)\n4. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial stupor/coma with underlying dementia:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Septic encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]\n4. Drug withdrawal",
     "nextSteps": []
    }
   },
   {
-   "id": "V169",
+   "id": "V170",
    "age": 47,
    "sex": "M",
-   "acute": "yes",
-   "rass": 0,
+   "acute": "unsure",
+   "rass": -5,
    "tool": "camicu",
-   "feats": {
-    "disorg": true
-   },
+   "feats": {},
    "dem": false,
    "flags": [],
    "causes": [
@@ -4603,16 +4667,16 @@
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Subsyndromal delirium, etiology not yet identified.",
+    "phenotype": "Coma",
+    "subtype": "",
+    "note": "Coma, etiology not yet identified.",
     "nextSteps": [
      "No cause named yet: consider brain imaging."
     ]
    }
   },
   {
-   "id": "V170",
+   "id": "V171",
    "age": 24,
    "sex": "M",
    "acute": "no",
@@ -4641,7 +4705,7 @@
    }
   },
   {
-   "id": "V171",
+   "id": "V172",
    "age": 51,
    "sex": "M",
    "acute": "yes",
@@ -4667,7 +4731,7 @@
    }
   },
   {
-   "id": "V172",
+   "id": "V173",
    "age": 51,
    "sex": "F",
    "acute": "yes",
@@ -4683,22 +4747,22 @@
     "fall"
    ],
    "causes": [
-    "toxidrome",
-    "tumor"
+    "tbi",
+    "toxic"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Brain tumor or mass\n2. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hypoactive delirium:\n1. Traumatic brain injury (TBI)\n2. Toxic encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
    }
   },
   {
-   "id": "V173",
+   "id": "V174",
    "age": 58,
    "sex": "F",
    "acute": "unsure",
@@ -4710,21 +4774,21 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "etohx"
+    "ich"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Alcohol intoxication, presenting with hypoactive delirium.",
+    "note": "Intracerebral hemorrhage (ICH), presenting with hypoactive delirium.",
     "nextSteps": []
    }
   },
   {
-   "id": "V174",
-   "age": 73,
-   "sex": "F",
+   "id": "V175",
+   "age": 81,
+   "sex": "M",
    "acute": "yes",
    "rass": -1,
    "tool": "camicu",
@@ -4737,46 +4801,16 @@
     "fall"
    ],
    "causes": [
-    "drugx",
-    "metabolic",
-    "tumor"
+    "etohwd",
+    "toxic",
+    "toxidrome"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Brain tumor or mass\n2. Metabolic encephalopathy due to [specify etiology]\n3. Drug intoxication due to [specify drug]",
-    "nextSteps": [
-     "Fall or head injury on blood thinners: urgent head CT."
-    ]
-   }
-  },
-  {
-   "id": "V175",
-   "age": 70,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 3,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true,
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [
-    "fall"
-   ],
-   "causes": [
-    "autoimmune",
-    "vascular"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n2. Vascular/hemodynamic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive delirium:\n1. Toxic encephalopathy due to [specify etiology]\n2. Alcohol withdrawal\n3. Toxidrome: [specify toxidrome]",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
@@ -4784,7 +4818,36 @@
   },
   {
    "id": "V176",
-   "age": 76,
+   "age": 70,
+   "sex": "F",
+   "acute": "no",
+   "rass": -1,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true
+   },
+   "dem": true,
+   "flags": [
+    "fall"
+   ],
+   "causes": [
+    "autoimmune",
+    "toxidrome"
+   ],
+   "expected": {
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Acute encephalopathy unlikely",
+    "subtype": "",
+    "note": "Dementia at baseline; acute encephalopathy not supported at this time.",
+    "nextSteps": [
+     "Fall or head injury on blood thinners: urgent head CT."
+    ]
+   }
+  },
+  {
+   "id": "V177",
+   "age": 43,
    "sex": "M",
    "acute": "yes",
    "rass": 2,
@@ -4795,24 +4858,24 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "etohx"
+    "tumor"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Alcohol intoxication, presenting with hyperactive delirium.",
+    "note": "Brain tumor or mass, presenting with hyperactive delirium.",
     "nextSteps": []
    }
   },
   {
-   "id": "V177",
+   "id": "V178",
    "age": 30,
    "sex": "M",
-   "acute": "yes",
-   "rass": 4,
-   "tool": "camicu",
+   "acute": "no",
+   "rass": 0,
+   "tool": "cam",
    "feats": {
     "disorg": true,
     "fluct": true,
@@ -4820,26 +4883,27 @@
    },
    "dem": true,
    "flags": [
-    "mening"
+    "fall"
    ],
    "causes": [
-    "drugwd",
-    "toxic"
+    "drugx",
+    "sz",
+    "vascular"
    ],
    "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Possible delirium on top of dementia",
-    "subtype": "hyperactive",
-    "note": "Multifactorial possible hyperactive delirium superimposed on dementia:\n1. Toxic encephalopathy due to [specify etiology]\n2. Drug withdrawal",
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "Acute encephalopathy unlikely",
+    "subtype": "",
+    "note": "Dementia at baseline; acute encephalopathy not supported at this time.",
     "nextSteps": [
-     "Fever with neck stiffness: lumbar puncture."
+     "Fall or head injury on blood thinners: urgent head CT."
     ]
    }
   },
   {
-   "id": "V178",
-   "age": 39,
+   "id": "V179",
+   "age": 60,
    "sex": "M",
    "acute": "yes",
    "rass": -2,
@@ -4854,18 +4918,18 @@
     "fall"
    ],
    "causes": [
-    "cns",
+    "drugwd",
+    "etohx",
     "metabolic",
-    "toxic",
-    "toxidrome",
-    "vascular"
+    "tbi",
+    "toxic"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Metabolic encephalopathy due to [specify etiology]\n3. Toxic encephalopathy due to [specify etiology]\n4. Vascular/hemodynamic encephalopathy due to [specify etiology]\n5. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hypoactive delirium:\n1. Traumatic brain injury (TBI)\n2. Metabolic encephalopathy due to [specify etiology]\n3. Toxic encephalopathy due to [specify etiology]\n4. Alcohol intoxication\n5. Drug withdrawal",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI.",
      "Fall or head injury on blood thinners: urgent head CT."
@@ -4873,14 +4937,13 @@
    }
   },
   {
-   "id": "V179",
+   "id": "V180",
    "age": 58,
    "sex": "F",
    "acute": "yes",
-   "rass": 3,
+   "rass": 0,
    "tool": "cam",
    "feats": {
-    "fluct": true,
     "inatt": true
    },
    "dem": false,
@@ -4888,22 +4951,22 @@
     "mening"
    ],
    "causes": [
-    "cns",
-    "drugx"
+    "drugwd",
+    "etohwd"
    ],
    "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Drug intoxication due to [specify drug]",
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Multifactorial subsyndromal delirium:\n1. Alcohol withdrawal\n2. Drug withdrawal",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
    }
   },
   {
-   "id": "V180",
+   "id": "V181",
    "age": 81,
    "sex": "F",
    "acute": "unsure",
@@ -4928,8 +4991,8 @@
    }
   },
   {
-   "id": "V181",
-   "age": 42,
+   "id": "V182",
+   "age": 81,
    "sex": "F",
    "acute": "yes",
    "rass": 0,
@@ -4944,132 +5007,117 @@
     "seiz"
    ],
    "causes": [
-    "drugwd",
+    "autoimmune",
+    "ich",
     "metabolic",
-    "sz",
-    "tbi",
-    "vascular"
+    "septic",
+    "tumor"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial delirium:\n1. Seizure (postictal state or non-convulsive status)\n2. Traumatic brain injury or subdural hematoma\n3. Metabolic encephalopathy due to [specify etiology]\n4. Vascular/hemodynamic encephalopathy due to [specify etiology]\n5. Drug withdrawal",
+    "note": "Multifactorial delirium:\n1. Brain tumor or mass\n2. Intracerebral hemorrhage (ICH)\n3. Autoimmune encephalopathy due to [specify etiology]\n4. Metabolic encephalopathy due to [specify etiology]\n5. Septic encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]
    }
   },
   {
-   "id": "V182",
-   "age": 90,
+   "id": "V183",
+   "age": 34,
    "sex": "M",
-   "acute": "no",
+   "acute": "yes",
    "rass": -1,
    "tool": "cam",
    "feats": {
     "disorg": true,
-    "inatt": true
+    "fluct": true
    },
    "dem": false,
    "flags": [],
    "causes": [
     "autoimmune",
-    "etohwd",
-    "stroke"
-   ],
-   "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V183",
-   "age": 19,
-   "sex": "F",
-   "acute": "no",
-   "rass": 1,
-   "tool": "cam",
-   "feats": {
-    "inatt": true
-   },
-   "dem": true,
-   "flags": [
-    "focal"
-   ],
-   "causes": [
-    "autoimmune"
-   ],
-   "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Dementia at baseline; acute encephalopathy not supported at this time.",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI."
-    ]
-   }
-  },
-  {
-   "id": "V184",
-   "age": 78,
-   "sex": "F",
-   "acute": "yes",
-   "rass": -1,
-   "tool": "cam",
-   "feats": {
-    "disorg": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "drugwd"
+    "ich"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Drug withdrawal, presenting with hypoactive subsyndromal delirium.",
+    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Intracerebral hemorrhage (ICH)\n2. Autoimmune encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
   {
-   "id": "V185",
-   "age": 43,
+   "id": "V184",
+   "age": 62,
    "sex": "F",
    "acute": "yes",
-   "rass": -4,
-   "tool": "cam",
-   "feats": {},
+   "rass": 3,
+   "tool": "camicu",
+   "feats": {
+    "fluct": true,
+    "inatt": true
+   },
    "dem": false,
-   "flags": [],
+   "flags": [
+    "seiz",
+    "fall"
+   ],
    "causes": [
-    "cns",
-    "etohx",
-    "metabolic"
+    "etohwd"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
-    "phenotype": "Stupor/coma",
-    "subtype": "",
-    "note": "Multifactorial stupor/coma:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Metabolic encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
-    "nextSteps": []
+    "phenotype": "Delirium",
+    "subtype": "hyperactive",
+    "note": "Alcohol withdrawal, presenting with hyperactive delirium.",
+    "nextSteps": [
+     "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
+     "Fall or head injury on blood thinners: urgent head CT."
+    ]
+   }
+  },
+  {
+   "id": "V185",
+   "age": 85,
+   "sex": "M",
+   "acute": "unsure",
+   "rass": 4,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true,
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [
+    "mening"
+   ],
+   "causes": [
+    "etohx",
+    "septic",
+    "sz"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hyperactive",
+    "note": "Multifactorial hyperactive delirium:\n1. Seizure (postictal state or non-convulsive status)\n2. Septic encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
+    "nextSteps": [
+     "Fever with neck stiffness: lumbar puncture."
+    ]
    }
   },
   {
    "id": "V186",
-   "age": 67,
-   "sex": "M",
+   "age": 99,
+   "sex": "F",
    "acute": "yes",
-   "rass": -2,
+   "rass": -1,
    "tool": "cam",
    "feats": {
     "inatt": true
@@ -5077,76 +5125,79 @@
    "dem": false,
    "flags": [],
    "causes": [
-    "autoimmune",
-    "metabolic",
-    "toxic"
+    "etohwd"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n2. Metabolic encephalopathy due to [specify etiology]\n3. Toxic encephalopathy due to [specify etiology]",
+    "note": "Alcohol withdrawal, presenting with hypoactive delirium.",
     "nextSteps": []
    }
   },
   {
    "id": "V187",
-   "age": 35,
+   "age": 71,
    "sex": "F",
-   "acute": "unsure",
-   "rass": -4,
+   "acute": "yes",
+   "rass": -1,
    "tool": "cam",
-   "feats": {},
+   "feats": {
+    "disorg": true,
+    "fluct": true
+   },
    "dem": false,
    "flags": [],
    "causes": [
-    "etohwd",
-    "toxic"
+    "sdh"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
-    "phenotype": "Stupor/coma",
-    "subtype": "",
-    "note": "Multifactorial stupor/coma:\n1. Toxic encephalopathy due to [specify etiology]\n2. Alcohol withdrawal",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Subdural hematoma (SDH), presenting with hypoactive subsyndromal delirium.",
     "nextSteps": []
    }
   },
   {
    "id": "V188",
-   "age": 18,
-   "sex": "F",
-   "acute": "no",
-   "rass": -4,
-   "tool": "camicu",
-   "feats": {},
-   "dem": false,
+   "age": 53,
+   "sex": "M",
+   "acute": "yes",
+   "rass": 0,
+   "tool": "cam",
+   "feats": {
+    "disorg": true,
+    "fluct": true
+   },
+   "dem": true,
    "flags": [
-    "seiz"
+    "focal"
    ],
-   "causes": [
-    "bleed"
-   ],
+   "causes": [],
    "expected": {
-    "level": 0,
-    "levelText": "Low likelihood",
-    "phenotype": "Acute encephalopathy unlikely",
-    "subtype": "",
-    "note": "Acute encephalopathy not supported at this time.",
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Subsyndromal delirium superimposed on dementia, etiology not yet identified.",
     "nextSteps": [
-     "Seizure, twitching or myoclonus: EEG for non-convulsive status."
+     "Focal or one-sided signs: urgent CT or MRI.",
+     "No cause named yet: consider brain imaging."
     ]
    }
   },
   {
    "id": "V189",
-   "age": 25,
-   "sex": "M",
-   "acute": "yes",
-   "rass": -1,
+   "age": 50,
+   "sex": "F",
+   "acute": "unsure",
+   "rass": 3,
    "tool": "cam",
    "feats": {
+    "disorg": true,
     "fluct": true
    },
    "dem": false,
@@ -5155,18 +5206,14 @@
     "mening"
    ],
    "causes": [
-    "autoimmune",
-    "drugx",
-    "sz",
-    "tbi",
-    "tumor"
+    "toxidrome"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
-    "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Brain tumor or mass\n2. Seizure (postictal state or non-convulsive status)\n3. Traumatic brain injury or subdural hematoma\n4. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n5. Drug intoxication due to [specify drug]",
+    "subtype": "hyperactive",
+    "note": "Toxidrome: [specify toxidrome], presenting with hyperactive subsyndromal delirium.",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
      "Fever with neck stiffness: lumbar puncture."
@@ -5175,35 +5222,62 @@
   },
   {
    "id": "V190",
-   "age": 81,
+   "age": 44,
    "sex": "F",
-   "acute": "yes",
-   "rass": -1,
-   "tool": "camicu",
+   "acute": "unsure",
+   "rass": 2,
+   "tool": "cam",
    "feats": {
+    "fluct": true,
     "inatt": true
    },
    "dem": false,
-   "flags": [],
+   "flags": [
+    "focal"
+   ],
    "causes": [
-    "metabolic",
-    "nutritional",
-    "toxidrome"
+    "stroke"
    ],
    "expected": {
     "level": 2,
     "levelText": "High likelihood",
     "phenotype": "Delirium",
-    "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Nutritional encephalopathy due to [specify etiology]\n3. Toxidrome: [specify toxidrome]",
-    "nextSteps": []
+    "subtype": "hyperactive",
+    "note": "Acute ischemic stroke, presenting with hyperactive delirium.",
+    "nextSteps": [
+     "Focal or one-sided signs: urgent CT or MRI."
+    ]
    }
   },
   {
    "id": "V191",
+   "age": 48,
+   "sex": "M",
+   "acute": "yes",
+   "rass": -3,
+   "tool": "camicu",
+   "feats": {
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "toxic"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Toxic encephalopathy due to [specify etiology], manifesting as hypoactive subsyndromal delirium.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V192",
    "age": 66,
    "sex": "F",
-   "acute": "yes",
+   "acute": "unsure",
    "rass": 2,
    "tool": "cam",
    "feats": {},
@@ -5213,16 +5287,16 @@
     "autoimmune"
    ],
    "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
+    "level": 0,
+    "levelText": "Low likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Autoimmune/inflammatory encephalopathy due to [specify etiology], manifesting as hyperactive subsyndromal delirium.",
+    "note": "Acute encephalopathy not supported at this time.",
     "nextSteps": []
    }
   },
   {
-   "id": "V192",
+   "id": "V193",
    "age": 57,
    "sex": "M",
    "acute": "yes",
@@ -5251,8 +5325,8 @@
    }
   },
   {
-   "id": "V193",
-   "age": 22,
+   "id": "V194",
+   "age": 92,
    "sex": "F",
    "acute": "yes",
    "rass": 0,
@@ -5265,23 +5339,149 @@
     "fall"
    ],
    "causes": [
-    "cns",
-    "etohx"
+    "ich",
+    "tumor"
    ],
    "expected": {
     "level": 1,
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Alcohol intoxication",
+    "note": "Multifactorial subsyndromal delirium:\n1. Brain tumor or mass\n2. Intracerebral hemorrhage (ICH)",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
    }
   },
   {
-   "id": "V194",
-   "age": 70,
+   "id": "V195",
+   "age": 59,
+   "sex": "M",
+   "acute": "unsure",
+   "rass": -3,
+   "tool": "cam",
+   "feats": {
+    "disorg": true,
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "nutritional",
+    "toxic"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "hypoactive",
+    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V196",
+   "age": 25,
+   "sex": "M",
+   "acute": "yes",
+   "rass": -2,
+   "tool": "cam",
+   "feats": {
+    "disorg": true,
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "metabolic"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hypoactive",
+    "note": "Metabolic encephalopathy due to [specify etiology], manifesting as hypoactive delirium.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V197",
+   "age": 33,
+   "sex": "F",
+   "acute": "yes",
+   "rass": -2,
+   "tool": "cam",
+   "feats": {
+    "disorg": true,
+    "inatt": true
+   },
+   "dem": false,
+   "flags": [
+    "focal"
+   ],
+   "causes": [
+    "nutritional"
+   ],
+   "expected": {
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
+    "subtype": "hypoactive",
+    "note": "Nutritional encephalopathy due to [specify etiology], manifesting as hypoactive delirium.",
+    "nextSteps": [
+     "Focal or one-sided signs: urgent CT or MRI."
+    ]
+   }
+  },
+  {
+   "id": "V198",
+   "age": 49,
+   "sex": "F",
+   "acute": "yes",
+   "rass": 0,
+   "tool": "camicu",
+   "feats": {
+    "disorg": true,
+    "fluct": true
+   },
+   "dem": false,
+   "flags": [],
+   "causes": [
+    "etohwd",
+    "vascular"
+   ],
+   "expected": {
+    "level": 1,
+    "levelText": "Moderate likelihood",
+    "phenotype": "Subsyndromal delirium",
+    "subtype": "mixed or undetermined",
+    "note": "Multifactorial subsyndromal delirium:\n1. Vascular encephalopathy due to [specify etiology]\n2. Alcohol withdrawal",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V199",
+   "age": 45,
+   "sex": "M",
+   "acute": "yes",
+   "rass": 0,
+   "tool": "cam",
+   "feats": {},
+   "dem": false,
+   "flags": [],
+   "causes": [],
+   "expected": {
+    "level": 0,
+    "levelText": "Low likelihood",
+    "phenotype": "No delirium features",
+    "subtype": "",
+    "note": "Acute encephalopathy not supported at this time.",
+    "nextSteps": []
+   }
+  },
+  {
+   "id": "V200",
+   "age": 29,
    "sex": "M",
    "acute": "yes",
    "rass": 0,
@@ -5292,188 +5492,22 @@
     "inatt": true
    },
    "dem": false,
-   "flags": [],
-   "causes": [
-    "cns",
-    "nutritional",
-    "sz"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "mixed or undetermined",
-    "note": "Multifactorial delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Seizure (postictal state or non-convulsive status)\n3. Nutritional encephalopathy due to [specify etiology]",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V195",
-   "age": 36,
-   "sex": "M",
-   "acute": "yes",
-   "rass": -2,
-   "tool": "camicu",
-   "feats": {
-    "fluct": true
-   },
-   "dem": true,
    "flags": [
-    "mening",
-    "fall"
+    "seiz"
    ],
    "causes": [
     "etohx",
-    "septic"
+    "ich",
+    "nutritional"
    ],
    "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium superimposed on dementia:\n1. Septic encephalopathy due to [specify etiology]\n2. Alcohol intoxication",
-    "nextSteps": [
-     "Fever with neck stiffness: lumbar puncture.",
-     "Fall or head injury on blood thinners: urgent head CT."
-    ]
-   }
-  },
-  {
-   "id": "V196",
-   "age": 47,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 2,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true,
-    "fluct": true
-   },
-   "dem": true,
-   "flags": [
-    "fall"
-   ],
-   "causes": [
-    "autoimmune",
-    "nutritional",
-    "septic"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium superimposed on dementia:\n1. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n2. Nutritional encephalopathy due to [specify etiology]\n3. Septic encephalopathy due to [specify etiology]",
-    "nextSteps": [
-     "Fall or head injury on blood thinners: urgent head CT."
-    ]
-   }
-  },
-  {
-   "id": "V197",
-   "age": 47,
-   "sex": "F",
-   "acute": "unsure",
-   "rass": 0,
-   "tool": "camicu",
-   "feats": {
-    "disorg": true,
-    "fluct": true
-   },
-   "dem": false,
-   "flags": [
-    "focal"
-   ],
-   "causes": [
-    "unk"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
+    "level": 2,
+    "levelText": "High likelihood",
+    "phenotype": "Delirium",
     "subtype": "mixed or undetermined",
-    "note": "Subsyndromal delirium, etiology not yet identified.",
+    "note": "Multifactorial delirium:\n1. Intracerebral hemorrhage (ICH)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
     "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI.",
-     "No cause named yet: consider brain imaging."
-    ]
-   }
-  },
-  {
-   "id": "V198",
-   "age": 47,
-   "sex": "F",
-   "acute": "yes",
-   "rass": -2,
-   "tool": "cam",
-   "feats": {
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [],
-   "causes": [
-    "tumor"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hypoactive",
-    "note": "Brain tumor or mass, presenting with hypoactive delirium.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V199",
-   "age": 23,
-   "sex": "F",
-   "acute": "yes",
-   "rass": 3,
-   "tool": "camicu",
-   "feats": {
-    "fluct": true
-   },
-   "dem": true,
-   "flags": [],
-   "causes": [
-    "cns"
-   ],
-   "expected": {
-    "level": 1,
-    "levelText": "Moderate likelihood",
-    "phenotype": "Subsyndromal delirium",
-    "subtype": "hyperactive",
-    "note": "Primary CNS infection (meningitis or encephalitis), presenting with hyperactive subsyndromal delirium superimposed on dementia.",
-    "nextSteps": []
-   }
-  },
-  {
-   "id": "V200",
-   "age": 47,
-   "sex": "M",
-   "acute": "yes",
-   "rass": -1,
-   "tool": "camicu",
-   "feats": {
-    "inatt": true
-   },
-   "dem": false,
-   "flags": [
-    "focal"
-   ],
-   "causes": [
-    "autoimmune",
-    "toxic",
-    "toxidrome"
-   ],
-   "expected": {
-    "level": 2,
-    "levelText": "High likelihood",
-    "phenotype": "Delirium",
-    "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]\n3. Toxidrome: [specify toxidrome]",
-    "nextSteps": [
-     "Focal or one-sided signs: urgent CT or MRI."
+     "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]
    }
   }

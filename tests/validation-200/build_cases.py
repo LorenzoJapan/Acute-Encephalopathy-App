@@ -18,21 +18,23 @@ N = 200
 BRAIN = {           # Primary brain related: named in its own right
     'cns': 'Primary CNS infection (meningitis or encephalitis)',
     'stroke': 'Acute ischemic stroke',
-    'bleed': 'CNS bleed (ICH or SAH)',
+    'ich':    'Intracerebral hemorrhage (ICH)',
+    'sah':    'Subarachnoid hemorrhage (SAH)',
     'sz': 'Seizure (postictal state or non-convulsive status)',
     'tumor': 'Brain tumor or mass',
-    'tbi': 'Traumatic brain injury or subdural hematoma',
+    'tbi':    'Traumatic brain injury (TBI)',
+    'sdh':    'Subdural hematoma (SDH)',
 }
 SUBSTANCE = {       # Substance abuse/medication related: named in its own right
     'etohx': 'Alcohol intoxication',
-    'drugx': 'Drug intoxication due to [specify drug]',
+    'drugx': 'Drug intoxication/overdose due to [specify drug]',
     'etohwd': 'Alcohol withdrawal',
     'drugwd': 'Drug withdrawal',
     'toxidrome': 'Toxidrome: [specify toxidrome]',
 }
 ENCEPH = {          # Encephalopathy related: "<Name> encephalopathy due to [specify etiology]"
     'septic': 'Septic', 'toxic': 'Toxic', 'metabolic': 'Metabolic', 'nutritional': 'Nutritional',
-    'vascular': 'Vascular/hemodynamic', 'autoimmune': 'Autoimmune/inflammatory',
+    'vascular': 'Vascular', 'autoimmune': 'Autoimmune',
 }
 ALL_CAUSES = sorted(list(BRAIN) + list(SUBSTANCE) + list(ENCEPH))
 

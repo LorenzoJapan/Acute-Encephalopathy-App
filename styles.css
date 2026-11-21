@@ -264,6 +264,13 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--ae-acc
 .lv-2 .meter span { background: var(--ae-meter-high); }
 .phen { font-size: var(--ae-fs-title3); line-height: 1.25; font-weight: 700; margin: 0; }
 .pdx { font-weight: 600; color: var(--ae-accent-strong); }
+/* Medical icons beside titles and headings */
+.qi { display: inline-block; flex: none; width: .9em; height: .9em; margin-right: .3em; vertical-align: -.1em; color: var(--ae-accent); }
+.qi svg { display: block; width: 100%; height: 100%; }
+.section .qi { width: 1.3em; height: 1.3em; vertical-align: -.3em; }
+.badge .qi, .card.alert .qi { color: inherit; }
+.badge .qi { width: 1.15em; height: 1.15em; vertical-align: -.25em; }
+.disclosure .qi { width: 1.2em; height: 1.2em; margin-right: 0; color: var(--ae-accent); }
 
 .row { display: flex; align-items: center; gap: 12px; min-height: 40px; border-bottom: 1px solid var(--ae-line); font-size: var(--ae-fs-callout); }
 .row:last-child { border-bottom: 0; }

@@ -14,6 +14,22 @@
     brain: '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3.5a3 3 0 0 0-3 3v.2A3 3 0 0 0 4 9.6a3 3 0 0 0 .6 4.9A3 3 0 0 0 7 19a2.5 2.5 0 0 0 5 .5V5.5a2 2 0 0 0-2.5-2Z"/><path d="M14.5 3.5a3 3 0 0 1 3 3v.2A3 3 0 0 1 20 9.6a3 3 0 0 1-.6 4.9A3 3 0 0 1 17 19a2.5 2.5 0 0 1-5 .5"/></svg>'
   };
 
+  // Medical icons beside step titles, step 5 section headings and result headings (sized by CSS: .qi).
+  var QI = {
+    clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+    eye: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+    clipcheck: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6a1 1 0 0 1 1 1v1h1.5A1.5 1.5 0 0 1 19 6.5v14a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 20.5v-14A1.5 1.5 0 0 1 6.5 5H8V4a1 1 0 0 1 1-1z"/><path d="M9 13.5l2 2 4-4"/></svg>',
+    alert: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><path d="M12 17.5v.01"/></svg>',
+    search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',
+    brain: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3.5a3 3 0 0 0-3 3v.2A3 3 0 0 0 4 9.6a3 3 0 0 0 .6 4.9A3 3 0 0 0 7 19a2.5 2.5 0 0 0 5 .5V5.5a2 2 0 0 0-2.5-2Z"/><path d="M14.5 3.5a3 3 0 0 1 3 3v.2A3 3 0 0 1 20 9.6a3 3 0 0 1-.6 4.9A3 3 0 0 1 17 19a2.5 2.5 0 0 1-5 .5"/></svg>',
+    pill: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="8.5" width="19" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="M9.5 9.5l5 5"/></svg>',
+    flask: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6.5L4.6 18.8A1.5 1.5 0 0 0 5.9 21h12.2a1.5 1.5 0 0 0 1.3-2.2L14 9.5V3"/><path d="M7.2 15h9.6"/></svg>',
+    stetho: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v5a5 5 0 0 0 10 0V3"/><path d="M10 13v2a5 5 0 0 0 10 0v-1"/><circle cx="20" cy="12" r="2"/></svg>',
+    list: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg>',
+    doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>'
+  };
+  function qi(name) { return '<span class="qi" aria-hidden="true">' + QI[name] + '</span>'; }
+
   function fresh() {
     return { screen: 'home', acute: null, rass: null, tool: 'cam', feats: {}, dem: false, flags: {}, causes: {}, copied: false, showCrit: false };
   }
@@ -74,7 +90,7 @@
   }
 
   function baseline() {
-    return '<div class="screen"><h2 class="h2">Is this an acute change from baseline?</h2>' +
+    return '<div class="screen"><h2 class="h2">' + qi('clock') + 'Is this an acute change from baseline?</h2>' +
       '<p class="lead">New or worse over hours to days (under four weeks). Check with family, the facility or prior notes.</p>' +
       '<div class="opts">' + AE.ACUTE.map(function (o) { return option('acute', o.id, s.acute === o.id, o.t, o.d); }).join('') + '</div>' +
       '<p class="section" id="dem-label">Known dementia?</p>' +
@@ -86,7 +102,7 @@
 
   function arousal() {
     var coma = AE.isComa(s);
-    return '<div class="screen tight"><h2 class="h2 sm">How awake is the patient?</h2>' +
+    return '<div class="screen tight"><h2 class="h2 sm">' + qi('eye') + 'How awake is the patient?</h2>' +
       '<p class="lead">RASS. Assess off sedation where you can.</p>' +
       '<div class="opts compact">' + AE.RASS.map(function (o) {
         var lbl = (o.v > 0 ? '+' : (o.v < 0 ? '−' : '')) + Math.abs(o.v);
@@ -99,7 +115,7 @@
   function features() {
     var tool = AE.TOOLS[s.tool];
     var loc = typeof s.rass === 'number' && s.rass !== 0;
-    return '<div class="screen tight"><h2 class="h2">Which features are present?</h2>' +
+    return '<div class="screen tight"><h2 class="h2">' + qi('clipcheck') + 'Which features are present?</h2>' +
       '<div class="seg" role="group" aria-label="Screening tool">' +
       '<button type="button" class="' + (s.tool === 'cam' ? 'on' : '') + '" aria-pressed="' + (s.tool === 'cam') + '" data-action="tool" data-value="cam">CAM</button>' +
       '<button type="button" class="' + (s.tool === 'camicu' ? 'on' : '') + '" aria-pressed="' + (s.tool === 'camicu') + '" data-action="tool" data-value="camicu">Run CAM-ICU</button>' +
@@ -113,7 +129,7 @@
   }
 
   function flags() {
-    return '<div class="screen"><h2 class="h2">Any neurological red flags?</h2>' +
+    return '<div class="screen"><h2 class="h2">' + qi('alert') + 'Any neurological red flags?</h2>' +
       '<p class="lead">These change what you order next. Tap all that apply, or none.</p>' +
       '<div class="opts">' + AE.FLAGS.map(function (o) { return option('flag', o.id, !!s.flags[o.id], o.t, o.d); }).join('') + '</div></div>';
   }
@@ -130,12 +146,12 @@
 
   function cause() {
     var anyFlag = AE.FLAGS.some(function (x) { return s.flags[x.id]; });
-    return '<div class="screen compact"><div class="titlerow"><h2 class="h2 sm">What is driving it?</h2>' + chips('unknown') + '</div>' +
+    return '<div class="screen compact"><div class="titlerow"><h2 class="h2 sm">' + qi('search') + 'What is driving it?</h2>' + chips('unknown') + '</div>' +
       '<p class="micro">(choose all that apply)</p>' +
       (anyFlag ? '<div class="banner mod sm" role="status">' + ICON.warn + '<span><strong>Red flags noted.</strong> Consider stroke, seizure, <abbr title="' + esc(AE.ABBR.CNS) + '">CNS</abbr> infection or head injury.</span></div>' : '') +
-      '<p class="section">Primary brain related</p>' + chips('primary') +
-      '<p class="section">Substance abuse/medication related</p>' + chips('substance') +
-      '<p class="section">Encephalopathy related</p>' +
+      '<p class="section">' + qi('brain') + 'Primary brain related</p>' + chips('primary') +
+      '<p class="section">' + qi('pill') + 'Substance abuse/medication related</p>' + chips('substance') +
+      '<p class="section">' + qi('flask') + 'Encephalopathy related</p>' +
       chips('systemic') +
       (tipId ? '<div class="tipbubble" aria-hidden="true">' + esc(AE.hint(AE.CAUSES.filter(function (c) { return c.id === tipId; })[0])) + '</div>' : '') +
       '</div>';
@@ -146,21 +162,21 @@
     var met = r.criteria.filter(function (c) { return c.met; }).length;
     return '<div class="screen tight">' +
       '<div class="likely lv-' + r.level + '" aria-live="polite">' +
-      '<span class="badge">' + r.levelText + '</span>' +
+      '<span class="badge">' + qi('stetho') + r.levelText + '</span>' +
       (r.primaryDx ? '<p class="micro pdx">Primary diagnosis: ' + esc(r.primaryDx) + '</p>' : '') +
       '<p class="phen">' + esc(r.title) + '</p>' +
       '<div class="meter" aria-hidden="true"><span></span><span></span><span></span></div>' +
       '<p class="micro">' + esc(r.summary) + ' <span style="color:var(--ae-ink-3)">Criteria-based estimate; supports, does not replace, clinical judgement.</span></p></div>' +
       // Red-flag actions and the "no cause yet" step live in one card (red when there are red flags).
       (r.nextSteps.length ? '<div class="card' + (r.flags.length ? ' alert" role="alert' : '') + '">' +
-        (r.flags.length ? '<p class="micro" style="color:inherit;font-weight:700;margin-bottom:6px">Red flags present: act on these first</p>' : '') +
+        (r.flags.length ? '<p class="micro" style="color:inherit;font-weight:700;margin-bottom:6px">' + qi('alert') + 'Red flags present: act on these first</p>' : '') +
         '<ul class="next">' + r.nextSteps.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul></div>' : '') +
-      '<button type="button" class="disclosure" aria-expanded="' + s.showCrit + '" aria-controls="crit" data-action="crit">Criteria' +
+      '<button type="button" class="disclosure" aria-expanded="' + s.showCrit + '" aria-controls="crit" data-action="crit">' + qi('list') + 'Criteria' +
         '<span class="count">' + met + ' of ' + r.criteria.length + ' met</span><span class="chev">' + ICON.chev + '</span></button>' +
       (s.showCrit ? '<div class="card crit" id="crit">' + r.criteria.map(function (c) {
         return '<div class="row"><span class="lbl">' + esc(c.label) + '</span><span class="' + (c.met ? 'yes' : 'no') + '">' + (c.met ? ICON.yes : (c.neutral ? '' : ICON.no)) + esc(c.status) + '</span></div>';
       }).join('') + '</div>' : '') +
-      '<p class="section">Diagnosis</p><div class="diag">' +
+      '<p class="section">' + qi('doc') + 'Diagnosis</p><div class="diag">' +
       '<div class="doc">' + esc(r.note) + '</div>' +
       '<button type="button" class="copy' + (s.copied ? ' done' : '') + '" data-action="copy">' + ICON.copy + (s.copied ? 'Copied' : 'Copy Diagnostic Framework') + '</button></div>' +
       '</div>';

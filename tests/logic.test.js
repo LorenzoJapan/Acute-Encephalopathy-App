@@ -122,11 +122,18 @@ test('Two systemic causes -> multifactorial list', () => {
 });
 
 // Primary brain or substance diagnoses: named as the diagnosis, not "acute encephalopathy".
-test('CNS bleed is its own primary diagnosis, with an ICH/SAH hover', () => {
-  assert.strictEqual(AE.evaluate(p({ rass: -4, causes: { bleed: true } })).note, 'CNS bleed (ICH or SAH), presenting with stupor/coma.');
-  assert.strictEqual(AE.hint(cat('bleed')), 'Intracerebral hemorrhage (ICH) or subarachnoid hemorrhage (SAH)');
-  assert.strictEqual(AE.evaluate(p({ rass: -1, feats: all4, causes: { stroke: true, bleed: true } })).note,
-    'Multifactorial hypoactive delirium:\n1. Acute ischemic stroke\n2. CNS bleed (ICH or SAH)');
+test('ICH, SAH, TBI and SDH are separate primary diagnoses, each with its full name on hover', () => {
+  const want = { ich: ['Intracerebral hemorrhage', 'Intracerebral hemorrhage (ICH)'], sah: ['Subarachnoid hemorrhage', 'Subarachnoid hemorrhage (SAH)'],
+    tbi: ['Traumatic brain injury', 'Traumatic brain injury (TBI)'], sdh: ['Subdural hematoma', 'Subdural hematoma (SDH)'] };
+  Object.keys(want).forEach((id) => {
+    assert.strictEqual(cat(id).group, 'primary', id);
+    assert.strictEqual(AE.hint(cat(id)), want[id][0], id);
+    const one = {}; one[id] = true;
+    assert.strictEqual(AE.evaluate(p({ rass: -4, causes: one })).note, want[id][1] + ', presenting with stupor/coma.', id);
+  });
+  ['bleed'].forEach((id) => assert.ok(!cat(id), id + ' is gone'));
+  assert.strictEqual(AE.evaluate(p({ rass: -1, feats: all4, causes: { stroke: true, ich: true, sah: true, tbi: true, sdh: true } })).note,
+    'Multifactorial hypoactive delirium:\n1. Acute ischemic stroke\n2. Intracerebral hemorrhage (ICH)\n3. Subarachnoid hemorrhage (SAH)\n4. Subdural hematoma (SDH)\n5. Traumatic brain injury (TBI)');
 });
 
 test('Primary only: stroke is the diagnosis, delirium the presentation', () => {
@@ -165,8 +172,8 @@ test('Medication chip is gone', () => {
 
 test('Primary only: drug intoxication keeps [specify drug]', () => {
   const r = AE.evaluate(p({ rass: -2, feats: all4, causes: { drugx: true } }));
-  assert.strictEqual(r.note, 'Drug intoxication due to [specify drug], presenting with hypoactive delirium.');
-  assert.strictEqual(r.primaryDx, 'Drug intoxication due to [specify drug]');
+  assert.strictEqual(r.note, 'Drug intoxication/overdose due to [specify drug], presenting with hypoactive delirium.');
+  assert.strictEqual(r.primaryDx, 'Drug intoxication/overdose due to [specify drug]');
 });
 
 test('Primary + systemic -> multifactorial list, primary first', () => {
@@ -176,7 +183,7 @@ test('Primary + systemic -> multifactorial list, primary first', () => {
 
 test('Two primaries -> multifactorial list', () => {
   const r = AE.evaluate(p({ rass: -2, feats: all4, causes: { tbi: true, tumor: true } }));
-  assert.strictEqual(r.note, 'Multifactorial hypoactive delirium:\n1. Brain tumor or mass\n2. Traumatic brain injury or subdural hematoma');
+  assert.strictEqual(r.note, 'Multifactorial hypoactive delirium:\n1. Brain tumor or mass\n2. Traumatic brain injury (TBI)');
 });
 
 test('Coma from CNS infection', () => {
@@ -253,7 +260,7 @@ test('Old specific systemic chips are gone', () => {
 
 test('Each category writes its own encephalopathy name', () => {
   const expect = { septic: 'Septic encephalopathy due to [specify etiology]', toxic: 'Toxic encephalopathy due to [specify etiology]', metabolic: 'Metabolic encephalopathy due to [specify etiology]',
-    nutritional: 'Nutritional encephalopathy due to [specify etiology]', vascular: 'Vascular/hemodynamic encephalopathy due to [specify etiology]', autoimmune: 'Autoimmune/inflammatory encephalopathy due to [specify etiology]' };
+    nutritional: 'Nutritional encephalopathy due to [specify etiology]', vascular: 'Vascular encephalopathy due to [specify etiology]', autoimmune: 'Autoimmune encephalopathy due to [specify etiology]' };
   Object.keys(expect).forEach((id) => {
     const c = {}; c[id] = true;
     assert.strictEqual(AE.evaluate(p({ feats: all4, causes: c })).note, expect[id] + ', manifesting as delirium.');
@@ -262,16 +269,19 @@ test('Each category writes its own encephalopathy name', () => {
 
 test('Each category hover lists its underlying causes', () => {
   assert.match(AE.hint(cat('septic')), /cytokine storm, HLH/);
-  assert.match(AE.hint(cat('toxic')), /^Toxic encephalopathy is a diffuse dysfunction of the brain/);
+  assert.match(AE.hint(cat('toxic')), /^Toxic encephalopathy is a global cerebral dysfunction caused by exposure to toxic substances or accumulation of toxic metabolites, resulting in altered cognition, consciousness, behavior, or neurologic function\.\n\nEnvironmental and Occupational Toxins\n/);
   ['Environmental and Occupational Toxins', 'Prescription and Therapeutic Agents', 'Industrial and Other Chemical Exposures', '• Carbon monoxide', '• Amiodarone (rarely)', '• Heavy-metal mixtures']
     .forEach((t) => assert.ok(AE.hint(cat('toxic')).includes(t), t));
+  assert.match(AE.hint(cat('metabolic')), /^Metabolic encephalopathy is a global cerebral dysfunction caused by:\n\nOrgan failure: hepatic encephalopathy;/);
   assert.match(AE.hint(cat('metabolic')), /dialysis disequilibrium/);
   assert.match(AE.hint(cat('metabolic')), /Non-cirrhotic hyperammonemia/);
   assert.match(AE.hint(cat('metabolic')), /porphyria/);
-  assert.match(AE.hint(cat('nutritional')), /Wernicke/);
+  assert.match(AE.hint(cat('nutritional')), /^Nutritional encephalopathy is a global cerebral dysfunction that can be caused by conditions like:\n\nWernicke/);
   assert.match(AE.hint(cat('nutritional')), /Pellagra \(niacin deficiency\)/);
-  assert.match(AE.hint(cat('vascular')), /Hypoxic-ischemic \(post-anoxic\)/);
-  assert.match(AE.hint(cat('vascular')), /Low-flow or hypoperfusion/);
+  assert.match(AE.hint(cat('vascular')), /^Vascular encephalopathy is a global cerebral dysfunction that can be caused by conditions like:\n\nDiffuse, not a focal stroke/);
+  assert.match(AE.hint(cat('vascular')), /hypoxic-ischemic \(post-anoxic\)/);
+  assert.match(AE.hint(cat('vascular')), /low-flow or hypoperfusion/);
+  assert.match(AE.hint(cat('autoimmune')), /^Autoimmune encephalopathy is a global cerebral dysfunction that can be caused by conditions like:\n\nSteroid-responsive/);
   assert.match(AE.hint(cat('autoimmune')), /SREAT/);
   assert.match(AE.hint(cat('autoimmune')), /NMDAR, LGI1, CASPR2, GABA-B/);
   assert.match(AE.hint(cat('autoimmune')), /Susac syndrome/);
@@ -306,7 +316,7 @@ test('Every acronym on a step 5 chip has a definition', () => {
 
 test('AE.define lists the definitions for a chip label', () => {
   assert.strictEqual(AE.define('Seizure/NCSE'), 'NCSE: non-convulsive status epilepticus');
-  assert.strictEqual(AE.define('Stroke/bleed'), '');
+  assert.strictEqual(AE.define('Ischemic stroke'), '');
 });
 
 test('Acronym chips give their definition through hint(); plain chips give none', () => {
@@ -337,12 +347,12 @@ test('Multifactorial: RASS -4 -> stupor/coma', () => {
 
 test('Multifactorial: RASS -5 -> coma', () => {
   const r = AE.evaluate(p({ rass: -5, causes: { tbi: true, vascular: true } }));
-  assert.strictEqual(r.note, 'Multifactorial coma:\n1. Traumatic brain injury or subdural hematoma\n2. Vascular/hemodynamic encephalopathy due to [specify etiology]');
+  assert.strictEqual(r.note, 'Multifactorial coma:\n1. Traumatic brain injury (TBI)\n2. Vascular encephalopathy due to [specify etiology]');
 });
 
 test('Multifactorial: subsyndromal delirium', () => {
   const r = AE.evaluate(p({ rass: 0, feats: { inatt: true }, causes: { toxic: true, autoimmune: true } }));
-  assert.strictEqual(r.note, 'Multifactorial subsyndromal delirium:\n1. Autoimmune/inflammatory encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]');
+  assert.strictEqual(r.note, 'Multifactorial subsyndromal delirium:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]');
 });
 
 test('Multifactorial: brain first, then encephalopathy, then substance, each A–Z', () => {
@@ -352,7 +362,7 @@ test('Multifactorial: brain first, then encephalopathy, then substance, each A�
 
 test('Multifactorial: drug intoxication is a substance diagnosis, listed after brain and encephalopathy', () => {
   const r = AE.evaluate(p({ rass: -1, feats: all4, causes: { stroke: true, drugx: true, septic: true } }));
-  assert.strictEqual(r.note, 'Multifactorial hypoactive delirium:\n1. Acute ischemic stroke\n2. Septic encephalopathy due to [specify etiology]\n3. Drug intoxication due to [specify drug]');
+  assert.strictEqual(r.note, 'Multifactorial hypoactive delirium:\n1. Acute ischemic stroke\n2. Septic encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]');
 });
 
 test('Low likelihood stays "not supported" even with several causes ticked', () => {
@@ -361,15 +371,16 @@ test('Low likelihood stays "not supported" even with several causes ticked', () 
 
 test('Step 5 has three sections: primary brain, substance/medication, encephalopathy', () => {
   const row = (g) => AE.CAUSES.filter((c) => c.group === g).map((c) => c.s);
-  assert.deepStrictEqual(row('primary'), ['CNS infection', 'Ischemic stroke', 'CNS bleed', 'Seizure/NCSE', 'Tumor/mass', 'Head injury/SDH']);
-  assert.deepStrictEqual(row('substance'), ['Alcohol intoxication', 'Drug intoxication', 'Alcohol withdrawal', 'Drug withdrawal', 'Toxidromes']);
+  assert.deepStrictEqual(row('primary'), ['CNS infection', 'Ischemic stroke', 'ICH', 'SAH', 'Seizure/NCSE', 'Tumor/mass', 'TBI', 'SDH']);
+  assert.deepStrictEqual(row('substance'), ['Alcohol intoxication', 'Drug intoxication/overdose', 'Alcohol withdrawal', 'Drug withdrawal', 'Toxidromes']);
   assert.deepStrictEqual(row('systemic'), ['Septic', 'Toxic', 'Metabolic', 'Nutritional', 'Vascular', 'Autoimmune']);
 });
 
 test('Drug intoxication and Toxidromes hover text', () => {
-  assert.strictEqual(AE.hint(cat('drugx')), 'Intoxication: sedatives, opioids, anticholinergics, salicylates, lithium etc.');
+  ['Opioids\n• Fentanyl and fentanyl analogues, now the most common', 'Stimulants\n', 'Cannabinoids\n', 'Dissociatives and hallucinogens\n', 'Sedative-hypnotics\n', 'Inhalants\n• Solvents and aerosols (toluene, butane), nitrous oxide (“whippets”)']
+    .forEach((t) => assert.ok(AE.hint(cat('drugx')).includes(t), t));
   assert.doesNotMatch(AE.hint(cat('drugx')), /alcohol/i);
-  assert.strictEqual(AE.hint(cat('toxidrome')), 'Toxidromes: serotonin syndrome, NMS, anticholinergic syndrome etc.');
+  assert.strictEqual(AE.hint(cat('toxidrome')), 'Psychiatric medication toxidrome: a syndrome of altered mental status and neurologic and/or autonomic dysfunction resulting from toxicity, accumulation, overdose, interaction, or adverse reaction to psychotropic medications, producing a recognizable clinical pattern such as serotonin syndrome, anticholinergic toxicity, neuroleptic malignant syndrome, or lithium toxicity.');
 });
 
 test('Toxidrome writes its own Diagnosis line', () => {
@@ -378,11 +389,11 @@ test('Toxidrome writes its own Diagnosis line', () => {
 
 test('Drug intoxication + Toxic encephalopathy -> multifactorial, both listed', () => {
   assert.strictEqual(AE.evaluate(p({ rass: -2, feats: all4, causes: { toxic: true, drugx: true } })).note,
-    'Multifactorial hypoactive delirium:\n1. Toxic encephalopathy due to [specify etiology]\n2. Drug intoxication due to [specify drug]');
+    'Multifactorial hypoactive delirium:\n1. Toxic encephalopathy due to [specify etiology]\n2. Drug intoxication/overdose due to [specify drug]');
   assert.strictEqual(AE.evaluate(p({ rass: -4, causes: { toxic: true, drugx: true } })).note,
-    'Multifactorial stupor/coma:\n1. Toxic encephalopathy due to [specify etiology]\n2. Drug intoxication due to [specify drug]');
+    'Multifactorial stupor/coma:\n1. Toxic encephalopathy due to [specify etiology]\n2. Drug intoxication/overdose due to [specify drug]');
   assert.strictEqual(AE.evaluate(p({ rass: -5, causes: { toxic: true, drugx: true, metabolic: true } })).note,
-    'Multifactorial coma:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]\n3. Drug intoxication due to [specify drug]');
+    'Multifactorial coma:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]');
 });
 
 test('Toxidrome + Toxic or another diagnosis -> multifactorial, brain then encephalopathy then substance', () => {
@@ -395,7 +406,7 @@ test('Toxidrome + Toxic or another diagnosis -> multifactorial, brain then encep
 });
 
 test('Exactly one brain or substance diagnosis is named on its own; any second diagnosis -> multifactorial', () => {
-  ['cns', 'stroke', 'sz', 'tumor', 'tbi', 'etohx', 'drugx', 'etohwd', 'drugwd', 'toxidrome'].forEach((id) => {
+  ['cns', 'stroke', 'ich', 'sah', 'sz', 'tumor', 'tbi', 'sdh', 'etohx', 'drugx', 'etohwd', 'drugwd', 'toxidrome'].forEach((id) => {
     const one = {}; one[id] = true;
     assert.match(AE.evaluate(p({ rass: -4, causes: one })).note, /, presenting with stupor\/coma\.$/, id);
     AE.CAUSES.filter((c) => c.id !== id && c.group !== 'unknown').forEach((c) => {
@@ -464,11 +475,11 @@ test('arousalTerm gives the step 2 warning wording', () => {
 });
 
 test('Septic hover text', () => {
-  assert.strictEqual(AE.hint(cat('septic')), 'Diffuse brain dysfunction from peripheral infection, with no direct CNS extension or cytokine mediated encephalopathy: cytokine storm, HLH, MAS');
+  assert.strictEqual(AE.hint(cat('septic')), 'Septic encephalopathy is a global cerebral dysfunction caused by peripheral infection, with no direct CNS extension or cytokine mediated encephalopathy: cytokine storm, HLH, MAS.');
 });
 
 test('Vascular hover names cardiogenic shock / severe heart failure for low-flow', () => {
-  assert.match(AE.hint(cat('vascular')), /Low-flow or hypoperfusion encephalopathy \(i\.e\. cardiogenic shock\/severe heart failure\)/);
+  assert.match(AE.hint(cat('vascular')), /low-flow or hypoperfusion encephalopathy \(i\.e\. cardiogenic shock\/severe heart failure\)\.$/);
 });
 
 test('Every Encephalopathy-section chip asks for the specific cause', () => {
@@ -480,7 +491,7 @@ test('Every Encephalopathy-section chip asks for the specific cause', () => {
 
 test('Multifactorial list flags drug intoxication and toxidrome too', () => {
   assert.strictEqual(AE.evaluate(p({ rass: 2, feats: all4, causes: { drugx: true, toxidrome: true } })).note,
-    'Multifactorial hyperactive delirium:\n1. Drug intoxication due to [specify drug]\n2. Toxidrome: [specify toxidrome]');
+    'Multifactorial hyperactive delirium:\n1. Drug intoxication/overdose due to [specify drug]\n2. Toxidrome: [specify toxidrome]');
 });
 
 // "Acute encephalopathy" is only used once an underlying etiology is named.
@@ -522,7 +533,7 @@ test('Dementia + one encephalopathy, drug intoxication, subsyndromal', () => {
   assert.strictEqual(AE.evaluate(d({ rass: 2, feats: { inatt: true }, causes: { metabolic: true } })).note,
     'Metabolic encephalopathy due to [specify etiology], manifesting as possible hyperactive delirium superimposed on dementia.');
   assert.strictEqual(AE.evaluate(d({ rass: -1, feats: { inatt: true }, causes: { drugx: true } })).note,
-    'Drug intoxication due to [specify drug], presenting with possible hypoactive delirium superimposed on dementia.');
+    'Drug intoxication/overdose due to [specify drug], presenting with possible hypoactive delirium superimposed on dementia.');
   assert.strictEqual(AE.evaluate(d({ rass: 0, feats: { disorg: true } })).note,
     'Subsyndromal delirium superimposed on dementia, etiology not yet identified.');
 });
@@ -530,7 +541,7 @@ test('Dementia + stupor/coma -> "with underlying dementia"', () => {
   assert.strictEqual(AE.evaluate(d({ rass: -4, causes: { septic: true } })).note,
     'Septic encephalopathy due to [specify etiology], manifesting as stupor/coma with underlying dementia.');
   assert.strictEqual(AE.evaluate(d({ rass: -5, causes: { tbi: true, vascular: true } })).note,
-    'Multifactorial coma with underlying dementia:\n1. Traumatic brain injury or subdural hematoma\n2. Vascular/hemodynamic encephalopathy due to [specify etiology]');
+    'Multifactorial coma with underlying dementia:\n1. Traumatic brain injury (TBI)\n2. Vascular encephalopathy due to [specify etiology]');
 });
 test('Dementia at baseline (not a new change)', () => {
   assert.strictEqual(AE.evaluate(d({ acute: 'no' })).note, 'Dementia at baseline; acute encephalopathy not supported at this time.');
