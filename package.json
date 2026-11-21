@@ -1,0 +1,10 @@
+{
+  "name": "acute-encephalopathy-app",
+  "version": "0.1.0",
+  "description": "Bedside decision support for acute encephalopathy (Slooter et al., Intensive Care Med 2020).",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/logic.test.js tests/validation.test.js tests/validation200.test.js",
+    "build-validation": "python3 tests/validation/build_cases.py && python3 tests/validation-200/build_cases.py"
+  }
+}

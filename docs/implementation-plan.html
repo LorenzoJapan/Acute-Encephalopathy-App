@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acute Encephalopathy App Plan</title>
+<style>
+:root{
+  --teal:#1F6B64;--teal-d:#174F4A;--tint:#E4F1EE;--tint2:#F1F8F6;
+  --ink:#1C2321;--ink2:#4A5754;--ground:#F3F6F5;--white:#FFFFFF;--line:#D6E2DF;
+  --high:#8F3A16;--high-bg:#FCEDE4;--mod:#7A5300;--mod-bg:#FBF1D9;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:48px 16px 96px}
+header{padding:8px 0 32px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--teal);margin:0 0 8px}
+h1{font-size:40px;line-height:1.15;margin:0 0 12px;letter-spacing:-.01em}
+h2{font-size:26px;line-height:1.25;margin:0 0 6px;letter-spacing:-.01em}
+h3{font-size:18px;margin:20px 0 6px}
+.lead{font-size:19px;color:var(--ink2);max-width:680px;margin:0}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0}
+nav.toc a{font-size:14px;font-weight:600;color:var(--teal);text-decoration:none;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 14px;min-height:44px;display:inline-flex;align-items:center}
+nav.toc a:hover{background:var(--tint)}
+section{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:32px;margin:0 0 20px}
+.num{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--tint);color:var(--teal-d);font-weight:700;font-size:14px;align-items:center;justify-content:center;margin-right:8px;vertical-align:3px}
+p{margin:0 0 12px}
+.why{background:var(--tint2);border-radius:14px;padding:16px 18px;margin:16px 0}
+.why b{color:var(--teal-d)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:12px 0}
+.tile{border:1px solid var(--line);border-radius:14px;padding:16px}
+.tile strong{display:block;margin-bottom:4px}
+.tile span{color:var(--ink2);font-size:15px}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:12px 0}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink2)}
+.tbl{overflow-x:auto}
+.pill{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px}
+.p-high{background:var(--high-bg);color:var(--high)}.p-mod{background:var(--mod-bg);color:var(--mod)}.p-low{background:var(--tint);color:var(--teal)}
+/* phone mockups */
+.phones{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin:20px 0 4px}
+.phone{width:240px;height:500px;border-radius:38px;background:var(--ground);border:8px solid #1C2321;padding:34px 14px 14px;display:flex;flex-direction:column;gap:8px;font-size:11px;overflow:hidden}
+.phone .t{font-size:18px;font-weight:700;line-height:1.2}
+.phone .s{color:var(--ink2);font-size:10.5px;line-height:1.4}
+.phone .c{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px}
+.phone .o{background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:7px 8px;display:flex;gap:6px;align-items:center}
+.phone .o.on{border-color:var(--teal);background:var(--tint2)}
+.phone .sc{width:22px;height:18px;border-radius:5px;background:var(--ground);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:10px}
+.phone .o.on .sc{background:var(--teal);color:#fff}
+.phone .btn{margin-top:auto;background:var(--teal);color:#fff;border-radius:10px;text-align:center;padding:10px;font-weight:600;font-size:12px}
+.phone .bar{height:3px;background:var(--line);border-radius:3px}.phone .bar i{display:block;height:3px;width:40%;background:var(--teal);border-radius:3px}
+.cap{text-align:center;font-size:13px;color:var(--ink2);margin-top:8px}
+.meter{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.meter i{height:5px;border-radius:3px;background:#C2551F}
+/* code */
+pre{font-family:var(--mono);font-size:13.5px;line-height:1.6;background:#1C2321;color:#E4F1EE;border-radius:14px;padding:18px;overflow-x:auto;margin:10px 0 6px}
+pre .k{color:#8FD3C7}pre .c{color:#9FB2AE}
+.plain{font-size:15px;color:var(--ink2);border-left:0;margin:0 0 20px}
+.plain b{color:var(--ink)}
+/* flow */
+figure{margin:16px 0}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:14px;color:var(--ink2);margin-top:8px}
+ol.phase{padding-left:0;list-style:none;margin:0;display:flex;flex-direction:column;gap:12px}
+ol.phase li{border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+ol.phase li b{color:var(--teal-d)}
+.status{float:right;font-size:12px;font-weight:700;color:var(--teal)}
+footer{font-size:13px;color:var(--ink2);text-align:center;margin-top:24px}
+@media (max-width:560px){section{padding:22px}h1{font-size:32px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+<p class="eyebrow">Implementation plan · plain-language edition</p>
+<h1>Acute Encephalopathy App</h1>
+<p class="lead">An iPhone tool that walks a clinician through five bedside questions and returns a likelihood, the name of what they are seeing, next steps, and a sentence for the chart.</p>
+<nav class="toc" aria-label="Sections">
+<a href="#problem">1 · The problem</a><a href="#what">2 · What it does</a><a href="#screens">3 · Screens</a><a href="#flow">4 · How answers flow</a><a href="#rules">5 · The rules</a><a href="#edges">6 · Tricky cases</a><a href="#design">7 · Design choices</a><a href="#code">8 · Code to review</a><a href="#build">9 · Build phases</a><a href="#impact">10 · Impact and limits</a>
+</nav>
+</header>
+
+<section id="problem">
+<h2><span class="num">1</span>The problem</h2>
+<p>Two groups of clinicians have been describing the same brain problem with different words. ICU doctors and geriatricians say <b>delirium</b>. Neurologists and many hospital notes say <b>encephalopathy</b>. Their research barely refers to each other: in the 2020 paper's analysis, almost 99% of references stayed within one word's camp.</p>
+<p>The 2020 consensus fixed the vocabulary: <b>acute encephalopathy</b> is the thing going wrong inside the brain, and <b>subsyndromal delirium, delirium and coma</b> are the three ways it shows up at the bedside. What the paper did not give is a simple way to apply that at the bedside.</p>
+<div class="why"><b>Why does that matter?</b> Labels steer care. Write "septic encephalopathy" and people may stop looking for other causes. Write "delirium" and a known care bundle switches on. Write "altered mental status" and nobody knows what was actually found. <b>Why does this keep happening?</b> Nothing at the bedside forces you to name both the presentation and the cause, so people write whichever word they learned.</div>
+<h3>The branches the app must handle</h3>
+<div class="grid2">
+<div class="tile"><strong>Not actually new</strong><span>This is the patient's baseline, so it is a long-term problem such as dementia, not acute encephalopathy.</span></div>
+<div class="tile"><strong>Coma</strong><span>Too unresponsive to test attention, so the delirium questions can't be asked.</span></div>
+<div class="tile"><strong>Delirium</strong><span>All four core features are present.</span></div>
+<div class="tile"><strong>Subsyndromal delirium</strong><span>Some features are present, but not all of them.</span></div>
+</div>
+</section>
+
+<section id="what">
+<h2><span class="num">2</span>What the app does</h2>
+<p>It asks the five questions from our step process, in order, one per screen:</p>
+<div class="grid2">
+<div class="tile"><strong>1 · Baseline</strong><span>Is this new or worse? Yes, not sure, or no.</span></div>
+<div class="tile"><strong>2 · Arousal</strong><span>How awake? Pick one level on the 10-level RASS scale.</span></div>
+<div class="tile"><strong>3 · Features</strong><span>Inattention, reduced awareness, fluctuation, other thinking change. Plus: could dementia explain it?</span></div>
+<div class="tile"><strong>4 · Red flags</strong><span>One-sided signs, seizures, fever with stiff neck, fall on blood thinners.</span></div>
+<div class="tile"><strong>5 · Cause</strong><span>Medications, withdrawal, infection, metabolic, oxygen/CO₂, bladder/bowel/pain, stroke, or not yet known.</span></div>
+<div class="tile"><strong>Result</strong><span>Likelihood (low, moderate or high), the presentation name, red-flag actions, next steps and a copy-ready chart note.</span></div>
+</div>
+<div class="why"><b>Why is there no percentage?</b> No study has turned these criteria into a validated probability. Showing "78%" would look scientific without being so. Low, moderate and high are honest about what the rules can tell you. <b>When could that change?</b> A percentage can be added later, but only after real patient data shows what each answer pattern predicts.</div>
+</section>
+
+<section id="screens">
+<h2><span class="num">3</span>Screens (mockups)</h2>
+<p>The working version is on the design canvas. These are simplified sketches of three key screens.</p>
+<div class="phones">
+<div>
+<div class="phone" role="img" aria-label="Home screen mockup">
+<div style="width:36px;height:36px;border-radius:10px;background:var(--tint);margin-top:14px"></div>
+<div class="s" style="color:var(--teal);font-weight:600;text-transform:uppercase;letter-spacing:.05em">Bedside decision support</div>
+<div class="t">Acute Encephalopathy</div>
+<div class="s">A five-step check that turns what you see into a likelihood and a ready-to-use note.</div>
+<div class="c s">1 Baseline<br>2 Arousal<br>3 Features<br>4 Red flags<br>5 Cause</div>
+<div class="btn">Start assessment</div>
+</div>
+<p class="cap">Home</p>
+</div>
+<div>
+<div class="phone" role="img" aria-label="Arousal step mockup">
+<div class="bar"><i></i></div>
+<div class="t">How awake is the patient?</div>
+<div class="o"><span class="sc">+1</span>Restless</div>
+<div class="o"><span class="sc">0</span>Alert and calm</div>
+<div class="o on"><span class="sc">−1</span>Drowsy</div>
+<div class="o"><span class="sc">−2</span>Light sedation</div>
+<div class="o"><span class="sc">−3</span>Moderate sedation</div>
+<div class="o"><span class="sc">−4</span>Deep sedation</div>
+<div class="btn">Continue</div>
+</div>
+<p class="cap">Step 2 · one tap per answer</p>
+</div>
+<div>
+<div class="phone" role="img" aria-label="Result screen mockup">
+<div class="c" style="display:flex;flex-direction:column;gap:6px">
+<span class="pill p-high" style="align-self:flex-start;font-size:9px">High likelihood</span>
+<div class="t" style="font-size:15px">Delirium · hypoactive</div>
+<div class="meter"><i></i><i></i><i></i></div>
+<div class="s">All core features present with an acute change.</div>
+</div>
+<div class="c s"><b style="color:var(--ink)">Next steps</b><br>Treat the suspected cause · Non-drug delirium care · Rescreen daily</div>
+<div class="c s" style="font-family:var(--mono);font-size:9.5px;color:var(--ink)">Acute encephalopathy due to infection, manifesting as hypoactive delirium.</div>
+<div class="btn">New assessment</div>
+</div>
+<p class="cap">Result · copy note to chart</p>
+</div>
+</div>
+</section>
+
+<section id="flow">
+<h2><span class="num">4</span>How the answers flow</h2>
+<p>Think of it as a funnel with two shortcuts. Answers go in at the top, the rules sort them, and one result comes out.</p>
+<figure>
+<svg viewBox="0 0 860 430" role="img" aria-label="Flow: baseline, then arousal, then features, red flags, cause, result. Shortcut: not new goes straight to result. Shortcut: coma skips features.">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#4A5754"/></marker></defs>
+<g font-family="-apple-system,Helvetica,sans-serif" font-size="15" fill="#1C2321">
+<rect x="20" y="40" width="150" height="64" rx="14" fill="#E4F1EE" stroke="#1F6B64"/><text x="95" y="68" text-anchor="middle" font-weight="700">1 Baseline</text><text x="95" y="88" text-anchor="middle" font-size="12" fill="#4A5754">new change?</text>
+<rect x="240" y="40" width="150" height="64" rx="14" fill="#E4F1EE" stroke="#1F6B64"/><text x="315" y="68" text-anchor="middle" font-weight="700">2 Arousal</text><text x="315" y="88" text-anchor="middle" font-size="12" fill="#4A5754">RASS level</text>
+<rect x="460" y="40" width="150" height="64" rx="14" fill="#E4F1EE" stroke="#1F6B64"/><text x="535" y="68" text-anchor="middle" font-weight="700">3 Features</text><text x="535" y="88" text-anchor="middle" font-size="12" fill="#4A5754">4 core + dementia</text>
+<rect x="680" y="40" width="160" height="64" rx="14" fill="#E4F1EE" stroke="#1F6B64"/><text x="760" y="68" text-anchor="middle" font-weight="700">4 Red flags</text><text x="760" y="88" text-anchor="middle" font-size="12" fill="#4A5754">urgent tests</text>
+<rect x="680" y="180" width="160" height="64" rx="14" fill="#E4F1EE" stroke="#1F6B64"/><text x="760" y="208" text-anchor="middle" font-weight="700">5 Cause</text><text x="760" y="228" text-anchor="middle" font-size="12" fill="#4A5754">what's driving it</text>
+<rect x="330" y="300" width="250" height="100" rx="16" fill="#FFFFFF" stroke="#1C2321" stroke-width="1.5"/><text x="455" y="330" text-anchor="middle" font-weight="700">The rules → Result</text><text x="455" y="354" text-anchor="middle" font-size="12" fill="#4A5754">likelihood · presentation name</text><text x="455" y="374" text-anchor="middle" font-size="12" fill="#4A5754">next steps · chart sentence</text>
+<path d="M170 72H236" stroke="#4A5754" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M390 72H456" stroke="#4A5754" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M610 72H676" stroke="#4A5754" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M760 104V176" stroke="#4A5754" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M720 244 580 320" stroke="#4A5754" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M95 104V350H326" stroke="#8F3A16" stroke-width="1.6" stroke-dasharray="6 5" fill="none" marker-end="url(#ar)"/>
+<text x="105" y="250" font-size="13" fill="#8F3A16" font-weight="600">"No, it's baseline" →</text><text x="105" y="268" font-size="13" fill="#8F3A16">straight to result</text>
+<path d="M315 40V16H760V36" stroke="#7A5300" stroke-width="1.6" stroke-dasharray="6 5" fill="none" marker-end="url(#ar)"/>
+<text x="430" y="12" font-size="13" fill="#7A5300" font-weight="600">Coma (RASS −4/−5) → skip features</text>
+</g>
+</svg>
+<figcaption>Solid arrows are the normal path. Dashed arrows are the two shortcuts. Nothing is sent anywhere: every answer stays on the phone.</figcaption>
+</figure>
+</section>
+
+<section id="rules">
+<h2><span class="num">5</span>The rules, in plain English</h2>
+<p>The rules are checked from top to bottom, and the first one that matches decides the result.</p>
+<div class="tbl"><table>
+<thead><tr><th>If…</th><th>Presentation</th><th>Likelihood</th></tr></thead>
+<tbody>
+<tr><td>The change is not new (baseline)</td><td>Acute encephalopathy unlikely</td><td><span class="pill p-low">Low</span></td></tr>
+<tr><td>RASS −4 or −5 (no response to voice)</td><td>Coma</td><td><span class="pill p-high">High</span></td></tr>
+<tr><td>All 4 core features present, no dementia doubt</td><td>Delirium</td><td><span class="pill p-high">High</span></td></tr>
+<tr><td>All 4 present, but dementia could explain it</td><td>Possible delirium on top of dementia</td><td><span class="pill p-mod">Moderate</span></td></tr>
+<tr><td>1 to 3 core features present</td><td>Subsyndromal delirium</td><td><span class="pill p-mod">Moderate</span></td></tr>
+<tr><td>None present</td><td>No delirium features</td><td><span class="pill p-low">Low</span></td></tr>
+</tbody></table></div>
+<p><b>Then two adjustments:</b> if the baseline answer was "not sure", the likelihood drops one level. The motor type comes from RASS: above 0 is <i>hyperactive</i>, below 0 is <i>hypoactive</i>, exactly 0 is <i>mixed or undetermined</i>.</p>
+</section>
+
+<section id="edges">
+<h2><span class="num">6</span>Tricky cases and how the app handles them</h2>
+<div class="tbl"><table>
+<thead><tr><th>Situation</th><th>What the app does</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Baseline unknown (no family, no notes)</td><td>Allows "Not sure", lowers likelihood one level, and says so</td><td>The rules need an acute change. Guessing "yes" would overcall.</td></tr>
+<tr><td>Patient is RASS −3 (stuporous)</td><td>Still asks the feature questions, counted as hypoactive</td><td>The paper leaves this zone unclear. RASS −3 still responds to voice, so testing is possible.</td></tr>
+<tr><td>Known dementia</td><td>A separate "could dementia explain this?" switch</td><td>Dementia alone can produce some features (DSM-5 criterion D).</td></tr>
+<tr><td>Coma</td><td>Skips features and goes straight to red flags</td><td>You cannot test attention in someone who won't respond to voice.</td></tr>
+<tr><td>Several causes</td><td>All of them go in the note, joined with "and"</td><td>Most delirium has more than one cause.</td></tr>
+<tr><td>"Not yet known" cause</td><td>Clears the other causes. The note says "[cause not yet identified]" and a search reminder appears</td><td>The paper's key point: the diagnosis isn't finished until a cause is named.</td></tr>
+<tr><td>Red flag plus low likelihood</td><td>The red-flag warning still shows at the top</td><td>A one-sided weakness needs a scan whatever the delirium score says.</td></tr>
+<tr><td>Patient is sedated</td><td>Reminder on step 2: "assess off sedation where you can"</td><td>Sedation drugs can mimic coma or delirium.</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="design">
+<h2><span class="num">7</span>Design choices and the reasons for them</h2>
+<div class="grid2">
+<div class="tile"><strong>One question per screen</strong><span>Fewer mistakes when you are tired or interrupted. Same pattern as iPhone Settings.</span></div>
+<div class="tile"><strong>Deep teal for every action</strong><span>Calm and clinical. Warm clay and amber are kept only for likelihood and warnings, so color always means something.</span></div>
+<div class="tile"><strong>Words, not just color</strong><span>Every likelihood also says "Low", "Moderate" or "High", so color-blind users lose nothing.</span></div>
+<div class="tile"><strong>Big tap areas</strong><span>Everything is at least 44 points tall, Apple's minimum, so it works with gloves on.</span></div>
+<div class="tile"><strong>Main button at the bottom</strong><span>Within reach of your thumb on a large iPhone.</span></div>
+<div class="tile"><strong>Quiet motion</strong><span>Screens rise gently, ticks pop and buttons press in slightly. All of it turns off if the phone's Reduce Motion setting is on.</span></div>
+<div class="tile"><strong>Strong contrast</strong><span>Every text color passes the accessibility standard (WCAG AA, at least 4.5:1). The ratios are on the canvas's style-tokens board.</span></div>
+<div class="tile"><strong>The note names both parts</strong><span>"…due to <i>cause</i>, manifesting as <i>presentation</i>". This matches the 2020 consensus and avoids "altered mental status".</span></div>
+</div>
+</section>
+
+<section id="code">
+<h2><span class="num">8</span>Code worth reviewing</h2>
+<p>You don't need to read code. Each snippet below has a plain-English line saying what it means, so you can check the medicine is right.</p>
+
+<pre><span class="k">if</span> (acute === <span class="k">'no'</span>)            → <span class="k">Low</span>,  "Acute encephalopathy unlikely"
+<span class="k">else if</span> (coma)                 → <span class="k">High</span>, "Coma"
+<span class="k">else if</span> (featuresPresent === 4 &amp;&amp; !dementia) → <span class="k">High</span>, "Delirium"
+<span class="k">else if</span> (featuresPresent === 4 &amp;&amp; dementia)  → <span class="k">Moderate</span>, "Possible delirium on top of dementia"
+<span class="k">else if</span> (featuresPresent &gt;= 1) → <span class="k">Moderate</span>, "Subsyndromal delirium"
+<span class="k">else</span>                           → <span class="k">Low</span>,  "No delirium features"</pre>
+<p class="plain"><b>In plain English:</b> this is the table in section 5. Checking order matters: "not new" is checked first, so a patient at baseline can never be labelled delirious.</p>
+
+<pre><span class="k">var</span> coma = rass !== <span class="k">null</span> &amp;&amp; rass &lt;= -4;
+<span class="k">if</span> (screen === <span class="k">'arousal'</span> &amp;&amp; coma) next = <span class="k">'flags'</span>;   <span class="c">// skip the feature questions</span></pre>
+<p class="plain"><b>In plain English:</b> RASS −4 or −5 counts as coma, and the app jumps past the feature questions. If you think RASS −3 should also count as coma, this "−4" is the one number to change.</p>
+
+<pre><span class="k">if</span> (acute === <span class="k">'unsure'</span> &amp;&amp; level &gt; 0) { level -= 1; }</pre>
+<p class="plain"><b>In plain English:</b> if you are not sure the change is new, the app drops the likelihood one level. A "high" becomes "moderate" until someone confirms the baseline.</p>
+
+<pre>doc = <span class="k">'Acute encephalopathy due to '</span> + causes + <span class="k">', manifesting as '</span> + subtype + presentation + <span class="k">'.'</span>
+<span class="c">// e.g. "Acute encephalopathy due to infection, manifesting as hypoactive delirium."</span></pre>
+<p class="plain"><b>In plain English:</b> this builds the chart sentence from your answers. It always names both the cause and what you saw. That pairing is the whole point of the 2020 paper.</p>
+</section>
+
+<section id="build">
+<h2><span class="num">9</span>Build phases</h2>
+<ol class="phase">
+<li><span class="status">Done</span><b>Phase 1 · Clickable prototype.</b> All screens, rules and the chart note work on the design canvas.</li>
+<li><b>Phase 2 · Clinical review.</b> You and one or two colleagues (ICU, neurology, geriatrics) review the wording, the coma cut-off, the red flags and the cause list.</li>
+<li><b>Phase 3 · Test patients.</b> Write a set of made-up patients with the answer you expect for each, covering every row in sections 5 and 6. Then confirm the app gives the same answer every time.</li>
+<li><b>Phase 4 · iPhone web app.</b> Package it so it installs to the home screen and works offline. Nothing is stored or sent, so no patient data leaves the phone.</li>
+<li><b>Phase 5 · Pilot.</b> Try it on your service, compare the app's labels with your own, and refine before sharing more widely.</li>
+</ol>
+</section>
+
+<section id="impact">
+<h2><span class="num">10</span>Impact and limits</h2>
+<h3>What it changes</h3>
+<p>One shared vocabulary in notes across specialties. Fewer vague "altered mental status" entries. A reminder that the job isn't done until a cause is found. Clearer documentation for handoffs and coding.</p>
+<h3>What it does not do</h3>
+<p>It does not replace the 4AT or CAM-ICU tests themselves. It records what those tests showed. It does not give a validated probability, and it has not yet been tested on real patients. It is decision support, and the clinician's judgement comes first.</p>
+</section>
+
+<footer>Sources: Slooter AJC et al. Updated nomenclature of delirium and acute encephalopathy. Intensive Care Med 2020;46:1020–1022 · DSM-5 delirium criteria · RASS (Sessler 2002).</footer>
+</div>
+</body>
+</html>
