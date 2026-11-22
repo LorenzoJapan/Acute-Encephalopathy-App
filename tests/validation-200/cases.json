@@ -27,7 +27,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Brain tumor or mass\n2. Subarachnoid hemorrhage (SAH)\n3. Alcohol intoxication",
+    "note": "Multifactorial hypoactive subsyndromal delirium due to:\n1. Brain tumor or mass\n2. Subarachnoid hemorrhage (SAH)\n3. Alcohol intoxication",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI.",
      "Seizure, twitching or myoclonus: EEG for non-convulsive status."
@@ -184,7 +184,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Septic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Septic encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -211,7 +211,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Autoimmune encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive subsyndromal delirium due to:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Autoimmune encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -265,7 +265,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Acute ischemic stroke\n2. Nutritional encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive subsyndromal delirium due to:\n1. Acute ischemic stroke\n2. Nutritional encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]
@@ -317,7 +317,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium superimposed on dementia:\n1. Subdural hematoma (SDH)\n2. Autoimmune encephalopathy due to [specify etiology]",
+    "note": "Multifactorial subsyndromal delirium superimposed on dementia due to:\n1. Subdural hematoma (SDH)\n2. Autoimmune encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -373,7 +373,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Toxic encephalopathy due to [specify etiology]\n2. Vascular encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Toxic encephalopathy due to [specify etiology]\n2. Vascular encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -451,7 +451,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Acute ischemic stroke\n2. Subarachnoid hemorrhage (SAH)\n3. Subdural hematoma (SDH)\n4. Nutritional encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Acute ischemic stroke\n2. Subarachnoid hemorrhage (SAH)\n3. Subdural hematoma (SDH)\n4. Nutritional encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -506,7 +506,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Drug intoxication/overdose due to [specify drug]",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": []
    }
   },
@@ -558,7 +558,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Stupor/coma",
     "subtype": "",
-    "note": "Multifactorial stupor/coma:\n1. Subdural hematoma (SDH)\n2. Alcohol intoxication",
+    "note": "Multifactorial stupor/coma due to:\n1. Subdural hematoma (SDH)\n2. Alcohol intoxication",
     "nextSteps": []
    }
   },
@@ -584,7 +584,7 @@
     "levelText": "High likelihood",
     "phenotype": "Coma",
     "subtype": "",
-    "note": "Multifactorial coma:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Toxic encephalopathy due to [specify etiology]\n4. Vascular encephalopathy due to [specify etiology]\n5. Drug withdrawal",
+    "note": "Multifactorial coma due to:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Toxic encephalopathy due to [specify etiology]\n4. Vascular encephalopathy due to [specify etiology]\n5. Drug withdrawal",
     "nextSteps": []
    }
   },
@@ -640,7 +640,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Subdural hematoma (SDH)\n2. Septic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Subdural hematoma (SDH)\n2. Septic encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -688,7 +688,7 @@
     "levelText": "High likelihood",
     "phenotype": "Coma",
     "subtype": "",
-    "note": "Multifactorial coma:\n1. Subdural hematoma (SDH)\n2. Autoimmune encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]",
+    "note": "Multifactorial coma due to:\n1. Subdural hematoma (SDH)\n2. Autoimmune encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -743,7 +743,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Acute ischemic stroke\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Acute ischemic stroke\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -804,7 +804,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Possible delirium on top of dementia",
     "subtype": "hyperactive",
-    "note": "Multifactorial possible hyperactive delirium superimposed on dementia:\n1. Traumatic brain injury (TBI)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]",
+    "note": "Multifactorial possible hyperactive delirium superimposed on dementia due to:\n1. Traumatic brain injury (TBI)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
      "Fever with neck stiffness: lumbar puncture."
@@ -833,7 +833,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Traumatic brain injury (TBI)\n2. Drug withdrawal",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Traumatic brain injury (TBI)\n2. Drug withdrawal",
     "nextSteps": []
    }
   },
@@ -863,7 +863,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Possible delirium on top of dementia",
     "subtype": "hyperactive",
-    "note": "Multifactorial possible hyperactive delirium superimposed on dementia:\n1. Brain tumor or mass\n2. Drug intoxication/overdose due to [specify drug]\n3. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial possible hyperactive delirium superimposed on dementia due to:\n1. Brain tumor or mass\n2. Drug intoxication/overdose due to [specify drug]\n3. Toxidrome: [specify toxidrome]",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI.",
      "Fall or head injury on blood thinners: urgent head CT."
@@ -892,7 +892,7 @@
     "levelText": "High likelihood",
     "phenotype": "Stupor/coma",
     "subtype": "",
-    "note": "Multifactorial stupor/coma:\n1. Brain tumor or mass\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal",
+    "note": "Multifactorial stupor/coma due to:\n1. Brain tumor or mass\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -950,7 +950,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial delirium:\n1. Brain tumor or mass\n2. Autoimmune encephalopathy due to [specify etiology]",
+    "note": "Multifactorial delirium due to:\n1. Brain tumor or mass\n2. Autoimmune encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -1037,7 +1037,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Traumatic brain injury (TBI)\n3. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial subsyndromal delirium due to:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Traumatic brain injury (TBI)\n3. Toxidrome: [specify toxidrome]",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture.",
      "Fall or head injury on blood thinners: urgent head CT."
@@ -1067,7 +1067,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Brain tumor or mass\n2. Metabolic encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]",
+    "note": "Multifactorial hyperactive subsyndromal delirium due to:\n1. Brain tumor or mass\n2. Metabolic encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": []
    }
   },
@@ -1096,7 +1096,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Metabolic encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive subsyndromal delirium due to:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Metabolic encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
      "Fever with neck stiffness: lumbar puncture."
@@ -1181,7 +1181,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Nutritional encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]\n4. Alcohol withdrawal",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Nutritional encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]\n4. Alcohol withdrawal",
     "nextSteps": []
    }
   },
@@ -1237,7 +1237,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium superimposed on dementia:\n1. Subarachnoid hemorrhage (SAH)\n2. Nutritional encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive subsyndromal delirium superimposed on dementia due to:\n1. Subarachnoid hemorrhage (SAH)\n2. Nutritional encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]
@@ -1298,7 +1298,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]\n4. Drug withdrawal\n5. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]\n4. Drug withdrawal\n5. Toxidrome: [specify toxidrome]",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -1330,7 +1330,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Possible delirium on top of dementia",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial possible delirium superimposed on dementia:\n1. Seizure (postictal state or non-convulsive status)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal",
+    "note": "Multifactorial possible delirium superimposed on dementia due to:\n1. Seizure (postictal state or non-convulsive status)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]
@@ -1355,7 +1355,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Coma",
     "subtype": "",
-    "note": "Multifactorial coma:\n1. Acute ischemic stroke\n2. Intracerebral hemorrhage (ICH)",
+    "note": "Multifactorial coma due to:\n1. Acute ischemic stroke\n2. Intracerebral hemorrhage (ICH)",
     "nextSteps": []
    }
   },
@@ -1409,7 +1409,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Acute ischemic stroke\n2. Intracerebral hemorrhage (ICH)\n3. Drug withdrawal",
+    "note": "Multifactorial hypoactive subsyndromal delirium due to:\n1. Acute ischemic stroke\n2. Intracerebral hemorrhage (ICH)\n3. Drug withdrawal",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
@@ -1521,7 +1521,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Toxic encephalopathy due to [specify etiology]\n2. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Toxic encephalopathy due to [specify etiology]\n2. Toxidrome: [specify toxidrome]",
     "nextSteps": []
    }
   },
@@ -1602,7 +1602,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -1631,7 +1631,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Seizure (postictal state or non-convulsive status)\n3. Subarachnoid hemorrhage (SAH)\n4. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Seizure (postictal state or non-convulsive status)\n3. Subarachnoid hemorrhage (SAH)\n4. Toxidrome: [specify toxidrome]",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]
@@ -1688,7 +1688,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Traumatic brain injury (TBI)\n2. Alcohol withdrawal",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Traumatic brain injury (TBI)\n2. Alcohol withdrawal",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI."
     ]
@@ -1715,7 +1715,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. Subdural hematoma (SDH)\n2. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial subsyndromal delirium due to:\n1. Subdural hematoma (SDH)\n2. Toxidrome: [specify toxidrome]",
     "nextSteps": []
    }
   },
@@ -1743,7 +1743,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Possible delirium on top of dementia",
     "subtype": "hypoactive",
-    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Brain tumor or mass\n2. Intracerebral hemorrhage (ICH)\n3. Autoimmune encephalopathy due to [specify etiology]",
+    "note": "Multifactorial possible hypoactive delirium superimposed on dementia due to:\n1. Brain tumor or mass\n2. Intracerebral hemorrhage (ICH)\n3. Autoimmune encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -1771,7 +1771,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Subdural hematoma (SDH)\n2. Toxic encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]\n4. Alcohol withdrawal",
+    "note": "Multifactorial hypoactive subsyndromal delirium due to:\n1. Subdural hematoma (SDH)\n2. Toxic encephalopathy due to [specify etiology]\n3. Vascular encephalopathy due to [specify etiology]\n4. Alcohol withdrawal",
     "nextSteps": []
    }
   },
@@ -1800,7 +1800,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]",
+    "note": "Multifactorial hypoactive subsyndromal delirium due to:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI.",
      "Fall or head injury on blood thinners: urgent head CT."
@@ -1833,7 +1833,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. Intracerebral hemorrhage (ICH)\n2. Septic encephalopathy due to [specify etiology]\n3. Alcohol withdrawal\n4. Drug withdrawal",
+    "note": "Multifactorial subsyndromal delirium due to:\n1. Intracerebral hemorrhage (ICH)\n2. Septic encephalopathy due to [specify etiology]\n3. Alcohol withdrawal\n4. Drug withdrawal",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI.",
      "Fever with neck stiffness: lumbar puncture."
@@ -1970,7 +1970,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Acute ischemic stroke\n2. Primary CNS infection (meningitis or encephalitis)\n3. Subarachnoid hemorrhage (SAH)\n4. Traumatic brain injury (TBI)\n5. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Acute ischemic stroke\n2. Primary CNS infection (meningitis or encephalitis)\n3. Subarachnoid hemorrhage (SAH)\n4. Traumatic brain injury (TBI)\n5. Toxidrome: [specify toxidrome]",
     "nextSteps": []
    }
   },
@@ -2021,7 +2021,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Possible delirium on top of dementia",
     "subtype": "hypoactive",
-    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Alcohol withdrawal",
+    "note": "Multifactorial possible hypoactive delirium superimposed on dementia due to:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Alcohol withdrawal",
     "nextSteps": []
    }
   },
@@ -2045,7 +2045,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Seizure (postictal state or non-convulsive status)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal",
+    "note": "Multifactorial hyperactive subsyndromal delirium due to:\n1. Seizure (postictal state or non-convulsive status)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal",
     "nextSteps": []
    }
   },
@@ -2148,7 +2148,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Brain tumor or mass\n2. Alcohol withdrawal",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Brain tumor or mass\n2. Alcohol withdrawal",
     "nextSteps": []
    }
   },
@@ -2260,7 +2260,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Possible delirium on top of dementia",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial possible delirium superimposed on dementia:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Vascular encephalopathy due to [specify etiology]",
+    "note": "Multifactorial possible delirium superimposed on dementia due to:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Vascular encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
@@ -2291,7 +2291,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Possible delirium on top of dementia",
     "subtype": "hypoactive",
-    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Acute ischemic stroke\n2. Seizure (postictal state or non-convulsive status)\n3. Subdural hematoma (SDH)\n4. Vascular encephalopathy due to [specify etiology]\n5. Drug withdrawal",
+    "note": "Multifactorial possible hypoactive delirium superimposed on dementia due to:\n1. Acute ischemic stroke\n2. Seizure (postictal state or non-convulsive status)\n3. Subdural hematoma (SDH)\n4. Vascular encephalopathy due to [specify etiology]\n5. Drug withdrawal",
     "nextSteps": []
    }
   },
@@ -2417,7 +2417,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Septic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive subsyndromal delirium due to:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Septic encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -2448,7 +2448,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Possible delirium on top of dementia",
     "subtype": "hypoactive",
-    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Septic encephalopathy due to [specify etiology]\n4. Drug withdrawal",
+    "note": "Multifactorial possible hypoactive delirium superimposed on dementia due to:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Septic encephalopathy due to [specify etiology]\n4. Drug withdrawal",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI.",
      "Fall or head injury on blood thinners: urgent head CT."
@@ -2630,7 +2630,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Brain tumor or mass\n2. Nutritional encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Brain tumor or mass\n2. Nutritional encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
@@ -2826,7 +2826,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Drug intoxication/overdose due to [specify drug]",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": []
    }
   },
@@ -2883,7 +2883,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Subarachnoid hemorrhage (SAH)\n2. Traumatic brain injury (TBI)\n3. Metabolic encephalopathy due to [specify etiology]\n4. Septic encephalopathy due to [specify etiology]\n5. Alcohol withdrawal",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Subarachnoid hemorrhage (SAH)\n2. Traumatic brain injury (TBI)\n3. Metabolic encephalopathy due to [specify etiology]\n4. Septic encephalopathy due to [specify etiology]\n5. Alcohol withdrawal",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI."
     ]
@@ -2913,7 +2913,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Seizure (postictal state or non-convulsive status)\n3. Subarachnoid hemorrhage (SAH)\n4. Traumatic brain injury (TBI)\n5. Autoimmune encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Seizure (postictal state or non-convulsive status)\n3. Subarachnoid hemorrhage (SAH)\n4. Traumatic brain injury (TBI)\n5. Autoimmune encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -2940,7 +2940,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. Alcohol withdrawal\n2. Drug withdrawal",
+    "note": "Multifactorial subsyndromal delirium due to:\n1. Alcohol withdrawal\n2. Drug withdrawal",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -2996,7 +2996,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. Acute ischemic stroke\n2. Seizure (postictal state or non-convulsive status)\n3. Traumatic brain injury (TBI)\n4. Nutritional encephalopathy due to [specify etiology]\n5. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial subsyndromal delirium due to:\n1. Acute ischemic stroke\n2. Seizure (postictal state or non-convulsive status)\n3. Traumatic brain injury (TBI)\n4. Nutritional encephalopathy due to [specify etiology]\n5. Toxidrome: [specify toxidrome]",
     "nextSteps": []
    }
   },
@@ -3051,7 +3051,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Seizure (postictal state or non-convulsive status)\n2. Toxic encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Seizure (postictal state or non-convulsive status)\n2. Toxic encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
     "nextSteps": []
    }
   },
@@ -3251,7 +3251,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal\n4. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol withdrawal\n4. Toxidrome: [specify toxidrome]",
     "nextSteps": []
    }
   },
@@ -3277,7 +3277,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Coma",
     "subtype": "",
-    "note": "Multifactorial coma:\n1. Subdural hematoma (SDH)\n2. Alcohol intoxication\n3. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial coma due to:\n1. Subdural hematoma (SDH)\n2. Alcohol intoxication\n3. Toxidrome: [specify toxidrome]",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI."
     ]
@@ -3383,7 +3383,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Drug intoxication/overdose due to [specify drug]",
+    "note": "Multifactorial hyperactive subsyndromal delirium due to:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": []
    }
   },
@@ -3436,7 +3436,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hyperactive subsyndromal delirium due to:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Toxidrome: [specify toxidrome]",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
@@ -3489,7 +3489,7 @@
     "levelText": "High likelihood",
     "phenotype": "Coma",
     "subtype": "",
-    "note": "Multifactorial coma:\n1. Intracerebral hemorrhage (ICH)\n2. Primary CNS infection (meningitis or encephalitis)\n3. Alcohol withdrawal\n4. Drug intoxication/overdose due to [specify drug]",
+    "note": "Multifactorial coma due to:\n1. Intracerebral hemorrhage (ICH)\n2. Primary CNS infection (meningitis or encephalitis)\n3. Alcohol withdrawal\n4. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
@@ -3517,7 +3517,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Intracerebral hemorrhage (ICH)\n2. Vascular encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive subsyndromal delirium due to:\n1. Intracerebral hemorrhage (ICH)\n2. Vascular encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -3550,7 +3550,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial delirium:\n1. Acute ischemic stroke\n2. Brain tumor or mass\n3. Toxic encephalopathy due to [specify etiology]\n4. Vascular encephalopathy due to [specify etiology]\n5. Drug withdrawal",
+    "note": "Multifactorial delirium due to:\n1. Acute ischemic stroke\n2. Brain tumor or mass\n3. Toxic encephalopathy due to [specify etiology]\n4. Vascular encephalopathy due to [specify etiology]\n5. Drug withdrawal",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status.",
      "Fall or head injury on blood thinners: urgent head CT."
@@ -3721,7 +3721,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Alcohol intoxication\n3. Alcohol withdrawal\n4. Drug withdrawal",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Autoimmune encephalopathy due to [specify etiology]\n2. Alcohol intoxication\n3. Alcohol withdrawal\n4. Drug withdrawal",
     "nextSteps": []
    }
   },
@@ -3750,7 +3750,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Intracerebral hemorrhage (ICH)\n2. Subarachnoid hemorrhage (SAH)\n3. Autoimmune encephalopathy due to [specify etiology]\n4. Drug withdrawal\n5. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Intracerebral hemorrhage (ICH)\n2. Subarachnoid hemorrhage (SAH)\n3. Autoimmune encephalopathy due to [specify etiology]\n4. Drug withdrawal\n5. Toxidrome: [specify toxidrome]",
     "nextSteps": []
    }
   },
@@ -3777,7 +3777,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial delirium:\n1. Subdural hematoma (SDH)\n2. Drug intoxication/overdose due to [specify drug]\n3. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial delirium due to:\n1. Subdural hematoma (SDH)\n2. Drug intoxication/overdose due to [specify drug]\n3. Toxidrome: [specify toxidrome]",
     "nextSteps": []
    }
   },
@@ -3808,7 +3808,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Possible delirium on top of dementia",
     "subtype": "hypoactive",
-    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Seizure (postictal state or non-convulsive status)\n3. Alcohol intoxication\n4. Drug withdrawal",
+    "note": "Multifactorial possible hypoactive delirium superimposed on dementia due to:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Seizure (postictal state or non-convulsive status)\n3. Alcohol intoxication\n4. Drug withdrawal",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI."
     ]
@@ -3840,7 +3840,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Brain tumor or mass\n2. Intracerebral hemorrhage (ICH)\n3. Subdural hematoma (SDH)\n4. Alcohol withdrawal",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Brain tumor or mass\n2. Intracerebral hemorrhage (ICH)\n3. Subdural hematoma (SDH)\n4. Alcohol withdrawal",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -3919,7 +3919,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Alcohol withdrawal\n3. Drug withdrawal",
+    "note": "Multifactorial hyperactive subsyndromal delirium due to:\n1. Primary CNS infection (meningitis or encephalitis)\n2. Alcohol withdrawal\n3. Drug withdrawal",
     "nextSteps": []
    }
   },
@@ -4197,7 +4197,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium superimposed on dementia:\n1. Acute ischemic stroke\n2. Subdural hematoma (SDH)\n3. Toxic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive subsyndromal delirium superimposed on dementia due to:\n1. Acute ischemic stroke\n2. Subdural hematoma (SDH)\n3. Toxic encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -4278,7 +4278,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Subarachnoid hemorrhage (SAH)\n2. Septic encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]",
+    "note": "Multifactorial hyperactive subsyndromal delirium due to:\n1. Subarachnoid hemorrhage (SAH)\n2. Septic encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI."
     ]
@@ -4309,7 +4309,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Possible delirium on top of dementia",
     "subtype": "hypoactive",
-    "note": "Multifactorial possible hypoactive delirium superimposed on dementia:\n1. Traumatic brain injury (TBI)\n2. Alcohol withdrawal\n3. Drug withdrawal",
+    "note": "Multifactorial possible hypoactive delirium superimposed on dementia due to:\n1. Traumatic brain injury (TBI)\n2. Alcohol withdrawal\n3. Drug withdrawal",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -4364,7 +4364,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. Acute ischemic stroke\n2. Primary CNS infection (meningitis or encephalitis)",
+    "note": "Multifactorial subsyndromal delirium due to:\n1. Acute ischemic stroke\n2. Primary CNS infection (meningitis or encephalitis)",
     "nextSteps": []
    }
   },
@@ -4392,7 +4392,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive subsyndromal delirium:\n1. Subarachnoid hemorrhage (SAH)\n2. Autoimmune encephalopathy due to [specify etiology]\n3. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hyperactive subsyndromal delirium due to:\n1. Subarachnoid hemorrhage (SAH)\n2. Autoimmune encephalopathy due to [specify etiology]\n3. Toxidrome: [specify toxidrome]",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
@@ -4471,7 +4471,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Possible delirium on top of dementia",
     "subtype": "hyperactive",
-    "note": "Multifactorial possible hyperactive delirium superimposed on dementia:\n1. Septic encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
+    "note": "Multifactorial possible hyperactive delirium superimposed on dementia due to:\n1. Septic encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
     "nextSteps": []
    }
   },
@@ -4567,7 +4567,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. Intracerebral hemorrhage (ICH)\n2. Seizure (postictal state or non-convulsive status)\n3. Metabolic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial subsyndromal delirium due to:\n1. Intracerebral hemorrhage (ICH)\n2. Seizure (postictal state or non-convulsive status)\n3. Metabolic encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -4647,7 +4647,7 @@
     "levelText": "High likelihood",
     "phenotype": "Stupor/coma",
     "subtype": "",
-    "note": "Multifactorial stupor/coma with underlying dementia:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Septic encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]\n4. Drug withdrawal",
+    "note": "Multifactorial stupor/coma with underlying dementia due to:\n1. Metabolic encephalopathy due to [specify etiology]\n2. Septic encephalopathy due to [specify etiology]\n3. Drug intoxication/overdose due to [specify drug]\n4. Drug withdrawal",
     "nextSteps": []
    }
   },
@@ -4755,7 +4755,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Traumatic brain injury (TBI)\n2. Toxic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Traumatic brain injury (TBI)\n2. Toxic encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
@@ -4810,7 +4810,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Toxic encephalopathy due to [specify etiology]\n2. Alcohol withdrawal\n3. Toxidrome: [specify toxidrome]",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Toxic encephalopathy due to [specify etiology]\n2. Alcohol withdrawal\n3. Toxidrome: [specify toxidrome]",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
@@ -4929,7 +4929,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive delirium:\n1. Traumatic brain injury (TBI)\n2. Metabolic encephalopathy due to [specify etiology]\n3. Toxic encephalopathy due to [specify etiology]\n4. Alcohol intoxication\n5. Drug withdrawal",
+    "note": "Multifactorial hypoactive delirium due to:\n1. Traumatic brain injury (TBI)\n2. Metabolic encephalopathy due to [specify etiology]\n3. Toxic encephalopathy due to [specify etiology]\n4. Alcohol intoxication\n5. Drug withdrawal",
     "nextSteps": [
      "Focal or one-sided signs: urgent CT or MRI.",
      "Fall or head injury on blood thinners: urgent head CT."
@@ -4959,7 +4959,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. Alcohol withdrawal\n2. Drug withdrawal",
+    "note": "Multifactorial subsyndromal delirium due to:\n1. Alcohol withdrawal\n2. Drug withdrawal",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -5018,7 +5018,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial delirium:\n1. Brain tumor or mass\n2. Intracerebral hemorrhage (ICH)\n3. Autoimmune encephalopathy due to [specify etiology]\n4. Metabolic encephalopathy due to [specify etiology]\n5. Septic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial delirium due to:\n1. Brain tumor or mass\n2. Intracerebral hemorrhage (ICH)\n3. Autoimmune encephalopathy due to [specify etiology]\n4. Metabolic encephalopathy due to [specify etiology]\n5. Septic encephalopathy due to [specify etiology]",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]
@@ -5046,7 +5046,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Intracerebral hemorrhage (ICH)\n2. Autoimmune encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive subsyndromal delirium due to:\n1. Intracerebral hemorrhage (ICH)\n2. Autoimmune encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -5106,7 +5106,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Delirium",
     "subtype": "hyperactive",
-    "note": "Multifactorial hyperactive delirium:\n1. Seizure (postictal state or non-convulsive status)\n2. Septic encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
+    "note": "Multifactorial hyperactive delirium due to:\n1. Seizure (postictal state or non-convulsive status)\n2. Septic encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
     "nextSteps": [
      "Fever with neck stiffness: lumbar puncture."
     ]
@@ -5347,7 +5347,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. Brain tumor or mass\n2. Intracerebral hemorrhage (ICH)",
+    "note": "Multifactorial subsyndromal delirium due to:\n1. Brain tumor or mass\n2. Intracerebral hemorrhage (ICH)",
     "nextSteps": [
      "Fall or head injury on blood thinners: urgent head CT."
     ]
@@ -5375,7 +5375,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "hypoactive",
-    "note": "Multifactorial hypoactive subsyndromal delirium:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]",
+    "note": "Multifactorial hypoactive subsyndromal delirium due to:\n1. Nutritional encephalopathy due to [specify etiology]\n2. Toxic encephalopathy due to [specify etiology]",
     "nextSteps": []
    }
   },
@@ -5455,7 +5455,7 @@
     "levelText": "Moderate likelihood",
     "phenotype": "Subsyndromal delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial subsyndromal delirium:\n1. Vascular encephalopathy due to [specify etiology]\n2. Alcohol withdrawal",
+    "note": "Multifactorial subsyndromal delirium due to:\n1. Vascular encephalopathy due to [specify etiology]\n2. Alcohol withdrawal",
     "nextSteps": []
    }
   },
@@ -5505,7 +5505,7 @@
     "levelText": "High likelihood",
     "phenotype": "Delirium",
     "subtype": "mixed or undetermined",
-    "note": "Multifactorial delirium:\n1. Intracerebral hemorrhage (ICH)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
+    "note": "Multifactorial delirium due to:\n1. Intracerebral hemorrhage (ICH)\n2. Nutritional encephalopathy due to [specify etiology]\n3. Alcohol intoxication",
     "nextSteps": [
      "Seizure, twitching or myoclonus: EEG for non-convulsive status."
     ]

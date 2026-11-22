@@ -121,7 +121,7 @@ def expected(c):
         else:
             note = 'Acute encephalopathy not supported at this time; known dementia.'
     elif len(contributors) >= 2:
-        note = 'Multifactorial ' + presentation + ':\n' + '\n'.join(
+        note = 'Multifactorial ' + presentation + ' due to:\n' + '\n'.join(
             '%d. %s' % (i + 1, cap(t)) for i, t in enumerate(contributors))
     elif primary:
         note = PRIMARY[primary[0]] + ', presenting with ' + presentation + '.'

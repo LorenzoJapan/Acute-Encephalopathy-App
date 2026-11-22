@@ -35,6 +35,8 @@ The rules are checked from top to bottom, and the first match decides the result
 
 **CAM / CAM-ICU positive** means Feature 1 (an acute change or fluctuating course) **and** Feature 2 (inattention) **and** either disorganized thinking or altered consciousness. Both tools use this algorithm. They differ in how inattention and thinking are tested, and in numbering: in the CAM, disorganized thinking is Feature 3 and altered consciousness is Feature 4; in the CAM-ICU these are swapped. Altered consciousness means any RASS other than 0.
 
+In one line: Full CAM-positive means delirium; partial CAM features mean subsyndromal delirium; too obtunded to assess (RASS −4 or −5) means stupor/coma or coma. All map to the acute encephalopathy process.
+
 Then two adjustments are applied:
 - "Not sure" about the baseline lowers the likelihood by one level, unless a fluctuating course confirms Feature 1.
 - The motor subtype comes from RASS: above 0 is hyperactive, below 0 is hypoactive, 0 is mixed or undetermined.
@@ -49,7 +51,7 @@ A primary brain or substance diagnosis is named as the diagnosis itself, with de
 | Septic (sepsis, including infection without organ dysfunction) | *Septic encephalopathy due to [specify etiology], manifesting as hypoactive delirium.* |
 | One brain or substance diagnosis | *Acute ischemic stroke, presenting with hypoactive delirium.* |
 | Drug intoxication/overdose or Toxidromes | *Drug intoxication/overdose due to [specify drug], presenting with hypoactive delirium.* · *Toxidrome: [specify toxidrome], presenting with hyperactive delirium.* |
-| Two or more diagnoses (any mix) | *Multifactorial hypoactive delirium:* then a numbered list: primary brain diagnoses first, then encephalopathies, then substance/medication, each group A–Z: *1. Acute ischemic stroke · 2. Metabolic encephalopathy due to [specify etiology] · 3. Septic encephalopathy due to [specify etiology] · 4. Alcohol withdrawal*. With RASS −4 it reads *Multifactorial stupor/coma:*, with RASS −5 *Multifactorial coma:*. |
+| Two or more diagnoses (any mix) | *Multifactorial hypoactive delirium due to:* then a numbered list: primary brain diagnoses first, then encephalopathies, then substance/medication, each group A–Z: *1. Acute ischemic stroke · 2. Metabolic encephalopathy due to [specify etiology] · 3. Septic encephalopathy due to [specify etiology] · 4. Alcohol withdrawal*. With RASS −4 it reads *Multifactorial stupor/coma due to:*, with RASS −5 *Multifactorial coma due to:*. |
 | Known dementia (any of the above) | The presentation adds *superimposed on dementia* (stupor/coma: *with underlying dementia*), e.g. *Acute ischemic stroke, presenting with possible hypoactive delirium superimposed on dementia.* ("possible" whenever the headline is *Possible delirium on top of dementia*) At baseline: *Dementia at baseline; acute encephalopathy not supported at this time.* New change but not supported: *…not supported at this time; known dementia.* |
 | No cause, or "Not yet known" | *Hypoactive delirium, etiology not yet identified.* ("Acute encephalopathy" is only written once an underlying etiology is named.) |
 

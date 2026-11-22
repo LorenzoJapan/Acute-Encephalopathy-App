@@ -112,7 +112,7 @@ def reference(p):
         else:
             note = 'Acute encephalopathy not supported at this time; known dementia.'
     elif len(listed) >= 2:
-        note = 'Multifactorial ' + shown + ':\n' + '\n'.join(str(i + 1) + '. ' + t for i, t in enumerate(listed))
+        note = 'Multifactorial ' + shown + ' due to:\n' + '\n'.join(str(i + 1) + '. ' + t for i, t in enumerate(listed))
     elif brain or substance:
         note = (brain + substance)[0] + ', presenting with ' + shown + '.'
     elif enceph:

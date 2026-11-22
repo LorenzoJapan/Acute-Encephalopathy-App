@@ -71,6 +71,9 @@
       '<span class="tick" aria-hidden="true">' + ICON.tick + '</span></button>';
   }
 
+  // How the app names the clinical state (About screen; the Features step shows its first half).
+  var STATE_RULE = 'Full CAM-positive means delirium; partial CAM features mean subsyndromal delirium; too obtunded to assess (RASS −4 or −5) means stupor/coma or coma. All map to the acute encephalopathy process.';
+
   var SETTINGS_BTN = '<button type="button" class="navbtn" aria-label="Display settings" data-action="settings">Aa</button>';
 
   function home() {
@@ -125,6 +128,7 @@
       '<div class="card" style="display:flex;align-items:center;gap:12px">' +
       '<span class="otext"><span class="ot" style="font-size:var(--ae-fs-callout)">Altered consciousness</span><span class="od">' + esc(tool.loc) + '</span></span>' +
       '<span class="' + (loc ? 'yes' : 'no') + '" style="font-size:var(--ae-fs-callout)">' + (loc ? ICON.yes + 'Present' : 'Absent') + '</span></div>' +
+      '<p class="micro">Full CAM-positive means delirium; partial CAM features mean subsyndromal delirium.</p>' +
       '</div>';
   }
 
@@ -185,7 +189,7 @@
   function definition() {
     return '<div class="screen about def tight">' +
       '<h2 class="h2 sm">Acute encephalopathy</h2>' +
-      '<div class="card"><p class="body">Acute encephalopathy should be used to describe a rapidly developing (in less than 4 weeks) <strong>etio-patho-biological brain process</strong> which is expressed clinically as either sub-syndromal delirium, delirium, stupor or coma and may have additional neurological features, such as seizures or extrapyramidal signs. The term acute encephalopathy is not recommended as a descriptor of clinical features that can be observed at the bedside.</p></div>' +
+      '<div class="card"><p class="body">Acute encephalopathy should be used to describe a rapidly developing (in less than 4 weeks) <strong>patho-biological brain process</strong> which is expressed clinically as either sub-syndromal delirium, delirium, stupor or coma and may have additional neurological features, such as seizures or extrapyramidal signs. The term acute encephalopathy is not recommended as a descriptor of clinical features that can be observed at the bedside.</p></div>' +
       '<p class="section">Acute encephalopathy: Diagnostic Criteria</p>' +
       '<div class="card"><ol class="next">' +
       '<li>Altered state of alertness/consciousness</li>' +
@@ -203,6 +207,7 @@
       '<p class="section">What the app covers</p>' +
       '<div class="card"><p class="ot">Clinical educational tool</p>' +
       '<p class="body">For use by clinicians (physicians, advanced practice providers, and medical students) as an educational aid that assists in diagnosis framing of altered mental status and acute encephalopathy. It does not replace clinical judgment at all times by the primary physicians. Not a validated or regulatory-cleared medical device.</p></div>' +
+      '<div class="card"><p class="ot">How the app names the clinical state</p><p class="body">' + STATE_RULE + '</p></div>' +
       '<div class="card"><p class="body">Guideline content © MDGadgetz, LLC. Modification or distribution of guideline content, including within software, requires express permission from the MDGadgetz LLC.</p></div>' +
       '<p class="section">Privacy</p>' +
       '<div class="card"><ul class="next">' +

@@ -218,7 +218,7 @@
       .filter(function (d, i, all) { return all.indexOf(d) === i; });
     var cap = function (t) { return t.charAt(0).toUpperCase() + t.slice(1); };
 
-    // Two or more contributing diagnoses: "Multifactorial <presentation>:" then a numbered list,
+    // Two or more contributing diagnoses: "Multifactorial <presentation> due to:" then a numbered list,
     // primary brain diagnoses first, then encephalopathies, then substance/medication; each group A–Z.
     var az = function (list) { return list.slice().sort(function (x, y) { x = x.toLowerCase(); y = y.toLowerCase(); return x < y ? -1 : x > y ? 1 : 0; }); };
     var dxOf = function (c) { return c.dx; };
@@ -229,7 +229,7 @@
       : a.acute === 'no' ? 'Dementia at baseline; acute encephalopathy not supported at this time.'
       : 'Acute encephalopathy not supported at this time; known dementia.';
     else if (contributors.length >= 2) {
-      note = 'Multifactorial ' + presentation + ':\n' +
+      note = 'Multifactorial ' + presentation + ' due to:\n' +
         contributors.map(function (t, i) { return (i + 1) + '. ' + cap(t); }).join('\n');
     }
     else if (primary.length) note = primaryLine + '.';
